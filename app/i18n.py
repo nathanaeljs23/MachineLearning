@@ -91,8 +91,10 @@ UI = {
         "legend_great":    "🟢 **Great** — P ≥ 70%",
         "legend_moderate": "🟡 **Moderate** — P 40–70%",
         "legend_bad":      "🔴 **Bad** — P < 40%",
-        "footer": "<small>COMP6577001 Machine Learning · BINUS University · "
-                  "Nathanael Joshua</small>",
+        "footer": "<small>COMP6577001 Machine Learning · BINUS University<br>"
+                  "• Nathanael Joshua Soesapto - 2802394310<br>"
+                  "• Saverio Kusuma - 2802424534<br>"
+                  "• Nicholas Lowell Johannes - 2802401676</small>"
     },
     "id": {
         "lang_label":   "🌐 Language / Bahasa",
@@ -175,8 +177,10 @@ UI = {
         "legend_great":    "🟢 **Sangat Baik** — P ≥ 70%",
         "legend_moderate": "🟡 **Sedang** — P 40–70%",
         "legend_bad":      "🔴 **Kurang** — P < 40%",
-        "footer": "<small>COMP6577001 Machine Learning · BINUS University · "
-                  "Nathanael Joshua</small>",
+        "footer": "<small>COMP6577001 Machine Learning · BINUS University<br>"
+                  "• Nathanael Joshua Soesapto - 2802394310<br>"
+                  "• Saverio Kusuma - 2802424534<br>"
+                  "• Nicholas Lowell Johannes - 2802401676</small>"
     },
 }
 

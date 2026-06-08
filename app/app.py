@@ -380,7 +380,13 @@ def main():
 
         st.markdown(
             """<style>
-            div[data-testid="stCustomComponentV1"] { margin-bottom: -2.5rem !important; }
+            div[data-testid="stCustomComponentV1"] {
+                margin-bottom: -5rem !important;
+                padding-bottom: 0 !important;
+            }
+            div[data-testid="stCustomComponentV1"] iframe {
+                display: block !important;
+            }
             </style>""",
             unsafe_allow_html=True,
         )
@@ -480,6 +486,18 @@ def main():
             map_col, table_col = st.columns([1.15, 1])
 
             with map_col:
+                st.markdown(
+                    """<style>
+                    div[data-testid="stCustomComponentV1"] {
+                        margin-bottom: -5rem !important;
+                        padding-bottom: 0 !important;
+                    }
+                    div[data-testid="stCustomComponentV1"] iframe {
+                        display: block !important;
+                    }
+                    </style>""",
+                    unsafe_allow_html=True,
+                )
                 rm = folium.Map(location=JAVA_CENTER, zoom_start=7, tiles="CartoDB positron")
                 for _, row in view.iterrows():
                     hexc = COLOUR_HEX[row["colour"]]
