@@ -102,3 +102,47 @@ def build_feature_vector(
         **anomaly_vals,
     }
     return pd.DataFrame([[row[f] for f in feature_order]], columns=feature_order)
+
+
+def rank_kabupaten(model, meta: dict, kab_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Predict padi viability for every kabupaten using its historical climate
+    averages (Option 1: anomalies = 0 by definition, lags = kab_mean).
+
+    Returns a DataFrame sorted by descending viability probability with columns:
+    kabupaten, province, centroid_lat, centroid_lon, prob, label, colour,
+    est_yield, revenue.
+    """
+    kab_stats_map = meta["kab_stats_map"]
+    feature_order = meta["features"]
+    low, high     = meta["low_threshold"], meta["high_threshold"]
+
+    rows = []
+    for _, r in kab_df.iterrows():
+        ks       = kab_stats_map.get(r["kabupaten"], {})
+        kab_mean = ks.get("kab_mean", meta["threshold"])
+        row = {col: r[col] for col in CLIMATE_14}
+        row.update({
+            "kab_mean":   kab_mean,
+            "kab_std":    ks.get("kab_std",    0.3),
+            "kab_median": ks.get("kab_median", meta["threshold"]),
+            "kab_min":    ks.get("kab_min",    low),
+            "kab_max":    ks.get("kab_max",    high),
+            "yield_lag1": kab_mean,
+            "yield_lag2": kab_mean,
+        })
+        for col in CLIMATE_14:
+            row[f"{col}_anomaly"] = 0.0
+        rows.append(row)
+
+    X = pd.DataFrame([[r[f] for f in feature_order] for r in rows], columns=feature_order)
+    probs = model.predict_proba(X)[:, 1]
+
+    out = kab_df[["kabupaten", "province", "centroid_lat", "centroid_lon"]].copy()
+    out["prob"]      = probs
+    labels_colours   = [viability_label(p, low, high) for p in probs]
+    out["label"]     = [lc[0] for lc in labels_colours]
+    out["colour"]    = [lc[1] for lc in labels_colours]
+    out["est_yield"] = [estimated_yield(p, low, high) for p in probs]
+    out["revenue"]   = [economic_estimate(y) for y in out["est_yield"]]
+    return out.sort_values("prob", ascending=False).reset_index(drop=True)

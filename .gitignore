@@ -5,3 +5,7 @@ __pycache__/
 *.ipynb_checkpoints/
 .DS_Store
 Dataset/
+
+# Logs and local Streamlit secrets/config
+*.log
+.streamlit/secrets.toml
