@@ -3,9 +3,11 @@
 import math
 import sys
 import os
+import json
 import pytest
 import numpy as np
 import pandas as pd
+import joblib
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "app"))
 from utils import (
@@ -17,6 +19,7 @@ from utils import (
     economic_estimate,
     build_feature_vector,
     compute_anomalies,
+    rank_kabupaten,
 )
 
 KAB_STAT_COLS = ["kab_mean", "kab_std", "kab_median", "kab_min", "kab_max"]
@@ -168,3 +171,37 @@ def test_feature_vector_type(sample_inputs):
     climate, kab, anomalies = sample_inputs
     X = build_feature_vector(climate, kab, 5.5, 5.5, anomalies, FEATURES)
     assert isinstance(X, pd.DataFrame)
+
+
+# ── rank_kabupaten ────────────────────────────────────────────────────────────
+
+_APP_DIR = os.path.join(os.path.dirname(__file__), "..", "app")
+
+
+@pytest.fixture(scope="module")
+def ranking():
+    model  = joblib.load(os.path.join(_APP_DIR, "model.pkl"))
+    meta   = json.load(open(os.path.join(_APP_DIR, "model_meta.json")))
+    kab_df = pd.read_csv(os.path.join(_APP_DIR, "kabupaten_climate_avg.csv"))
+    return rank_kabupaten(model, meta, kab_df)
+
+def test_rank_kabupaten_row_count(ranking):
+    assert len(ranking) == 112
+
+def test_rank_kabupaten_columns(ranking):
+    expected = {"kabupaten", "province", "centroid_lat", "centroid_lon",
+                "prob", "label", "colour", "est_yield", "revenue"}
+    assert expected.issubset(ranking.columns)
+
+def test_rank_kabupaten_sorted_descending(ranking):
+    probs = ranking["prob"].values
+    assert (probs[:-1] >= probs[1:]).all()
+
+def test_rank_kabupaten_prob_in_range(ranking):
+    assert ranking["prob"].between(0.0, 1.0).all()
+
+def test_rank_kabupaten_labels_valid(ranking):
+    assert set(ranking["label"].unique()).issubset({"Great", "Moderate", "Bad"})
+
+def test_rank_kabupaten_no_nulls(ranking):
+    assert ranking[["prob", "label", "est_yield", "revenue"]].notna().all().all()

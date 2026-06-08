@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from streamlit_folium import st_folium
+from streamlit_geolocation import streamlit_geolocation
 
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import (
@@ -16,50 +17,26 @@ from utils import (
     compute_anomalies,
     economic_estimate,
     estimated_yield,
+    haversine,
     nearest_kabupaten,
+    rank_kabupaten,
     viability_label,
+)
+from i18n import (
+    CLIMATE_LABELS,
+    CLIMATE_READABLE,
+    EXPL,
+    LANGUAGES,
+    UI,
+    VIABILITY,
 )
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 
-CLIMATE_LABELS = {
-    "temperature_mean_c":    ("Mean Temperature",           "°C"),
-    "temperature_max_c":     ("Max Temperature",            "°C"),
-    "temperature_min_c":     ("Min Temperature",            "°C"),
-    "rainfall_mm_year":      ("Annual Rainfall",            "mm/year"),
-    "precip_hours_day":      ("Precipitation Hours",        "hrs/day"),
-    "humidity_pct":          ("Humidity",                   "%"),
-    "sunshine_hrs_day":      ("Sunshine Hours",             "hrs/day"),
-    "shortwave_radiation":   ("Shortwave Radiation",        "MJ/m²/day"),
-    "et0_mm_day":            ("Evapotranspiration (ET₀)",   "mm/day"),
-    "vapour_pressure_def":   ("Vapour Pressure Deficit",    "kPa"),
-    "wind_speed":            ("Wind Speed",                 "m/s"),
-    "soil_moisture_0_7cm":   ("Soil Moisture 0-7cm",        "m³/m³"),
-    "soil_moisture_7_28cm":  ("Soil Moisture 7-28cm",       "m³/m³"),
-    "soil_temperature":      ("Soil Temperature",           "°C"),
-}
-
 PROVINCES       = ["Banten", "DI Yogyakarta", "Jawa Barat", "Jawa Tengah", "Jawa Timur"]
 DEFAULT_PROVINCE = "Jawa Tengah"
-
-_CLIMATE_READABLE = {
-    "temperature_mean_c":   "mean temperature",
-    "temperature_max_c":    "max temperature",
-    "temperature_min_c":    "min temperature",
-    "rainfall_mm_year":     "annual rainfall",
-    "precip_hours_day":     "precipitation hours",
-    "humidity_pct":         "humidity",
-    "sunshine_hrs_day":     "sunshine hours",
-    "shortwave_radiation":  "solar radiation",
-    "et0_mm_day":           "evapotranspiration",
-    "vapour_pressure_def":  "vapour pressure deficit",
-    "wind_speed":           "wind speed",
-    "soil_moisture_0_7cm":  "topsoil moisture",
-    "soil_moisture_7_28cm": "subsoil moisture",
-    "soil_temperature":     "soil temperature",
-}
 
 JAVA_CENTER = [-7.5, 110.0]
 
@@ -99,43 +76,40 @@ def load_kab_df():
     return pd.read_csv(os.path.join(APP_DIR, "kabupaten_climate_avg.csv"))
 
 
+@st.cache_data
+def compute_rankings():
+    """Predict viability for all kabupaten once and cache the ranked table."""
+    return rank_kabupaten(load_model(), load_meta(), load_kab_df())
+
+
+COLOUR_HEX = {"green": "#16a34a", "orange": "#d97706", "red": "#dc2626"}
+
+
 # ── Prediction helper ─────────────────────────────────────────────────────────
 
 def make_explanation(label: str, kab_mean: float, threshold: float,
-                     anomaly_vals: dict) -> str:
+                     anomaly_vals: dict, lang: str = "en") -> str:
+    e  = EXPL[lang]
+    rd = CLIMATE_READABLE[lang]
+
     scored = []
     for col in CLIMATE_14:
         z = anomaly_vals.get(f"{col}_anomaly", 0.0)
         if abs(z) > 0.6:
-            direction = "above-average" if z > 0 else "below-average"
-            scored.append((abs(z), direction, _CLIMATE_READABLE[col]))
+            direction = e["above"] if z > 0 else e["below"]
+            scored.append((abs(z), direction, rd[col]))
     scored.sort(reverse=True)
     top = scored[:2]
 
     km_str = f"<b>{kab_mean:.2f} ton/ha</b>"
     th_str = f"{threshold:.2f} ton/ha"
 
-    if label == "Great":
-        base = f"Regional historical yield averages {km_str}, above the viability threshold of {th_str}."
-        if top:
-            factors = " and ".join(f"{d} {n}" for _, d, n in top)
-            base += f" Current climate shows {factors}, supporting strong output."
-        else:
-            base += " Climate is close to the regional norm — ideal conditions for padi."
-    elif label == "Moderate":
-        base = f"Regional average yield is {km_str} (threshold: {th_str})."
-        if top:
-            factors = " and ".join(f"{d} {n}" for _, d, n in top)
-            base += f" Notable climate deviations: {factors} — some yield variability expected."
-        else:
-            base += " Climate is near average; seasonal conditions will determine final output."
+    base = e[f"{label}_base"].format(km=km_str, th=th_str)
+    if top:
+        factors = e["join"].join(e["factor_fmt"].format(d=d, n=n) for _, d, n in top)
+        base += e[f"{label}_factors"].format(factors=factors)
     else:
-        base = f"Regional average yield of {km_str} falls below the viability threshold of {th_str}."
-        if top:
-            factors = " and ".join(f"{d} {n}" for _, d, n in top)
-            base += f" Climate also shows {factors}, further reducing viability."
-        else:
-            base += " Low historical yield in this region drives the prediction."
+        base += e[f"{label}_none"]
     return base
 
 
@@ -158,7 +132,10 @@ def predict(model, meta, climate_vals: dict, kab_stats: dict, lag: float,
 
 # ── Result display ────────────────────────────────────────────────────────────
 
-def show_result(prob, label, colour, est_yield, revenue, title="", explanation=""):
+def show_result(prob, label, colour, est_yield, revenue, title="", explanation="",
+                lang="en"):
+    T = UI[lang]
+    disp_label = VIABILITY[lang][label]
     border_map = {"green": "#16a34a", "orange": "#d97706", "red": "#dc2626"}
     text_map   = {"green": "#14532d", "orange": "#78350f", "red": "#7f1d1d"}
     badge_map  = {"green": "#dcfce7", "orange": "#fef3c7", "red": "#fee2e2"}
@@ -173,7 +150,7 @@ def show_result(prob, label, colour, est_yield, revenue, title="", explanation="
     bar_pct = int(prob * 100)
     expl_html = (
         f'<div class="viability-row viability-explain-row">'
-        f'<span class="viability-label">Why</span>'
+        f'<span class="viability-label">{T["card_why"]}</span>'
         f'<span class="viability-explain">{explanation}</span></div>'
     ) if explanation else ""
 
@@ -271,25 +248,63 @@ def show_result(prob, label, colour, est_yield, revenue, title="", explanation="
         <div class="viability-card">
             <div class="viability-header">
                 <span style="font-size:1.7rem">{icon}</span>
-                <span class="viability-badge">{label} Viability</span>
+                <span class="viability-badge">{T["badge_template"].format(label=disp_label)}</span>
                 {"<span class='viability-location'>" + title + "</span>" if title else ""}
             </div>
             <div class="viability-row">
-                <span class="viability-label">Viability Score</span>
+                <span class="viability-label">{T["card_score"]}</span>
                 <span class="viability-value">
                     {prob*100:.1f}%
                     <span class="conf-bar-wrap"><span class="conf-bar-fill"></span></span>
                 </span>
             </div>
             <div class="viability-row">
-                <span class="viability-label">Estimated Yield</span>
-                <span class="viability-value">{est_yield}<span class="viability-sub">ton/ha</span></span>
+                <span class="viability-label">{T["card_yield"]}</span>
+                <span class="viability-value">{est_yield}<span class="viability-sub">{T["card_yield_unit"]}</span></span>
             </div>
             <div class="viability-row">
-                <span class="viability-label">Revenue <span class="viability-sub">(1 ha)</span></span>
-                <span class="viability-value">Rp {revenue:,.0f}<span class="viability-sub"> · HPP GKP Rp 6,500/kg</span></span>
+                <span class="viability-label">{T["card_revenue"]} <span class="viability-sub">{T["card_revenue_sub"]}</span></span>
+                <span class="viability-value">Rp {revenue:,.0f}<span class="viability-sub">{T["card_revenue_note"]}</span></span>
             </div>
             {expl_html}
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+# ── Compare card ──────────────────────────────────────────────────────────────
+
+def compare_card(name, province, prob, label, colour, est_yield, revenue, lang="en"):
+    """Compact card with only inline styles, so several can render side by side
+    without the shared CSS classes in show_result() colliding."""
+    T          = UI[lang]
+    disp_label = VIABILITY[lang][label]
+    border   = COLOUR_HEX[colour]
+    badge_bg = {"green": "#dcfce7", "orange": "#fef3c7", "red": "#fee2e2"}[colour]
+    text     = {"green": "#14532d", "orange": "#78350f", "red": "#7f1d1d"}[colour]
+    icon     = {"green": "🟢", "orange": "🟡", "red": "🔴"}[colour]
+    row = (
+        '<div style="display:flex;justify-content:space-between;padding:7px 0;'
+        'border-bottom:1px solid #eee;">'
+        '<span style="color:#6b7280;font-size:0.72rem;font-weight:700;'
+        'text-transform:uppercase;letter-spacing:0.05em;">{k}</span>'
+        '<span style="font-weight:900;color:#111;">{v}</span></div>'
+    )
+    st.markdown(
+        f"""
+        <div style="background:#fff;border:2px solid {border};border-radius:12px;
+                    padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <div style="font-weight:800;font-size:1.02rem;color:#1f2937;">{name}</div>
+            <div style="color:#6b7280;font-size:0.78rem;margin-bottom:10px;">{province}</div>
+            <div style="display:inline-block;background:{badge_bg};color:{text};
+                        border:2px solid {border};font-weight:800;font-size:0.82rem;
+                        padding:3px 12px;border-radius:999px;margin-bottom:10px;">
+                {icon} {disp_label}
+            </div>
+            {row.format(k=T["card_score"],   v=f"{prob*100:.1f}%")}
+            {row.format(k=T["card_yield"],   v=f"{est_yield} t/ha")}
+            {row.format(k=T["card_revenue"], v=f"Rp {revenue:,.0f}")}
         </div>
         """,
         unsafe_allow_html=True,
@@ -309,25 +324,45 @@ def main():
     meta   = load_meta()
     kab_df = load_kab_df()
 
-    st.title("🌾 Agri-Smart — Padi Viability Predictor")
-    st.caption(
-        f"Extra Trees classifier · Java Island · "
-        f"Accuracy {meta['accuracy']*100:.1f}% · "
-        f"F1 {meta['f1_score']*100:.1f}% · "
-        f"AUC-ROC {meta['auc_roc']*100:.1f}%"
-    )
+    # ── Language selector (top of sidebar) ────────────────────────────────────
+    with st.sidebar:
+        lang_name = st.radio(
+            UI["en"]["lang_label"], list(LANGUAGES.keys()), key="lang"
+        )
+        st.markdown("---")
+    lang    = LANGUAGES[lang_name]
+    T       = UI[lang]
+    clabels = CLIMATE_LABELS[lang]
 
-    tab1, tab2 = st.tabs(["🗺️ Map Pin", "✏️ Manual Input"])
+    st.title(T["app_title"])
+    st.caption(T["metrics_caption"].format(
+        acc=meta["accuracy"] * 100,
+        f1=meta["f1_score"] * 100,
+        auc=meta["auc_roc"] * 100,
+    ))
+
+    tab1, tab2, tab_rank = st.tabs([T["tab_map"], T["tab_manual"], T["tab_rank"]])
 
     # ════════════════════════════════════════════════════════
     # TAB 1 — Map Pin
     # ════════════════════════════════════════════════════════
     with tab1:
-        st.subheader("Pin a location on Java Island")
-        st.markdown(
-            "Click anywhere on the map. The app finds the nearest kabupaten and "
-            "predicts padi viability using its historical climate averages."
+        st.subheader(T["map_subheader"])
+        st.markdown(T["map_intro"])
+
+        # ── Geolocation button ─────────────────────────────────────────────
+        geo_col, geo_hint, _ = st.columns(
+            [1, 5, 6], gap="small", vertical_alignment="center"
         )
+        with geo_col:
+            loc = streamlit_geolocation()
+        with geo_hint:
+            st.caption(T["map_hint"])
+
+        geo_latlon = None
+        if loc and loc.get("latitude") is not None and loc.get("longitude") is not None:
+            geo_latlon = (float(loc["latitude"]), float(loc["longitude"]))
+        geo_just_fetched = geo_latlon is not None and geo_latlon != st.session_state.get("mp_prev_geo")
 
         m = folium.Map(location=JAVA_CENTER, zoom_start=7, tiles="CartoDB positron")
         for _, row in kab_df.iterrows():
@@ -336,6 +371,12 @@ def main():
                 radius=4, color="#2a6496", fill=True, fill_opacity=0.6,
                 tooltip=row["kabupaten"],
             ).add_to(m)
+        if geo_latlon:
+            folium.Marker(
+                location=list(geo_latlon),
+                tooltip=T["loc_your"],
+                icon=folium.Icon(color="red", icon="user", prefix="fa"),
+            ).add_to(m)
 
         st.markdown(
             """<style>
@@ -343,11 +384,32 @@ def main():
             </style>""",
             unsafe_allow_html=True,
         )
-        map_data = st_folium(m, use_container_width=True, height=460, key="map_pin")
+        folium_kwargs = dict(use_container_width=True, height=460, key="map_pin")
+        if geo_just_fetched:
+            folium_kwargs["center"] = list(geo_latlon)
+            folium_kwargs["zoom"]   = 9
+        map_data = st_folium(m, **folium_kwargs) or {}
 
+        # ── Resolve active location: a fresh action (geo or click) wins ────
         clicked = map_data.get("last_clicked")
-        if clicked:
-            lat, lon = clicked["lat"], clicked["lng"]
+        click_latlon = (clicked["lat"], clicked["lng"]) if clicked else None
+
+        if geo_latlon is not None and geo_latlon != st.session_state.get("mp_prev_geo"):
+            active, source = geo_latlon, "geo"
+        elif click_latlon is not None and click_latlon != st.session_state.get("mp_prev_click"):
+            active, source = click_latlon, "click"
+        elif click_latlon is not None:
+            active, source = click_latlon, "click"
+        elif geo_latlon is not None:
+            active, source = geo_latlon, "geo"
+        else:
+            active, source = None, None
+
+        st.session_state["mp_prev_geo"]   = geo_latlon
+        st.session_state["mp_prev_click"] = click_latlon
+
+        if active:
+            lat, lon = active
 
             kab_row  = nearest_kabupaten(lat, lon, kab_df)
             kab_name = kab_row["kabupaten"]
@@ -371,37 +433,118 @@ def main():
             prob, label, colour, est_yield, revenue = predict(
                 model, meta, climate_vals, kab_stats, lag, anomaly_vals
             )
-            expl = make_explanation(label, kab_stats["kab_mean"], meta["threshold"], anomaly_vals)
-            st.caption(f"📍 {lat:.4f}, {lon:.4f}  ·  Nearest kabupaten: **{kab_name}** ({province})")
-            show_result(prob, label, colour, est_yield, revenue, kab_name, expl)
+            expl = make_explanation(label, kab_stats["kab_mean"], meta["threshold"],
+                                    anomaly_vals, lang)
 
-            with st.expander("Climate features used"):
+            dist_km = haversine(lat, lon, kab_row["centroid_lat"], kab_row["centroid_lon"])
+            origin  = T["loc_your"] if source == "geo" else T["loc_pinned"]
+            st.caption(T["nearest_caption"].format(
+                origin=origin, lat=lat, lon=lon, kab=kab_name, prov=province, dist=dist_km,
+            ))
+            if dist_km > 75:
+                st.warning(T["off_java_warning"])
+            show_result(prob, label, colour, est_yield, revenue, kab_name, expl, lang)
+
+            with st.expander(T["climate_features_expander"]):
                 display = {
-                    CLIMATE_LABELS[k][0]: f"{climate_vals[k]:.3f} {CLIMATE_LABELS[k][1]}"
+                    clabels[k][0]: f"{climate_vals[k]:.3f} {clabels[k][1]}"
                     for k in CLIMATE_14
                 }
                 st.dataframe(pd.Series(display, name="Value"), use_container_width=True)
         else:
-            st.markdown("_Click the map to pin a location._")
+            st.markdown(T["map_empty"])
+
+    # ════════════════════════════════════════════════════════
+    # TAB — Rankings & Compare
+    # ════════════════════════════════════════════════════════
+    with tab_rank:
+        st.subheader(T["rank_subheader"])
+        st.markdown(T["rank_intro"])
+
+        ranking = compute_rankings()
+
+        prov_filter = st.multiselect(
+            T["filter_province"], PROVINCES, default=PROVINCES, key="rank_prov"
+        )
+        view = ranking[ranking["province"].isin(prov_filter)].reset_index(drop=True)
+
+        if view.empty:
+            st.info(T["no_province"])
+        else:
+            c1, c2, c3, c4 = st.columns(4)
+            c1.metric(T["metric_regions"],  len(view))
+            c2.metric(T["metric_great"],    int((view["label"] == "Great").sum()))
+            c3.metric(T["metric_moderate"], int((view["label"] == "Moderate").sum()))
+            c4.metric(T["metric_bad"],      int((view["label"] == "Bad").sum()))
+
+            map_col, table_col = st.columns([1.15, 1])
+
+            with map_col:
+                rm = folium.Map(location=JAVA_CENTER, zoom_start=7, tiles="CartoDB positron")
+                for _, row in view.iterrows():
+                    hexc = COLOUR_HEX[row["colour"]]
+                    disp = VIABILITY[lang][row["label"]]
+                    folium.CircleMarker(
+                        location=[row["centroid_lat"], row["centroid_lon"]],
+                        radius=6, color=hexc, weight=1,
+                        fill=True, fill_color=hexc, fill_opacity=0.8,
+                        tooltip=f"{row['kabupaten']} — {disp} ({row['prob']*100:.0f}%)",
+                    ).add_to(rm)
+                st_folium(rm, use_container_width=True, height=460, key="map_rank",
+                          returned_objects=[])
+
+            with table_col:
+                table = view.copy()
+                table.insert(0, T["col_rank"], range(1, len(table) + 1))
+                table[T["col_viability"]] = table["label"].map(VIABILITY[lang])
+                table[T["col_score"]]   = (table["prob"] * 100).round(1).map("{:.1f}%".format)
+                table[T["col_yield"]]   = table["est_yield"].map("{:.2f} t/ha".format)
+                table[T["col_revenue"]] = table["revenue"].map("Rp {:,.0f}".format)
+                show = table[[T["col_rank"], "kabupaten", "province", T["col_viability"],
+                              T["col_score"], T["col_yield"], T["col_revenue"]]].rename(
+                    columns={"kabupaten": T["col_kabupaten"], "province": T["col_province"]})
+                st.dataframe(show, use_container_width=True, hide_index=True, height=460)
+
+            csv = view[["kabupaten", "province", "prob", "label",
+                        "est_yield", "revenue"]].to_csv(index=False).encode("utf-8")
+            st.download_button(
+                T["download_csv"], csv,
+                file_name="padi_viability_rankings.csv", mime="text/csv",
+            )
+
+        st.markdown("---")
+        st.markdown(T["compare_header"])
+        compare = st.multiselect(
+            T["compare_select"],
+            ranking["kabupaten"].tolist(), max_selections=4, key="compare_sel",
+        )
+        if len(compare) >= 2:
+            cols = st.columns(len(compare))
+            for col, name in zip(cols, compare):
+                r = ranking[ranking["kabupaten"] == name].iloc[0]
+                with col:
+                    compare_card(name, r["province"], r["prob"], r["label"],
+                                 r["colour"], r["est_yield"], r["revenue"], lang)
+        elif len(compare) == 1:
+            st.info(T["compare_one_more"])
+        else:
+            st.markdown(T["compare_empty"])
 
     # ════════════════════════════════════════════════════════
     # TAB 2 — Manual Input
     # ════════════════════════════════════════════════════════
     with tab2:
-        st.subheader("Enter climate values manually")
-        st.markdown(
-            "Input 14 climate features for your location. "
-            "Select a province — its historical yield stats are used as a regional proxy."
-        )
+        st.subheader(T["manual_subheader"])
+        st.markdown(T["manual_intro"])
 
         with st.form("manual_form"):
-            province_sel = st.selectbox("Province", PROVINCES,
+            province_sel = st.selectbox(T["province_label"], PROVINCES,
                                         index=PROVINCES.index(DEFAULT_PROVINCE))
             col1, col2 = st.columns(2)
             manual_climate = {}
 
             for i, key in enumerate(CLIMATE_14):
-                label_text, unit = CLIMATE_LABELS[key]
+                label_text, unit = clabels[key]
                 target_col = col1 if i % 2 == 0 else col2
                 with target_col:
                     manual_climate[key] = st.number_input(
@@ -437,7 +580,7 @@ def main():
                 }
                 </style>
             """, unsafe_allow_html=True)
-            submitted = st.form_submit_button("🌾  Predict Viability", use_container_width=True)
+            submitted = st.form_submit_button(T["predict_button"], use_container_width=True)
 
         if submitted:
             prov_stats = meta.get("prov_stats_map", {}).get(province_sel)
@@ -461,30 +604,21 @@ def main():
             prob, label, colour, est_yield, revenue = predict(
                 model, meta, manual_climate, kab_stats, lag, anomaly_vals
             )
-            expl = make_explanation(label, kab_stats["kab_mean"], meta["threshold"], anomaly_vals)
-            show_result(prob, label, colour, est_yield, revenue, province_sel, expl)
+            expl = make_explanation(label, kab_stats["kab_mean"], meta["threshold"],
+                                    anomaly_vals, lang)
+            show_result(prob, label, colour, est_yield, revenue, province_sel, expl, lang)
 
-    # ── Sidebar ───────────────────────────────────────────────────────────────
+    # ── Sidebar (below the language selector) ─────────────────────────────────
     with st.sidebar:
-        st.markdown("### About")
-        st.markdown(
-            "**Agri-Smart** predicts padi cultivation viability across Java Island "
-            "using historical climate data and kabupaten yield patterns.\n\n"
-            "**Model:** Extra Trees (35 features)\n\n"
-            "**Training:** 2018–2024 · **Test:** 2025\n\n"
-            "**Coverage:** 112 kabupaten across 5 provinces"
-        )
+        st.markdown(T["about_header"])
+        st.markdown(T["about_body"])
         st.markdown("---")
-        st.markdown("**Viability legend**")
-        st.markdown("🟢 **Great** — P ≥ 70%")
-        st.markdown("🟡 **Moderate** — P 40–70%")
-        st.markdown("🔴 **Bad** — P < 40%")
+        st.markdown(T["legend_header"])
+        st.markdown(T["legend_great"])
+        st.markdown(T["legend_moderate"])
+        st.markdown(T["legend_bad"])
         st.markdown("---")
-        st.markdown(
-            "<small>COMP6577001 Machine Learning · BINUS University · "
-            "Nathanael Joshua</small>",
-            unsafe_allow_html=True,
-        )
+        st.markdown(T["footer"], unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
