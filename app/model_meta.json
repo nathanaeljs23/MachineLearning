@@ -39,8 +39,8 @@
     "soil_temperature_anomaly"
   ],
   "threshold": 5.5675,
-  "low_threshold": 5.3524,
-  "high_threshold": 5.8326,
+  "low_threshold": 5.3502,
+  "high_threshold": 5.8296,
   "accuracy": 0.8304,
   "f1_score": 0.8257,
   "auc_roc": 0.9072,

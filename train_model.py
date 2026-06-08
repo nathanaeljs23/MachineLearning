@@ -94,9 +94,9 @@ def main():
     print(f"Test 2025 — Accuracy: {acc:.4f} | F1: {f1:.4f} | AUC-ROC: {auc:.4f}")
 
     # Viability thresholds
-    all_yield  = df["yield_ton_ha"]
-    low_thresh  = float(np.percentile(all_yield, 33))
-    high_thresh = float(np.percentile(all_yield, 67))
+    train_yield = train["yield_ton_ha"]
+    low_thresh  = float(np.percentile(train_yield, 33))
+    high_thresh = float(np.percentile(train_yield, 67))
 
     # kab_stats_map
     kab_stats_map = kab_stats.to_dict(orient="index")
