@@ -1,0 +1,7774 @@
+{
+  "model_type": "binary_classification",
+  "model_name": "Extra Trees",
+  "features": [
+    "temperature_mean_c",
+    "temperature_max_c",
+    "temperature_min_c",
+    "rainfall_mm_year",
+    "precip_hours_day",
+    "humidity_pct",
+    "sunshine_hrs_day",
+    "shortwave_radiation",
+    "et0_mm_day",
+    "vapour_pressure_def",
+    "wind_speed",
+    "soil_moisture_0_7cm",
+    "soil_moisture_7_28cm",
+    "soil_temperature",
+    "kab_mean",
+    "kab_std",
+    "kab_median",
+    "kab_min",
+    "kab_max",
+    "yield_lag1",
+    "yield_lag2",
+    "temperature_mean_c_anomaly",
+    "temperature_max_c_anomaly",
+    "temperature_min_c_anomaly",
+    "rainfall_mm_year_anomaly",
+    "precip_hours_day_anomaly",
+    "humidity_pct_anomaly",
+    "sunshine_hrs_day_anomaly",
+    "shortwave_radiation_anomaly",
+    "et0_mm_day_anomaly",
+    "vapour_pressure_def_anomaly",
+    "wind_speed_anomaly",
+    "soil_moisture_0_7cm_anomaly",
+    "soil_moisture_7_28cm_anomaly",
+    "soil_temperature_anomaly"
+  ],
+  "threshold": 5.5675,
+  "low_threshold": 5.3524,
+  "high_threshold": 5.8326,
+  "accuracy": 0.8304,
+  "f1_score": 0.8257,
+  "auc_roc": 0.9072,
+  "kab_yield_map": {
+    "Bandung": 6.024,
+    "Bandung Barat": 5.4011,
+    "Bangkalan": 4.9859,
+    "Banjarnegara": 5.5783,
+    "Bantul": 5.6103,
+    "Banyumas": 5.4011,
+    "Banyuwangi": 5.8416,
+    "Batang": 5.1151,
+    "Bekasi": 5.2847,
+    "Blitar": 6.1103,
+    "Blora": 5.1344,
+    "Bogor": 5.4963,
+    "Bojonegoro": 5.3343,
+    "Bondowoso": 4.9464,
+    "Boyolali": 5.5117,
+    "Brebes": 5.5276,
+    "Ciamis": 5.5216,
+    "Cianjur": 5.5474,
+    "Cilacap": 6.3854,
+    "Cirebon": 5.8024,
+    "Demak": 6.0463,
+    "Garut": 5.8177,
+    "Gresik": 6.1734,
+    "Grobogan": 5.8373,
+    "Gunung Kidul": 4.4577,
+    "Indramayu": 6.1351,
+    "Jember": 5.1087,
+    "Jepara": 5.0534,
+    "Jombang": 6.1264,
+    "Karanganyar": 6.1051,
+    "Karawang": 5.9423,
+    "Kebumen": 5.403,
+    "Kediri": 5.7853,
+    "Kendal": 5.5467,
+    "Klaten": 5.5843,
+    "Kota Bandung": 6.6377,
+    "Kota Banjar": 5.681,
+    "Kota Batu": 6.7213,
+    "Kota Bekasi": 4.9416,
+    "Kota Blitar": 6.754,
+    "Kota Bogor": 4.9811,
+    "Kota Cilegon": 5.2391,
+    "Kota Cimahi": 5.7524,
+    "Kota Cirebon": 5.3043,
+    "Kota Depok": 5.4973,
+    "Kota Kediri": 5.7594,
+    "Kota Madiun": 5.9546,
+    "Kota Magelang": 5.353,
+    "Kota Malang": 6.49,
+    "Kota Mojokerto": 5.7343,
+    "Kota Pasuruan": 5.6883,
+    "Kota Pekalongan": 5.4953,
+    "Kota Probolinggo": 5.5757,
+    "Kota Salatiga": 5.9333,
+    "Kota Semarang": 5.34,
+    "Kota Serang": 5.5363,
+    "Kota Sukabumi": 6.0381,
+    "Kota Surabaya": 5.5861,
+    "Kota Surakarta": 5.9041,
+    "Kota Tangerang": 5.7921,
+    "Kota Tasikmalaya": 5.2677,
+    "Kota Tegal": 5.3777,
+    "Kota Yogyakarta": 5.2457,
+    "Kudus": 5.8974,
+    "Kulon Progo": 5.7229,
+    "Kuningan": 5.7053,
+    "Lamongan": 5.9329,
+    "Lebak": 4.8877,
+    "Lumajang": 5.4116,
+    "Madiun": 5.9339,
+    "Magelang": 5.212,
+    "Magetan": 6.3034,
+    "Majalengka": 5.7361,
+    "Malang": 5.9989,
+    "Mojokerto": 5.8834,
+    "Nganjuk": 5.8874,
+    "Ngawi": 6.2163,
+    "Pacitan": 4.7389,
+    "Pamekasan": 5.1083,
+    "Pandeglang": 5.2739,
+    "Pangandaran": 5.1876,
+    "Pasuruan": 5.3031,
+    "Pati": 5.6899,
+    "Pekalongan": 4.7496,
+    "Pemalang": 5.3884,
+    "Ponorogo": 5.8244,
+    "Probolinggo": 5.2096,
+    "Purbalingga": 5.5671,
+    "Purwakarta": 5.4881,
+    "Purworejo": 5.4241,
+    "Rembang": 5.024,
+    "Sampang": 4.8716,
+    "Semarang": 5.5279,
+    "Serang": 5.1539,
+    "Sidoarjo": 6.4053,
+    "Situbondo": 5.3791,
+    "Sleman": 4.9061,
+    "Sragen": 6.3063,
+    "Subang": 5.8493,
+    "Sukabumi": 5.3924,
+    "Sukoharjo": 6.8353,
+    "Sumedang": 5.358,
+    "Sumenep": 5.3,
+    "Tangerang": 5.0207,
+    "Tasikmalaya": 5.5363,
+    "Tegal": 5.312,
+    "Temanggung": 6.1024,
+    "Trenggalek": 5.3859,
+    "Tuban": 5.8089,
+    "Tulungagung": 5.8696,
+    "Wonogiri": 5.5679,
+    "Wonosobo": 5.0314
+  },
+  "kab_stats_map": {
+    "Bandung": {
+      "kab_mean": 6.024,
+      "kab_std": 0.2889,
+      "kab_median": 6.084,
+      "kab_min": 5.527,
+      "kab_max": 6.433
+    },
+    "Bandung Barat": {
+      "kab_mean": 5.4011,
+      "kab_std": 0.1228,
+      "kab_median": 5.398,
+      "kab_min": 5.262,
+      "kab_max": 5.639
+    },
+    "Bangkalan": {
+      "kab_mean": 4.9859,
+      "kab_std": 0.4468,
+      "kab_median": 4.866,
+      "kab_min": 4.638,
+      "kab_max": 5.95
+    },
+    "Banjarnegara": {
+      "kab_mean": 5.5783,
+      "kab_std": 0.2603,
+      "kab_median": 5.639,
+      "kab_min": 5.209,
+      "kab_max": 5.883
+    },
+    "Bantul": {
+      "kab_mean": 5.6103,
+      "kab_std": 0.2115,
+      "kab_median": 5.66,
+      "kab_min": 5.378,
+      "kab_max": 5.904
+    },
+    "Banyumas": {
+      "kab_mean": 5.4011,
+      "kab_std": 0.1402,
+      "kab_median": 5.459,
+      "kab_min": 5.209,
+      "kab_max": 5.549
+    },
+    "Banyuwangi": {
+      "kab_mean": 5.8416,
+      "kab_std": 0.2434,
+      "kab_median": 5.884,
+      "kab_min": 5.46,
+      "kab_max": 6.099
+    },
+    "Batang": {
+      "kab_mean": 5.1151,
+      "kab_std": 0.2624,
+      "kab_median": 5.015,
+      "kab_min": 4.817,
+      "kab_max": 5.483
+    },
+    "Bekasi": {
+      "kab_mean": 5.2847,
+      "kab_std": 0.3722,
+      "kab_median": 5.328,
+      "kab_min": 4.886,
+      "kab_max": 5.856
+    },
+    "Blitar": {
+      "kab_mean": 6.1103,
+      "kab_std": 0.3864,
+      "kab_median": 6.19,
+      "kab_min": 5.559,
+      "kab_max": 6.61
+    },
+    "Blora": {
+      "kab_mean": 5.1344,
+      "kab_std": 0.3609,
+      "kab_median": 5.002,
+      "kab_min": 4.787,
+      "kab_max": 5.86
+    },
+    "Bogor": {
+      "kab_mean": 5.4963,
+      "kab_std": 0.3123,
+      "kab_median": 5.554,
+      "kab_min": 4.966,
+      "kab_max": 5.973
+    },
+    "Bojonegoro": {
+      "kab_mean": 5.3343,
+      "kab_std": 0.1748,
+      "kab_median": 5.371,
+      "kab_min": 5.007,
+      "kab_max": 5.584
+    },
+    "Bondowoso": {
+      "kab_mean": 4.9464,
+      "kab_std": 0.1516,
+      "kab_median": 4.948,
+      "kab_min": 4.702,
+      "kab_max": 5.127
+    },
+    "Boyolali": {
+      "kab_mean": 5.5117,
+      "kab_std": 0.3585,
+      "kab_median": 5.605,
+      "kab_min": 4.72,
+      "kab_max": 5.774
+    },
+    "Brebes": {
+      "kab_mean": 5.5276,
+      "kab_std": 0.2593,
+      "kab_median": 5.458,
+      "kab_min": 5.303,
+      "kab_max": 6.091
+    },
+    "Ciamis": {
+      "kab_mean": 5.5216,
+      "kab_std": 0.1914,
+      "kab_median": 5.474,
+      "kab_min": 5.332,
+      "kab_max": 5.823
+    },
+    "Cianjur": {
+      "kab_mean": 5.5474,
+      "kab_std": 0.2203,
+      "kab_median": 5.472,
+      "kab_min": 5.333,
+      "kab_max": 5.991
+    },
+    "Cilacap": {
+      "kab_mean": 6.3854,
+      "kab_std": 0.1958,
+      "kab_median": 6.39,
+      "kab_min": 6.123,
+      "kab_max": 6.749
+    },
+    "Cirebon": {
+      "kab_mean": 5.8024,
+      "kab_std": 0.2185,
+      "kab_median": 5.827,
+      "kab_min": 5.471,
+      "kab_max": 6.045
+    },
+    "Demak": {
+      "kab_mean": 6.0463,
+      "kab_std": 0.1949,
+      "kab_median": 6.116,
+      "kab_min": 5.692,
+      "kab_max": 6.247
+    },
+    "Garut": {
+      "kab_mean": 5.8177,
+      "kab_std": 0.314,
+      "kab_median": 5.811,
+      "kab_min": 5.456,
+      "kab_max": 6.351
+    },
+    "Gresik": {
+      "kab_mean": 6.1734,
+      "kab_std": 0.1772,
+      "kab_median": 6.093,
+      "kab_min": 5.965,
+      "kab_max": 6.498
+    },
+    "Grobogan": {
+      "kab_mean": 5.8373,
+      "kab_std": 0.3277,
+      "kab_median": 5.924,
+      "kab_min": 5.233,
+      "kab_max": 6.175
+    },
+    "Gunung Kidul": {
+      "kab_mean": 4.4577,
+      "kab_std": 0.5185,
+      "kab_median": 4.538,
+      "kab_min": 3.761,
+      "kab_max": 5.359
+    },
+    "Indramayu": {
+      "kab_mean": 6.1351,
+      "kab_std": 0.2643,
+      "kab_median": 6.042,
+      "kab_min": 5.812,
+      "kab_max": 6.574
+    },
+    "Jember": {
+      "kab_mean": 5.1087,
+      "kab_std": 0.2096,
+      "kab_median": 5.126,
+      "kab_min": 4.854,
+      "kab_max": 5.504
+    },
+    "Jepara": {
+      "kab_mean": 5.0534,
+      "kab_std": 0.194,
+      "kab_median": 5.011,
+      "kab_min": 4.819,
+      "kab_max": 5.342
+    },
+    "Jombang": {
+      "kab_mean": 6.1264,
+      "kab_std": 0.0873,
+      "kab_median": 6.142,
+      "kab_min": 5.946,
+      "kab_max": 6.221
+    },
+    "Karanganyar": {
+      "kab_mean": 6.1051,
+      "kab_std": 0.0949,
+      "kab_median": 6.083,
+      "kab_min": 5.986,
+      "kab_max": 6.218
+    },
+    "Karawang": {
+      "kab_mean": 5.9423,
+      "kab_std": 0.196,
+      "kab_median": 5.987,
+      "kab_min": 5.683,
+      "kab_max": 6.236
+    },
+    "Kebumen": {
+      "kab_mean": 5.403,
+      "kab_std": 0.2627,
+      "kab_median": 5.352,
+      "kab_min": 5.041,
+      "kab_max": 5.742
+    },
+    "Kediri": {
+      "kab_mean": 5.7853,
+      "kab_std": 0.1292,
+      "kab_median": 5.747,
+      "kab_min": 5.645,
+      "kab_max": 5.94
+    },
+    "Kendal": {
+      "kab_mean": 5.5467,
+      "kab_std": 0.2868,
+      "kab_median": 5.425,
+      "kab_min": 5.208,
+      "kab_max": 5.998
+    },
+    "Klaten": {
+      "kab_mean": 5.5843,
+      "kab_std": 0.2094,
+      "kab_median": 5.623,
+      "kab_min": 5.313,
+      "kab_max": 5.793
+    },
+    "Kota Bandung": {
+      "kab_mean": 6.6377,
+      "kab_std": 0.5097,
+      "kab_median": 6.921,
+      "kab_min": 5.993,
+      "kab_max": 7.221
+    },
+    "Kota Banjar": {
+      "kab_mean": 5.681,
+      "kab_std": 0.3595,
+      "kab_median": 5.669,
+      "kab_min": 5.231,
+      "kab_max": 6.224
+    },
+    "Kota Batu": {
+      "kab_mean": 6.7213,
+      "kab_std": 0.3215,
+      "kab_median": 6.686,
+      "kab_min": 6.353,
+      "kab_max": 7.272
+    },
+    "Kota Bekasi": {
+      "kab_mean": 4.9416,
+      "kab_std": 0.7414,
+      "kab_median": 4.821,
+      "kab_min": 4.115,
+      "kab_max": 5.876
+    },
+    "Kota Blitar": {
+      "kab_mean": 6.754,
+      "kab_std": 0.3108,
+      "kab_median": 6.674,
+      "kab_min": 6.412,
+      "kab_max": 7.166
+    },
+    "Kota Bogor": {
+      "kab_mean": 4.9811,
+      "kab_std": 0.3063,
+      "kab_median": 4.885,
+      "kab_min": 4.57,
+      "kab_max": 5.402
+    },
+    "Kota Cilegon": {
+      "kab_mean": 5.2391,
+      "kab_std": 0.2309,
+      "kab_median": 5.293,
+      "kab_min": 4.806,
+      "kab_max": 5.562
+    },
+    "Kota Cimahi": {
+      "kab_mean": 5.7524,
+      "kab_std": 0.1863,
+      "kab_median": 5.732,
+      "kab_min": 5.551,
+      "kab_max": 6.138
+    },
+    "Kota Cirebon": {
+      "kab_mean": 5.3043,
+      "kab_std": 0.6101,
+      "kab_median": 5.372,
+      "kab_min": 4.567,
+      "kab_max": 6.394
+    },
+    "Kota Depok": {
+      "kab_mean": 5.4973,
+      "kab_std": 0.3645,
+      "kab_median": 5.472,
+      "kab_min": 4.957,
+      "kab_max": 6.106
+    },
+    "Kota Kediri": {
+      "kab_mean": 5.7594,
+      "kab_std": 0.5295,
+      "kab_median": 5.495,
+      "kab_min": 5.038,
+      "kab_max": 6.452
+    },
+    "Kota Madiun": {
+      "kab_mean": 5.9546,
+      "kab_std": 0.4771,
+      "kab_median": 6.058,
+      "kab_min": 5.219,
+      "kab_max": 6.555
+    },
+    "Kota Magelang": {
+      "kab_mean": 5.353,
+      "kab_std": 0.3469,
+      "kab_median": 5.198,
+      "kab_min": 5.023,
+      "kab_max": 5.916
+    },
+    "Kota Malang": {
+      "kab_mean": 6.49,
+      "kab_std": 0.2395,
+      "kab_median": 6.381,
+      "kab_min": 6.269,
+      "kab_max": 6.888
+    },
+    "Kota Mojokerto": {
+      "kab_mean": 5.7343,
+      "kab_std": 0.393,
+      "kab_median": 5.853,
+      "kab_min": 5.087,
+      "kab_max": 6.085
+    },
+    "Kota Pasuruan": {
+      "kab_mean": 5.6883,
+      "kab_std": 0.4912,
+      "kab_median": 5.502,
+      "kab_min": 5.232,
+      "kab_max": 6.513
+    },
+    "Kota Pekalongan": {
+      "kab_mean": 5.4953,
+      "kab_std": 0.5634,
+      "kab_median": 5.366,
+      "kab_min": 4.769,
+      "kab_max": 6.475
+    },
+    "Kota Probolinggo": {
+      "kab_mean": 5.5757,
+      "kab_std": 0.4896,
+      "kab_median": 5.729,
+      "kab_min": 4.931,
+      "kab_max": 6.121
+    },
+    "Kota Salatiga": {
+      "kab_mean": 5.9333,
+      "kab_std": 0.3782,
+      "kab_median": 6.008,
+      "kab_min": 5.545,
+      "kab_max": 6.644
+    },
+    "Kota Semarang": {
+      "kab_mean": 5.34,
+      "kab_std": 0.356,
+      "kab_median": 5.465,
+      "kab_min": 4.734,
+      "kab_max": 5.758
+    },
+    "Kota Serang": {
+      "kab_mean": 5.5363,
+      "kab_std": 0.2733,
+      "kab_median": 5.478,
+      "kab_min": 5.157,
+      "kab_max": 5.852
+    },
+    "Kota Sukabumi": {
+      "kab_mean": 6.0381,
+      "kab_std": 0.2354,
+      "kab_median": 6.091,
+      "kab_min": 5.626,
+      "kab_max": 6.317
+    },
+    "Kota Surabaya": {
+      "kab_mean": 5.5861,
+      "kab_std": 0.2031,
+      "kab_median": 5.565,
+      "kab_min": 5.358,
+      "kab_max": 5.97
+    },
+    "Kota Surakarta": {
+      "kab_mean": 5.9041,
+      "kab_std": 0.6123,
+      "kab_median": 5.817,
+      "kab_min": 4.964,
+      "kab_max": 6.835
+    },
+    "Kota Tangerang": {
+      "kab_mean": 5.7921,
+      "kab_std": 0.4808,
+      "kab_median": 5.77,
+      "kab_min": 5.107,
+      "kab_max": 6.32
+    },
+    "Kota Tasikmalaya": {
+      "kab_mean": 5.2677,
+      "kab_std": 0.3195,
+      "kab_median": 5.161,
+      "kab_min": 4.802,
+      "kab_max": 5.752
+    },
+    "Kota Tegal": {
+      "kab_mean": 5.3777,
+      "kab_std": 0.96,
+      "kab_median": 5.806,
+      "kab_min": 3.563,
+      "kab_max": 6.373
+    },
+    "Kota Yogyakarta": {
+      "kab_mean": 5.2457,
+      "kab_std": 0.16,
+      "kab_median": 5.217,
+      "kab_min": 5.096,
+      "kab_max": 5.566
+    },
+    "Kudus": {
+      "kab_mean": 5.8974,
+      "kab_std": 0.3658,
+      "kab_median": 5.868,
+      "kab_min": 5.544,
+      "kab_max": 6.579
+    },
+    "Kulon Progo": {
+      "kab_mean": 5.7229,
+      "kab_std": 0.3114,
+      "kab_median": 5.737,
+      "kab_min": 5.238,
+      "kab_max": 6.142
+    },
+    "Kuningan": {
+      "kab_mean": 5.7053,
+      "kab_std": 0.399,
+      "kab_median": 5.824,
+      "kab_min": 4.976,
+      "kab_max": 6.105
+    },
+    "Lamongan": {
+      "kab_mean": 5.9329,
+      "kab_std": 0.1662,
+      "kab_median": 5.978,
+      "kab_min": 5.717,
+      "kab_max": 6.193
+    },
+    "Lebak": {
+      "kab_mean": 4.8877,
+      "kab_std": 0.2649,
+      "kab_median": 4.948,
+      "kab_min": 4.45,
+      "kab_max": 5.226
+    },
+    "Lumajang": {
+      "kab_mean": 5.4116,
+      "kab_std": 0.1265,
+      "kab_median": 5.407,
+      "kab_min": 5.207,
+      "kab_max": 5.599
+    },
+    "Madiun": {
+      "kab_mean": 5.9339,
+      "kab_std": 0.2297,
+      "kab_median": 5.958,
+      "kab_min": 5.496,
+      "kab_max": 6.165
+    },
+    "Magelang": {
+      "kab_mean": 5.212,
+      "kab_std": 0.2381,
+      "kab_median": 5.202,
+      "kab_min": 4.832,
+      "kab_max": 5.568
+    },
+    "Magetan": {
+      "kab_mean": 6.3034,
+      "kab_std": 0.1672,
+      "kab_median": 6.316,
+      "kab_min": 6.066,
+      "kab_max": 6.601
+    },
+    "Majalengka": {
+      "kab_mean": 5.7361,
+      "kab_std": 0.2547,
+      "kab_median": 5.608,
+      "kab_min": 5.479,
+      "kab_max": 6.141
+    },
+    "Malang": {
+      "kab_mean": 5.9989,
+      "kab_std": 0.2242,
+      "kab_median": 5.949,
+      "kab_min": 5.718,
+      "kab_max": 6.361
+    },
+    "Mojokerto": {
+      "kab_mean": 5.8834,
+      "kab_std": 0.2046,
+      "kab_median": 5.795,
+      "kab_min": 5.666,
+      "kab_max": 6.178
+    },
+    "Nganjuk": {
+      "kab_mean": 5.8874,
+      "kab_std": 0.2742,
+      "kab_median": 5.926,
+      "kab_min": 5.353,
+      "kab_max": 6.145
+    },
+    "Ngawi": {
+      "kab_mean": 6.2163,
+      "kab_std": 0.2387,
+      "kab_median": 6.174,
+      "kab_min": 5.879,
+      "kab_max": 6.654
+    },
+    "Pacitan": {
+      "kab_mean": 4.7389,
+      "kab_std": 0.3008,
+      "kab_median": 4.664,
+      "kab_min": 4.351,
+      "kab_max": 5.188
+    },
+    "Pamekasan": {
+      "kab_mean": 5.1083,
+      "kab_std": 0.287,
+      "kab_median": 5.169,
+      "kab_min": 4.527,
+      "kab_max": 5.456
+    },
+    "Pandeglang": {
+      "kab_mean": 5.2739,
+      "kab_std": 0.3331,
+      "kab_median": 5.352,
+      "kab_min": 4.807,
+      "kab_max": 5.767
+    },
+    "Pangandaran": {
+      "kab_mean": 5.1876,
+      "kab_std": 0.4455,
+      "kab_median": 5.058,
+      "kab_min": 4.605,
+      "kab_max": 5.847
+    },
+    "Pasuruan": {
+      "kab_mean": 5.3031,
+      "kab_std": 0.2385,
+      "kab_median": 5.267,
+      "kab_min": 5.01,
+      "kab_max": 5.754
+    },
+    "Pati": {
+      "kab_mean": 5.6899,
+      "kab_std": 0.2515,
+      "kab_median": 5.567,
+      "kab_min": 5.414,
+      "kab_max": 6.023
+    },
+    "Pekalongan": {
+      "kab_mean": 4.7496,
+      "kab_std": 0.3941,
+      "kab_median": 4.648,
+      "kab_min": 4.442,
+      "kab_max": 5.502
+    },
+    "Pemalang": {
+      "kab_mean": 5.3884,
+      "kab_std": 0.2421,
+      "kab_median": 5.326,
+      "kab_min": 5.106,
+      "kab_max": 5.719
+    },
+    "Ponorogo": {
+      "kab_mean": 5.8244,
+      "kab_std": 0.1528,
+      "kab_median": 5.887,
+      "kab_min": 5.548,
+      "kab_max": 5.982
+    },
+    "Probolinggo": {
+      "kab_mean": 5.2096,
+      "kab_std": 0.3791,
+      "kab_median": 5.216,
+      "kab_min": 4.596,
+      "kab_max": 5.724
+    },
+    "Purbalingga": {
+      "kab_mean": 5.5671,
+      "kab_std": 0.3623,
+      "kab_median": 5.437,
+      "kab_min": 5.306,
+      "kab_max": 6.341
+    },
+    "Purwakarta": {
+      "kab_mean": 5.4881,
+      "kab_std": 0.2899,
+      "kab_median": 5.437,
+      "kab_min": 5.098,
+      "kab_max": 5.89
+    },
+    "Purworejo": {
+      "kab_mean": 5.4241,
+      "kab_std": 0.1109,
+      "kab_median": 5.387,
+      "kab_min": 5.311,
+      "kab_max": 5.624
+    },
+    "Rembang": {
+      "kab_mean": 5.024,
+      "kab_std": 0.619,
+      "kab_median": 5.23,
+      "kab_min": 4.031,
+      "kab_max": 5.675
+    },
+    "Sampang": {
+      "kab_mean": 4.8716,
+      "kab_std": 0.2471,
+      "kab_median": 4.945,
+      "kab_min": 4.413,
+      "kab_max": 5.127
+    },
+    "Semarang": {
+      "kab_mean": 5.5279,
+      "kab_std": 0.3211,
+      "kab_median": 5.456,
+      "kab_min": 5.072,
+      "kab_max": 5.964
+    },
+    "Serang": {
+      "kab_mean": 5.1539,
+      "kab_std": 0.3805,
+      "kab_median": 5.268,
+      "kab_min": 4.757,
+      "kab_max": 5.778
+    },
+    "Sidoarjo": {
+      "kab_mean": 6.4053,
+      "kab_std": 0.2754,
+      "kab_median": 6.312,
+      "kab_min": 6.093,
+      "kab_max": 6.848
+    },
+    "Situbondo": {
+      "kab_mean": 5.3791,
+      "kab_std": 0.2298,
+      "kab_median": 5.42,
+      "kab_min": 4.974,
+      "kab_max": 5.634
+    },
+    "Sleman": {
+      "kab_mean": 4.9061,
+      "kab_std": 0.1463,
+      "kab_median": 4.943,
+      "kab_min": 4.684,
+      "kab_max": 5.039
+    },
+    "Sragen": {
+      "kab_mean": 6.3063,
+      "kab_std": 0.4741,
+      "kab_median": 6.556,
+      "kab_min": 5.536,
+      "kab_max": 6.866
+    },
+    "Subang": {
+      "kab_mean": 5.8493,
+      "kab_std": 0.1108,
+      "kab_median": 5.852,
+      "kab_min": 5.705,
+      "kab_max": 6.033
+    },
+    "Sukabumi": {
+      "kab_mean": 5.3924,
+      "kab_std": 0.253,
+      "kab_median": 5.459,
+      "kab_min": 5.02,
+      "kab_max": 5.72
+    },
+    "Sukoharjo": {
+      "kab_mean": 6.8353,
+      "kab_std": 0.3826,
+      "kab_median": 6.871,
+      "kab_min": 6.441,
+      "kab_max": 7.532
+    },
+    "Sumedang": {
+      "kab_mean": 5.358,
+      "kab_std": 0.2275,
+      "kab_median": 5.364,
+      "kab_min": 4.912,
+      "kab_max": 5.609
+    },
+    "Sumenep": {
+      "kab_mean": 5.3,
+      "kab_std": 0.2683,
+      "kab_median": 5.356,
+      "kab_min": 4.845,
+      "kab_max": 5.591
+    },
+    "Tangerang": {
+      "kab_mean": 5.0207,
+      "kab_std": 0.2105,
+      "kab_median": 5.063,
+      "kab_min": 4.716,
+      "kab_max": 5.245
+    },
+    "Tasikmalaya": {
+      "kab_mean": 5.5363,
+      "kab_std": 0.3008,
+      "kab_median": 5.377,
+      "kab_min": 5.293,
+      "kab_max": 6.092
+    },
+    "Tegal": {
+      "kab_mean": 5.312,
+      "kab_std": 0.2495,
+      "kab_median": 5.345,
+      "kab_min": 4.832,
+      "kab_max": 5.669
+    },
+    "Temanggung": {
+      "kab_mean": 6.1024,
+      "kab_std": 0.3296,
+      "kab_median": 6.179,
+      "kab_min": 5.639,
+      "kab_max": 6.476
+    },
+    "Trenggalek": {
+      "kab_mean": 5.3859,
+      "kab_std": 0.2073,
+      "kab_median": 5.304,
+      "kab_min": 5.178,
+      "kab_max": 5.749
+    },
+    "Tuban": {
+      "kab_mean": 5.8089,
+      "kab_std": 0.2481,
+      "kab_median": 5.85,
+      "kab_min": 5.491,
+      "kab_max": 6.211
+    },
+    "Tulungagung": {
+      "kab_mean": 5.8696,
+      "kab_std": 0.3492,
+      "kab_median": 5.853,
+      "kab_min": 5.242,
+      "kab_max": 6.287
+    },
+    "Wonogiri": {
+      "kab_mean": 5.5679,
+      "kab_std": 0.2037,
+      "kab_median": 5.57,
+      "kab_min": 5.276,
+      "kab_max": 5.903
+    },
+    "Wonosobo": {
+      "kab_mean": 5.0314,
+      "kab_std": 0.1348,
+      "kab_median": 5.02,
+      "kab_min": 4.822,
+      "kab_max": 5.269
+    }
+  },
+  "prov_stats_map": {
+    "Banten": {
+      "kab_mean": 5.272,
+      "kab_std": 0.3106,
+      "kab_median": 5.3103,
+      "kab_min": 4.8286,
+      "kab_max": 5.6786
+    },
+    "DI Yogyakarta": {
+      "kab_mean": 5.1885,
+      "kab_std": 0.2695,
+      "kab_median": 5.219,
+      "kab_min": 4.8314,
+      "kab_max": 5.602
+    },
+    "Jawa Barat": {
+      "kab_mean": 5.6047,
+      "kab_std": 0.3117,
+      "kab_median": 5.5956,
+      "kab_min": 5.1936,
+      "kab_max": 6.0662
+    },
+    "Jawa Tengah": {
+      "kab_mean": 5.5791,
+      "kab_std": 0.323,
+      "kab_median": 5.5835,
+      "kab_min": 5.1332,
+      "kab_max": 6.0461
+    },
+    "Jawa Timur": {
+      "kab_mean": 5.7223,
+      "kab_std": 0.2704,
+      "kab_median": 5.712,
+      "kab_min": 5.3433,
+      "kab_max": 6.1053
+    }
+  },
+  "prov_climate_stats": {
+    "Banten": {
+      "temperature_mean_c": {
+        "mean": 26.322131,
+        "std": 0.595375
+      },
+      "temperature_max_c": {
+        "mean": 30.312284,
+        "std": 0.947171
+      },
+      "temperature_min_c": {
+        "mean": 23.226278,
+        "std": 0.443448
+      },
+      "rainfall_mm_year": {
+        "mean": 2391.693878,
+        "std": 474.642711
+      },
+      "precip_hours_day": {
+        "mean": 8.650751,
+        "std": 1.277881
+      },
+      "humidity_pct": {
+        "mean": 82.619386,
+        "std": 2.337914
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.699693,
+        "std": 0.477952
+      },
+      "shortwave_radiation": {
+        "mean": 18.202142,
+        "std": 0.956247
+      },
+      "et0_mm_day": {
+        "mean": 3.792708,
+        "std": 0.259144
+      },
+      "vapour_pressure_def": {
+        "mean": 1.566155,
+        "std": 0.263209
+      },
+      "wind_speed": {
+        "mean": 6.393678,
+        "std": 0.922919
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.323737,
+        "std": 0.061119
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.306763,
+        "std": 0.061487
+      },
+      "soil_temperature": {
+        "mean": 27.617937,
+        "std": 0.78624
+      }
+    },
+    "DI Yogyakarta": {
+      "temperature_mean_c": {
+        "mean": 25.492783,
+        "std": 0.484703
+      },
+      "temperature_max_c": {
+        "mean": 29.731677,
+        "std": 0.683378
+      },
+      "temperature_min_c": {
+        "mean": 22.371163,
+        "std": 0.526808
+      },
+      "rainfall_mm_year": {
+        "mean": 2602.368571,
+        "std": 669.520751
+      },
+      "precip_hours_day": {
+        "mean": 8.755706,
+        "std": 1.512393
+      },
+      "humidity_pct": {
+        "mean": 83.246128,
+        "std": 2.260045
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.332964,
+        "std": 0.504713
+      },
+      "shortwave_radiation": {
+        "mean": 18.244179,
+        "std": 0.944192
+      },
+      "et0_mm_day": {
+        "mean": 3.773992,
+        "std": 0.248595
+      },
+      "vapour_pressure_def": {
+        "mean": 1.500172,
+        "std": 0.255891
+      },
+      "wind_speed": {
+        "mean": 7.368667,
+        "std": 1.529477
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.271482,
+        "std": 0.087776
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.258456,
+        "std": 0.090274
+      },
+      "soil_temperature": {
+        "mean": 26.977328,
+        "std": 0.810236
+      }
+    },
+    "Jawa Barat": {
+      "temperature_mean_c": {
+        "mean": 25.007387,
+        "std": 1.952485
+      },
+      "temperature_max_c": {
+        "mean": 29.330699,
+        "std": 2.112085
+      },
+      "temperature_min_c": {
+        "mean": 21.792823,
+        "std": 1.949057
+      },
+      "rainfall_mm_year": {
+        "mean": 2661.637037,
+        "std": 749.425123
+      },
+      "precip_hours_day": {
+        "mean": 8.286025,
+        "std": 2.294304
+      },
+      "humidity_pct": {
+        "mean": 81.535422,
+        "std": 4.919105
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.425746,
+        "std": 0.586461
+      },
+      "shortwave_radiation": {
+        "mean": 18.325855,
+        "std": 1.185881
+      },
+      "et0_mm_day": {
+        "mean": 3.83775,
+        "std": 0.455864
+      },
+      "vapour_pressure_def": {
+        "mean": 1.605582,
+        "std": 0.466834
+      },
+      "wind_speed": {
+        "mean": 6.401121,
+        "std": 1.73094
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.338639,
+        "std": 0.080724
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.326022,
+        "std": 0.083816
+      },
+      "soil_temperature": {
+        "mean": 26.323707,
+        "std": 2.213171
+      }
+    },
+    "Jawa Tengah": {
+      "temperature_mean_c": {
+        "mean": 25.923265,
+        "std": 1.514375
+      },
+      "temperature_max_c": {
+        "mean": 30.127152,
+        "std": 1.80472
+      },
+      "temperature_min_c": {
+        "mean": 22.755168,
+        "std": 1.454474
+      },
+      "rainfall_mm_year": {
+        "mean": 2613.939184,
+        "std": 869.623739
+      },
+      "precip_hours_day": {
+        "mean": 7.976956,
+        "std": 2.055896
+      },
+      "humidity_pct": {
+        "mean": 80.479885,
+        "std": 4.294813
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.583367,
+        "std": 0.537496
+      },
+      "shortwave_radiation": {
+        "mean": 18.985984,
+        "std": 1.227909
+      },
+      "et0_mm_day": {
+        "mean": 4.031209,
+        "std": 0.433091
+      },
+      "vapour_pressure_def": {
+        "mean": 1.706131,
+        "std": 0.46426
+      },
+      "wind_speed": {
+        "mean": 7.429212,
+        "std": 1.764994
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.342924,
+        "std": 0.072347
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.333558,
+        "std": 0.073703
+      },
+      "soil_temperature": {
+        "mean": 27.372646,
+        "std": 1.827329
+      }
+    },
+    "Jawa Timur": {
+      "temperature_mean_c": {
+        "mean": 26.583365,
+        "std": 1.330455
+      },
+      "temperature_max_c": {
+        "mean": 30.847752,
+        "std": 1.658195
+      },
+      "temperature_min_c": {
+        "mean": 23.452129,
+        "std": 1.245553
+      },
+      "rainfall_mm_year": {
+        "mean": 2147.552256,
+        "std": 706.067554
+      },
+      "precip_hours_day": {
+        "mean": 6.793499,
+        "std": 1.754734
+      },
+      "humidity_pct": {
+        "mean": 78.755262,
+        "std": 4.340372
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.831396,
+        "std": 0.489734
+      },
+      "shortwave_radiation": {
+        "mean": 19.5127,
+        "std": 1.177273
+      },
+      "et0_mm_day": {
+        "mean": 4.313023,
+        "std": 0.479764
+      },
+      "vapour_pressure_def": {
+        "mean": 1.877996,
+        "std": 0.468921
+      },
+      "wind_speed": {
+        "mean": 8.791282,
+        "std": 2.359383
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.293839,
+        "std": 0.064751
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.283517,
+        "std": 0.065529
+      },
+      "soil_temperature": {
+        "mean": 28.393198,
+        "std": 1.581358
+      }
+    }
+  },
+  "kab_climate_stats": {
+    "Bandung": {
+      "temperature_mean_c": {
+        "mean": 22.859299,
+        "std": 0.414956
+      },
+      "temperature_max_c": {
+        "mean": 27.450115,
+        "std": 0.83473
+      },
+      "temperature_min_c": {
+        "mean": 18.838135,
+        "std": 0.283985
+      },
+      "rainfall_mm_year": {
+        "mean": 2552.357143,
+        "std": 594.806979
+      },
+      "precip_hours_day": {
+        "mean": 7.35115,
+        "std": 1.481504
+      },
+      "humidity_pct": {
+        "mean": 80.891718,
+        "std": 3.122526
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.508371,
+        "std": 0.479162
+      },
+      "shortwave_radiation": {
+        "mean": 19.076871,
+        "std": 1.028201
+      },
+      "et0_mm_day": {
+        "mean": 3.80642,
+        "std": 0.282187
+      },
+      "vapour_pressure_def": {
+        "mean": 1.434759,
+        "std": 0.288641
+      },
+      "wind_speed": {
+        "mean": 4.550128,
+        "std": 0.269552
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.316487,
+        "std": 0.031914
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.307747,
+        "std": 0.031507
+      },
+      "soil_temperature": {
+        "mean": 24.012012,
+        "std": 0.687829
+      }
+    },
+    "Bandung Barat": {
+      "temperature_mean_c": {
+        "mean": 22.293206,
+        "std": 0.289118
+      },
+      "temperature_max_c": {
+        "mean": 26.439894,
+        "std": 0.648971
+      },
+      "temperature_min_c": {
+        "mean": 19.297516,
+        "std": 0.206164
+      },
+      "rainfall_mm_year": {
+        "mean": 2884.728571,
+        "std": 639.609953
+      },
+      "precip_hours_day": {
+        "mean": 8.259861,
+        "std": 1.436147
+      },
+      "humidity_pct": {
+        "mean": 82.431212,
+        "std": 2.903382
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.47634,
+        "std": 0.448648
+      },
+      "shortwave_radiation": {
+        "mean": 18.719097,
+        "std": 0.905702
+      },
+      "et0_mm_day": {
+        "mean": 3.638461,
+        "std": 0.248564
+      },
+      "vapour_pressure_def": {
+        "mean": 1.268908,
+        "std": 0.216035
+      },
+      "wind_speed": {
+        "mean": 6.106442,
+        "std": 0.393884
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.359795,
+        "std": 0.035523
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.357693,
+        "std": 0.037928
+      },
+      "soil_temperature": {
+        "mean": 23.288339,
+        "std": 0.531585
+      }
+    },
+    "Bangkalan": {
+      "temperature_mean_c": {
+        "mean": 27.564892,
+        "std": 0.266804
+      },
+      "temperature_max_c": {
+        "mean": 30.780431,
+        "std": 0.511007
+      },
+      "temperature_min_c": {
+        "mean": 24.982072,
+        "std": 0.203161
+      },
+      "rainfall_mm_year": {
+        "mean": 2180.457143,
+        "std": 503.738824
+      },
+      "precip_hours_day": {
+        "mean": 7.537285,
+        "std": 1.24712
+      },
+      "humidity_pct": {
+        "mean": 78.028266,
+        "std": 2.288441
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.989013,
+        "std": 0.392546
+      },
+      "shortwave_radiation": {
+        "mean": 20.048567,
+        "std": 0.815453
+      },
+      "et0_mm_day": {
+        "mean": 4.381787,
+        "std": 0.253217
+      },
+      "vapour_pressure_def": {
+        "mean": 1.754685,
+        "std": 0.213949
+      },
+      "wind_speed": {
+        "mean": 8.970893,
+        "std": 0.337363
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.290731,
+        "std": 0.031291
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.27923,
+        "std": 0.0317
+      },
+      "soil_temperature": {
+        "mean": 29.885601,
+        "std": 0.749908
+      }
+    },
+    "Banjarnegara": {
+      "temperature_mean_c": {
+        "mean": 24.229836,
+        "std": 0.193449
+      },
+      "temperature_max_c": {
+        "mean": 27.852018,
+        "std": 0.395774
+      },
+      "temperature_min_c": {
+        "mean": 21.303254,
+        "std": 0.397671
+      },
+      "rainfall_mm_year": {
+        "mean": 3670.414286,
+        "std": 783.51039
+      },
+      "precip_hours_day": {
+        "mean": 10.678284,
+        "std": 1.523946
+      },
+      "humidity_pct": {
+        "mean": 85.196558,
+        "std": 1.538474
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.824596,
+        "std": 0.461359
+      },
+      "shortwave_radiation": {
+        "mean": 16.895964,
+        "std": 0.812017
+      },
+      "et0_mm_day": {
+        "mean": 3.352022,
+        "std": 0.182368
+      },
+      "vapour_pressure_def": {
+        "mean": 1.111913,
+        "std": 0.159437
+      },
+      "wind_speed": {
+        "mean": 4.491832,
+        "std": 0.192349
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.445379,
+        "std": 0.033395
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.43922,
+        "std": 0.035769
+      },
+      "soil_temperature": {
+        "mean": 25.32813,
+        "std": 0.325868
+      }
+    },
+    "Bantul": {
+      "temperature_mean_c": {
+        "mean": 25.737053,
+        "std": 0.254468
+      },
+      "temperature_max_c": {
+        "mean": 29.974965,
+        "std": 0.525326
+      },
+      "temperature_min_c": {
+        "mean": 22.371176,
+        "std": 0.301234
+      },
+      "rainfall_mm_year": {
+        "mean": 2318.014286,
+        "std": 578.12128
+      },
+      "precip_hours_day": {
+        "mean": 8.247455,
+        "std": 1.450081
+      },
+      "humidity_pct": {
+        "mean": 83.186372,
+        "std": 2.01044
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.569927,
+        "std": 0.461688
+      },
+      "shortwave_radiation": {
+        "mean": 18.531232,
+        "std": 0.98247
+      },
+      "et0_mm_day": {
+        "mean": 3.876889,
+        "std": 0.260582
+      },
+      "vapour_pressure_def": {
+        "mean": 1.53873,
+        "std": 0.209084
+      },
+      "wind_speed": {
+        "mean": 7.500102,
+        "std": 0.55189
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.195701,
+        "std": 0.034014
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.18094,
+        "std": 0.040601
+      },
+      "soil_temperature": {
+        "mean": 27.61623,
+        "std": 0.600339
+      }
+    },
+    "Banyumas": {
+      "temperature_mean_c": {
+        "mean": 25.236922,
+        "std": 0.182831
+      },
+      "temperature_max_c": {
+        "mean": 28.582225,
+        "std": 0.330318
+      },
+      "temperature_min_c": {
+        "mean": 22.599416,
+        "std": 0.329857
+      },
+      "rainfall_mm_year": {
+        "mean": 4149.185714,
+        "std": 1051.897809
+      },
+      "precip_hours_day": {
+        "mean": 11.454889,
+        "std": 1.874767
+      },
+      "humidity_pct": {
+        "mean": 84.572977,
+        "std": 1.569891
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.944109,
+        "std": 0.541593
+      },
+      "shortwave_radiation": {
+        "mean": 16.877776,
+        "std": 0.852709
+      },
+      "et0_mm_day": {
+        "mean": 3.366905,
+        "std": 0.185533
+      },
+      "vapour_pressure_def": {
+        "mean": 1.106669,
+        "std": 0.129225
+      },
+      "wind_speed": {
+        "mean": 4.890031,
+        "std": 0.25801
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.375718,
+        "std": 0.027771
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.37135,
+        "std": 0.03048
+      },
+      "soil_temperature": {
+        "mean": 25.934022,
+        "std": 0.17089
+      }
+    },
+    "Banyuwangi": {
+      "temperature_mean_c": {
+        "mean": 25.908625,
+        "std": 0.236409
+      },
+      "temperature_max_c": {
+        "mean": 29.337067,
+        "std": 0.3909
+      },
+      "temperature_min_c": {
+        "mean": 23.342716,
+        "std": 0.24033
+      },
+      "rainfall_mm_year": {
+        "mean": 1562.271429,
+        "std": 213.473033
+      },
+      "precip_hours_day": {
+        "mean": 9.204949,
+        "std": 1.251138
+      },
+      "humidity_pct": {
+        "mean": 83.021945,
+        "std": 1.072511
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.305301,
+        "std": 0.224318
+      },
+      "shortwave_radiation": {
+        "mean": 19.359787,
+        "std": 0.640373
+      },
+      "et0_mm_day": {
+        "mean": 3.912281,
+        "std": 0.144456
+      },
+      "vapour_pressure_def": {
+        "mean": 1.361383,
+        "std": 0.0886
+      },
+      "wind_speed": {
+        "mean": 7.732387,
+        "std": 0.285549
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.206667,
+        "std": 0.023367
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.185243,
+        "std": 0.02862
+      },
+      "soil_temperature": {
+        "mean": 26.481137,
+        "std": 0.238648
+      }
+    },
+    "Batang": {
+      "temperature_mean_c": {
+        "mean": 27.336533,
+        "std": 0.308544
+      },
+      "temperature_max_c": {
+        "mean": 31.0454,
+        "std": 0.53711
+      },
+      "temperature_min_c": {
+        "mean": 23.943232,
+        "std": 0.21817
+      },
+      "rainfall_mm_year": {
+        "mean": 1953.214286,
+        "std": 530.297531
+      },
+      "precip_hours_day": {
+        "mean": 6.522412,
+        "std": 1.443952
+      },
+      "humidity_pct": {
+        "mean": 76.727837,
+        "std": 2.336439
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.910363,
+        "std": 0.425718
+      },
+      "shortwave_radiation": {
+        "mean": 19.836264,
+        "std": 0.820812
+      },
+      "et0_mm_day": {
+        "mean": 4.205594,
+        "std": 0.212974
+      },
+      "vapour_pressure_def": {
+        "mean": 1.78679,
+        "std": 0.186781
+      },
+      "wind_speed": {
+        "mean": 5.63238,
+        "std": 0.225099
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.364052,
+        "std": 0.021504
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.34357,
+        "std": 0.024651
+      },
+      "soil_temperature": {
+        "mean": 29.573191,
+        "std": 0.502078
+      }
+    },
+    "Bekasi": {
+      "temperature_mean_c": {
+        "mean": 27.019204,
+        "std": 0.426073
+      },
+      "temperature_max_c": {
+        "mean": 31.622217,
+        "std": 0.727962
+      },
+      "temperature_min_c": {
+        "mean": 23.61847,
+        "std": 0.26885
+      },
+      "rainfall_mm_year": {
+        "mean": 2473.157143,
+        "std": 455.566537
+      },
+      "precip_hours_day": {
+        "mean": 7.827332,
+        "std": 1.279652
+      },
+      "humidity_pct": {
+        "mean": 80.445997,
+        "std": 2.707932
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.674957,
+        "std": 0.514399
+      },
+      "shortwave_radiation": {
+        "mean": 18.421718,
+        "std": 0.936999
+      },
+      "et0_mm_day": {
+        "mean": 3.989442,
+        "std": 0.269935
+      },
+      "vapour_pressure_def": {
+        "mean": 1.94145,
+        "std": 0.276257
+      },
+      "wind_speed": {
+        "mean": 6.71019,
+        "std": 0.261465
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.317225,
+        "std": 0.031777
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.301007,
+        "std": 0.034852
+      },
+      "soil_temperature": {
+        "mean": 28.520512,
+        "std": 0.710222
+      }
+    },
+    "Blitar": {
+      "temperature_mean_c": {
+        "mean": 25.209184,
+        "std": 0.247981
+      },
+      "temperature_max_c": {
+        "mean": 29.453231,
+        "std": 0.52289
+      },
+      "temperature_min_c": {
+        "mean": 22.050601,
+        "std": 0.256421
+      },
+      "rainfall_mm_year": {
+        "mean": 2316.485714,
+        "std": 633.928967
+      },
+      "precip_hours_day": {
+        "mean": 7.733356,
+        "std": 1.224737
+      },
+      "humidity_pct": {
+        "mean": 83.481613,
+        "std": 1.922473
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.487187,
+        "std": 0.451734
+      },
+      "shortwave_radiation": {
+        "mean": 18.46516,
+        "std": 0.919822
+      },
+      "et0_mm_day": {
+        "mean": 3.836149,
+        "std": 0.265098
+      },
+      "vapour_pressure_def": {
+        "mean": 1.469974,
+        "std": 0.211161
+      },
+      "wind_speed": {
+        "mean": 9.187666,
+        "std": 0.617672
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.198094,
+        "std": 0.033261
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.185601,
+        "std": 0.035382
+      },
+      "soil_temperature": {
+        "mean": 26.870838,
+        "std": 0.612562
+      }
+    },
+    "Blora": {
+      "temperature_mean_c": {
+        "mean": 26.548094,
+        "std": 0.39141
+      },
+      "temperature_max_c": {
+        "mean": 31.623063,
+        "std": 0.636032
+      },
+      "temperature_min_c": {
+        "mean": 22.983911,
+        "std": 0.245093
+      },
+      "rainfall_mm_year": {
+        "mean": 2301.857143,
+        "std": 436.221973
+      },
+      "precip_hours_day": {
+        "mean": 6.826252,
+        "std": 1.188618
+      },
+      "humidity_pct": {
+        "mean": 78.159681,
+        "std": 3.66983
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.573002,
+        "std": 0.430155
+      },
+      "shortwave_radiation": {
+        "mean": 19.133762,
+        "std": 0.897286
+      },
+      "et0_mm_day": {
+        "mean": 4.22947,
+        "std": 0.292601
+      },
+      "vapour_pressure_def": {
+        "mean": 2.174078,
+        "std": 0.322023
+      },
+      "wind_speed": {
+        "mean": 7.704358,
+        "std": 0.388253
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.396501,
+        "std": 0.027434
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.385774,
+        "std": 0.032351
+      },
+      "soil_temperature": {
+        "mean": 28.228638,
+        "std": 0.811522
+      }
+    },
+    "Bogor": {
+      "temperature_mean_c": {
+        "mean": 25.857409,
+        "std": 0.440945
+      },
+      "temperature_max_c": {
+        "mean": 30.27732,
+        "std": 0.908973
+      },
+      "temperature_min_c": {
+        "mean": 22.500143,
+        "std": 0.204749
+      },
+      "rainfall_mm_year": {
+        "mean": 2479.871429,
+        "std": 574.840145
+      },
+      "precip_hours_day": {
+        "mean": 7.553738,
+        "std": 1.264115
+      },
+      "humidity_pct": {
+        "mean": 79.990583,
+        "std": 2.74322
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.293583,
+        "std": 0.536311
+      },
+      "shortwave_radiation": {
+        "mean": 18.005418,
+        "std": 0.974913
+      },
+      "et0_mm_day": {
+        "mean": 3.822752,
+        "std": 0.26955
+      },
+      "vapour_pressure_def": {
+        "mean": 1.735374,
+        "std": 0.337141
+      },
+      "wind_speed": {
+        "mean": 5.636194,
+        "std": 0.332751
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.420716,
+        "std": 0.027847
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.407792,
+        "std": 0.029858
+      },
+      "soil_temperature": {
+        "mean": 27.187174,
+        "std": 0.775195
+      }
+    },
+    "Bojonegoro": {
+      "temperature_mean_c": {
+        "mean": 27.309327,
+        "std": 0.378148
+      },
+      "temperature_max_c": {
+        "mean": 32.448201,
+        "std": 0.611841
+      },
+      "temperature_min_c": {
+        "mean": 23.677972,
+        "std": 0.207519
+      },
+      "rainfall_mm_year": {
+        "mean": 2186.514286,
+        "std": 525.367917
+      },
+      "precip_hours_day": {
+        "mean": 6.469819,
+        "std": 1.355008
+      },
+      "humidity_pct": {
+        "mean": 76.264196,
+        "std": 3.478467
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.609845,
+        "std": 0.440626
+      },
+      "shortwave_radiation": {
+        "mean": 19.281855,
+        "std": 0.870788
+      },
+      "et0_mm_day": {
+        "mean": 4.404556,
+        "std": 0.305758
+      },
+      "vapour_pressure_def": {
+        "mean": 2.34217,
+        "std": 0.315116
+      },
+      "wind_speed": {
+        "mean": 7.413445,
+        "std": 0.5015
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.284412,
+        "std": 0.028667
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.273564,
+        "std": 0.026513
+      },
+      "soil_temperature": {
+        "mean": 29.081695,
+        "std": 0.750366
+      }
+    },
+    "Bondowoso": {
+      "temperature_mean_c": {
+        "mean": 25.445616,
+        "std": 0.345703
+      },
+      "temperature_max_c": {
+        "mean": 30.233239,
+        "std": 0.65374
+      },
+      "temperature_min_c": {
+        "mean": 22.000098,
+        "std": 0.268874
+      },
+      "rainfall_mm_year": {
+        "mean": 1679.8,
+        "std": 262.483346
+      },
+      "precip_hours_day": {
+        "mean": 5.691957,
+        "std": 1.013076
+      },
+      "humidity_pct": {
+        "mean": 77.417218,
+        "std": 2.450976
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.02844,
+        "std": 0.303558
+      },
+      "shortwave_radiation": {
+        "mean": 19.524981,
+        "std": 0.754776
+      },
+      "et0_mm_day": {
+        "mean": 4.245507,
+        "std": 0.24394
+      },
+      "vapour_pressure_def": {
+        "mean": 1.940641,
+        "std": 0.253555
+      },
+      "wind_speed": {
+        "mean": 9.344761,
+        "std": 0.629507
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.353106,
+        "std": 0.019333
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.338028,
+        "std": 0.023976
+      },
+      "soil_temperature": {
+        "mean": 27.783193,
+        "std": 0.66903
+      }
+    },
+    "Boyolali": {
+      "temperature_mean_c": {
+        "mean": 24.524273,
+        "std": 0.36884
+      },
+      "temperature_max_c": {
+        "mean": 28.931239,
+        "std": 0.71126
+      },
+      "temperature_min_c": {
+        "mean": 21.588777,
+        "std": 0.255611
+      },
+      "rainfall_mm_year": {
+        "mean": 3596.971429,
+        "std": 667.517647
+      },
+      "precip_hours_day": {
+        "mean": 7.61155,
+        "std": 1.414921
+      },
+      "humidity_pct": {
+        "mean": 77.873529,
+        "std": 3.699694
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.526499,
+        "std": 0.464134
+      },
+      "shortwave_radiation": {
+        "mean": 19.511416,
+        "std": 0.903375
+      },
+      "et0_mm_day": {
+        "mean": 4.258608,
+        "std": 0.373083
+      },
+      "vapour_pressure_def": {
+        "mean": 1.698379,
+        "std": 0.2988
+      },
+      "wind_speed": {
+        "mean": 9.916863,
+        "std": 1.010342
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.286078,
+        "std": 0.034648
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.277992,
+        "std": 0.032179
+      },
+      "soil_temperature": {
+        "mean": 25.919593,
+        "std": 0.769301
+      }
+    },
+    "Brebes": {
+      "temperature_mean_c": {
+        "mean": 27.152872,
+        "std": 0.326553
+      },
+      "temperature_max_c": {
+        "mean": 30.992583,
+        "std": 0.743805
+      },
+      "temperature_min_c": {
+        "mean": 24.388466,
+        "std": 0.140567
+      },
+      "rainfall_mm_year": {
+        "mean": 1943.457143,
+        "std": 508.453495
+      },
+      "precip_hours_day": {
+        "mean": 6.581618,
+        "std": 1.45223
+      },
+      "humidity_pct": {
+        "mean": 78.895838,
+        "std": 3.095554
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.953746,
+        "std": 0.413598
+      },
+      "shortwave_radiation": {
+        "mean": 19.354852,
+        "std": 0.826013
+      },
+      "et0_mm_day": {
+        "mean": 4.255959,
+        "std": 0.295223
+      },
+      "vapour_pressure_def": {
+        "mean": 1.843948,
+        "std": 0.287082
+      },
+      "wind_speed": {
+        "mean": 8.171099,
+        "std": 0.401825
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.294455,
+        "std": 0.033091
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.284092,
+        "std": 0.033527
+      },
+      "soil_temperature": {
+        "mean": 28.560333,
+        "std": 0.617806
+      }
+    },
+    "Ciamis": {
+      "temperature_mean_c": {
+        "mean": 24.247167,
+        "std": 0.231046
+      },
+      "temperature_max_c": {
+        "mean": 28.248846,
+        "std": 0.471922
+      },
+      "temperature_min_c": {
+        "mean": 21.495459,
+        "std": 0.329047
+      },
+      "rainfall_mm_year": {
+        "mean": 3245.485714,
+        "std": 955.215941
+      },
+      "precip_hours_day": {
+        "mean": 11.429678,
+        "std": 2.029871
+      },
+      "humidity_pct": {
+        "mean": 87.834924,
+        "std": 1.678663
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.770285,
+        "std": 0.594447
+      },
+      "shortwave_radiation": {
+        "mean": 17.025443,
+        "std": 0.997488
+      },
+      "et0_mm_day": {
+        "mean": 3.366964,
+        "std": 0.222909
+      },
+      "vapour_pressure_def": {
+        "mean": 1.132376,
+        "std": 0.155007
+      },
+      "wind_speed": {
+        "mean": 5.288298,
+        "std": 0.308196
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.358109,
+        "std": 0.036028
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.348866,
+        "std": 0.039894
+      },
+      "soil_temperature": {
+        "mean": 25.498853,
+        "std": 0.221607
+      }
+    },
+    "Cianjur": {
+      "temperature_mean_c": {
+        "mean": 24.045341,
+        "std": 0.445894
+      },
+      "temperature_max_c": {
+        "mean": 28.567062,
+        "std": 0.875811
+      },
+      "temperature_min_c": {
+        "mean": 20.456707,
+        "std": 0.261475
+      },
+      "rainfall_mm_year": {
+        "mean": 2643.7,
+        "std": 790.679613
+      },
+      "precip_hours_day": {
+        "mean": 7.524626,
+        "std": 1.39995
+      },
+      "humidity_pct": {
+        "mean": 80.317289,
+        "std": 3.013415
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.408621,
+        "std": 0.52803
+      },
+      "shortwave_radiation": {
+        "mean": 19.025861,
+        "std": 1.015213
+      },
+      "et0_mm_day": {
+        "mean": 3.872342,
+        "std": 0.277183
+      },
+      "vapour_pressure_def": {
+        "mean": 1.633023,
+        "std": 0.316525
+      },
+      "wind_speed": {
+        "mean": 5.809489,
+        "std": 0.257175
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.400874,
+        "std": 0.023454
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.386825,
+        "std": 0.024705
+      },
+      "soil_temperature": {
+        "mean": 25.62097,
+        "std": 0.764886
+      }
+    },
+    "Cilacap": {
+      "temperature_mean_c": {
+        "mean": 26.088651,
+        "std": 0.286998
+      },
+      "temperature_max_c": {
+        "mean": 28.258896,
+        "std": 0.412593
+      },
+      "temperature_min_c": {
+        "mean": 24.129488,
+        "std": 0.287364
+      },
+      "rainfall_mm_year": {
+        "mean": 2292.157143,
+        "std": 734.165546
+      },
+      "precip_hours_day": {
+        "mean": 10.481859,
+        "std": 2.627926
+      },
+      "humidity_pct": {
+        "mean": 85.324045,
+        "std": 1.356866
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.686365,
+        "std": 0.491451
+      },
+      "shortwave_radiation": {
+        "mean": 19.314888,
+        "std": 1.072987
+      },
+      "et0_mm_day": {
+        "mean": 3.852206,
+        "std": 0.232522
+      },
+      "vapour_pressure_def": {
+        "mean": 0.971067,
+        "std": 0.108028
+      },
+      "wind_speed": {
+        "mean": 11.486,
+        "std": 0.767251
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.199536,
+        "std": 0.044288
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.188957,
+        "std": 0.046823
+      },
+      "soil_temperature": {
+        "mean": 27.933195,
+        "std": 0.57538
+      }
+    },
+    "Cirebon": {
+      "temperature_mean_c": {
+        "mean": 27.715433,
+        "std": 0.35793
+      },
+      "temperature_max_c": {
+        "mean": 31.83339,
+        "std": 0.701848
+      },
+      "temperature_min_c": {
+        "mean": 24.466425,
+        "std": 0.244244
+      },
+      "rainfall_mm_year": {
+        "mean": 2091.8,
+        "std": 475.916971
+      },
+      "precip_hours_day": {
+        "mean": 5.804703,
+        "std": 1.317739
+      },
+      "humidity_pct": {
+        "mean": 74.356353,
+        "std": 3.224626
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.116474,
+        "std": 0.384787
+      },
+      "shortwave_radiation": {
+        "mean": 19.608868,
+        "std": 0.848924
+      },
+      "et0_mm_day": {
+        "mean": 4.695895,
+        "std": 0.34005
+      },
+      "vapour_pressure_def": {
+        "mean": 2.116433,
+        "std": 0.267599
+      },
+      "wind_speed": {
+        "mean": 9.815804,
+        "std": 0.941419
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.16322,
+        "std": 0.025611
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.148079,
+        "std": 0.024802
+      },
+      "soil_temperature": {
+        "mean": 29.26024,
+        "std": 0.624188
+      }
+    },
+    "Demak": {
+      "temperature_mean_c": {
+        "mean": 27.130097,
+        "std": 0.408356
+      },
+      "temperature_max_c": {
+        "mean": 32.134533,
+        "std": 0.725935
+      },
+      "temperature_min_c": {
+        "mean": 23.773818,
+        "std": 0.235078
+      },
+      "rainfall_mm_year": {
+        "mean": 2501.2,
+        "std": 467.670197
+      },
+      "precip_hours_day": {
+        "mean": 7.460655,
+        "std": 1.276895
+      },
+      "humidity_pct": {
+        "mean": 78.555355,
+        "std": 3.704043
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.722146,
+        "std": 0.430886
+      },
+      "shortwave_radiation": {
+        "mean": 19.641076,
+        "std": 0.830894
+      },
+      "et0_mm_day": {
+        "mean": 4.348925,
+        "std": 0.296828
+      },
+      "vapour_pressure_def": {
+        "mean": 2.217621,
+        "std": 0.339392
+      },
+      "wind_speed": {
+        "mean": 7.808004,
+        "std": 0.326371
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.401375,
+        "std": 0.031022
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.402224,
+        "std": 0.027098
+      },
+      "soil_temperature": {
+        "mean": 28.134406,
+        "std": 0.677851
+      }
+    },
+    "Garut": {
+      "temperature_mean_c": {
+        "mean": 22.570985,
+        "std": 0.289472
+      },
+      "temperature_max_c": {
+        "mean": 26.82173,
+        "std": 0.516044
+      },
+      "temperature_min_c": {
+        "mean": 19.255009,
+        "std": 0.378971
+      },
+      "rainfall_mm_year": {
+        "mean": 2992.242857,
+        "std": 790.419589
+      },
+      "precip_hours_day": {
+        "mean": 8.538083,
+        "std": 1.632275
+      },
+      "humidity_pct": {
+        "mean": 86.286365,
+        "std": 1.949672
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.217545,
+        "std": 0.529868
+      },
+      "shortwave_radiation": {
+        "mean": 17.994025,
+        "std": 1.068645
+      },
+      "et0_mm_day": {
+        "mean": 3.532434,
+        "std": 0.239698
+      },
+      "vapour_pressure_def": {
+        "mean": 1.151776,
+        "std": 0.16666
+      },
+      "wind_speed": {
+        "mean": 4.898713,
+        "std": 0.412787
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.327979,
+        "std": 0.037655
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.324593,
+        "std": 0.036795
+      },
+      "soil_temperature": {
+        "mean": 24.185121,
+        "std": 0.478011
+      }
+    },
+    "Gresik": {
+      "temperature_mean_c": {
+        "mean": 27.613454,
+        "std": 0.403753
+      },
+      "temperature_max_c": {
+        "mean": 31.246987,
+        "std": 0.992435
+      },
+      "temperature_min_c": {
+        "mean": 24.636893,
+        "std": 0.213506
+      },
+      "rainfall_mm_year": {
+        "mean": 1734.828571,
+        "std": 417.128604
+      },
+      "precip_hours_day": {
+        "mean": 6.019846,
+        "std": 1.126707
+      },
+      "humidity_pct": {
+        "mean": 77.191768,
+        "std": 2.895763
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.014657,
+        "std": 0.355587
+      },
+      "shortwave_radiation": {
+        "mean": 19.844534,
+        "std": 0.807956
+      },
+      "et0_mm_day": {
+        "mean": 4.443849,
+        "std": 0.303546
+      },
+      "vapour_pressure_def": {
+        "mean": 1.984779,
+        "std": 0.35611
+      },
+      "wind_speed": {
+        "mean": 8.985634,
+        "std": 0.542103
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.284952,
+        "std": 0.034322
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.276555,
+        "std": 0.03955
+      },
+      "soil_temperature": {
+        "mean": 29.4019,
+        "std": 0.761793
+      }
+    },
+    "Grobogan": {
+      "temperature_mean_c": {
+        "mean": 26.567876,
+        "std": 0.392335
+      },
+      "temperature_max_c": {
+        "mean": 31.669566,
+        "std": 0.695416
+      },
+      "temperature_min_c": {
+        "mean": 23.147532,
+        "std": 0.177256
+      },
+      "rainfall_mm_year": {
+        "mean": 2621.714286,
+        "std": 509.671042
+      },
+      "precip_hours_day": {
+        "mean": 7.290048,
+        "std": 1.322469
+      },
+      "humidity_pct": {
+        "mean": 79.64885,
+        "std": 3.717248
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.670728,
+        "std": 0.424837
+      },
+      "shortwave_radiation": {
+        "mean": 19.527087,
+        "std": 0.889323
+      },
+      "et0_mm_day": {
+        "mean": 4.221524,
+        "std": 0.298789
+      },
+      "vapour_pressure_def": {
+        "mean": 2.122927,
+        "std": 0.331181
+      },
+      "wind_speed": {
+        "mean": 7.469548,
+        "std": 0.347796
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.312412,
+        "std": 0.03259
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.306669,
+        "std": 0.032446
+      },
+      "soil_temperature": {
+        "mean": 27.717301,
+        "std": 0.694186
+      }
+    },
+    "Gunung Kidul": {
+      "temperature_mean_c": {
+        "mean": 25.055213,
+        "std": 0.253814
+      },
+      "temperature_max_c": {
+        "mean": 29.364535,
+        "std": 0.482238
+      },
+      "temperature_min_c": {
+        "mean": 22.060754,
+        "std": 0.250338
+      },
+      "rainfall_mm_year": {
+        "mean": 2311.3,
+        "std": 618.561072
+      },
+      "precip_hours_day": {
+        "mean": 7.954561,
+        "std": 1.420248
+      },
+      "humidity_pct": {
+        "mean": 83.617356,
+        "std": 1.892349
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.397789,
+        "std": 0.54211
+      },
+      "shortwave_radiation": {
+        "mean": 18.415165,
+        "std": 1.067007
+      },
+      "et0_mm_day": {
+        "mean": 3.836189,
+        "std": 0.281735
+      },
+      "vapour_pressure_def": {
+        "mean": 1.510476,
+        "std": 0.193724
+      },
+      "wind_speed": {
+        "mean": 10.027179,
+        "std": 0.867797
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.401236,
+        "std": 0.033919
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.390522,
+        "std": 0.034429
+      },
+      "soil_temperature": {
+        "mean": 26.789659,
+        "std": 0.496474
+      }
+    },
+    "Indramayu": {
+      "temperature_mean_c": {
+        "mean": 27.842332,
+        "std": 0.302123
+      },
+      "temperature_max_c": {
+        "mean": 31.839851,
+        "std": 0.696512
+      },
+      "temperature_min_c": {
+        "mean": 24.512129,
+        "std": 0.201984
+      },
+      "rainfall_mm_year": {
+        "mean": 1555.028571,
+        "std": 423.155557
+      },
+      "precip_hours_day": {
+        "mean": 6.134732,
+        "std": 1.260303
+      },
+      "humidity_pct": {
+        "mean": 74.612452,
+        "std": 2.765726
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.088625,
+        "std": 0.41402
+      },
+      "shortwave_radiation": {
+        "mean": 19.726459,
+        "std": 0.890393
+      },
+      "et0_mm_day": {
+        "mean": 4.573615,
+        "std": 0.290506
+      },
+      "vapour_pressure_def": {
+        "mean": 2.148712,
+        "std": 0.245957
+      },
+      "wind_speed": {
+        "mean": 9.337712,
+        "std": 0.509007
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.233657,
+        "std": 0.026169
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.20295,
+        "std": 0.023819
+      },
+      "soil_temperature": {
+        "mean": 30.417612,
+        "std": 0.52259
+      }
+    },
+    "Jember": {
+      "temperature_mean_c": {
+        "mean": 26.058686,
+        "std": 0.221186
+      },
+      "temperature_max_c": {
+        "mean": 30.439457,
+        "std": 0.399807
+      },
+      "temperature_min_c": {
+        "mean": 23.016803,
+        "std": 0.238152
+      },
+      "rainfall_mm_year": {
+        "mean": 2306.628571,
+        "std": 421.67115
+      },
+      "precip_hours_day": {
+        "mean": 8.443416,
+        "std": 0.963272
+      },
+      "humidity_pct": {
+        "mean": 82.46116,
+        "std": 1.26115
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.526519,
+        "std": 0.352698
+      },
+      "shortwave_radiation": {
+        "mean": 18.338801,
+        "std": 0.75884
+      },
+      "et0_mm_day": {
+        "mean": 3.805641,
+        "std": 0.171027
+      },
+      "vapour_pressure_def": {
+        "mean": 1.602745,
+        "std": 0.155181
+      },
+      "wind_speed": {
+        "mean": 5.317756,
+        "std": 0.38145
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.304103,
+        "std": 0.023588
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.284149,
+        "std": 0.024379
+      },
+      "soil_temperature": {
+        "mean": 27.756999,
+        "std": 0.469962
+      }
+    },
+    "Jepara": {
+      "temperature_mean_c": {
+        "mean": 26.93294,
+        "std": 0.312368
+      },
+      "temperature_max_c": {
+        "mean": 30.095145,
+        "std": 0.504997
+      },
+      "temperature_min_c": {
+        "mean": 24.364809,
+        "std": 0.192669
+      },
+      "rainfall_mm_year": {
+        "mean": 3450.271429,
+        "std": 584.987247
+      },
+      "precip_hours_day": {
+        "mean": 8.903628,
+        "std": 1.324845
+      },
+      "humidity_pct": {
+        "mean": 78.599066,
+        "std": 2.900306
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.803225,
+        "std": 0.386526
+      },
+      "shortwave_radiation": {
+        "mean": 19.579108,
+        "std": 0.825389
+      },
+      "et0_mm_day": {
+        "mean": 4.271485,
+        "std": 0.306103
+      },
+      "vapour_pressure_def": {
+        "mean": 1.616182,
+        "std": 0.224519
+      },
+      "wind_speed": {
+        "mean": 9.585054,
+        "std": 0.709761
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.409568,
+        "std": 0.026279
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.402188,
+        "std": 0.024302
+      },
+      "soil_temperature": {
+        "mean": 28.288915,
+        "std": 0.66998
+      }
+    },
+    "Jombang": {
+      "temperature_mean_c": {
+        "mean": 26.919817,
+        "std": 0.392991
+      },
+      "temperature_max_c": {
+        "mean": 32.695218,
+        "std": 0.615209
+      },
+      "temperature_min_c": {
+        "mean": 23.130687,
+        "std": 0.241006
+      },
+      "rainfall_mm_year": {
+        "mean": 2733.071429,
+        "std": 677.765905
+      },
+      "precip_hours_day": {
+        "mean": 6.376461,
+        "std": 1.254285
+      },
+      "humidity_pct": {
+        "mean": 78.695489,
+        "std": 3.634803
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.654405,
+        "std": 0.416351
+      },
+      "shortwave_radiation": {
+        "mean": 19.553633,
+        "std": 0.757688
+      },
+      "et0_mm_day": {
+        "mean": 4.303297,
+        "std": 0.248266
+      },
+      "vapour_pressure_def": {
+        "mean": 2.399738,
+        "std": 0.330959
+      },
+      "wind_speed": {
+        "mean": 6.445916,
+        "std": 0.435582
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.289669,
+        "std": 0.030613
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.28105,
+        "std": 0.03074
+      },
+      "soil_temperature": {
+        "mean": 28.336363,
+        "std": 0.759622
+      }
+    },
+    "Karanganyar": {
+      "temperature_mean_c": {
+        "mean": 24.823839,
+        "std": 0.335647
+      },
+      "temperature_max_c": {
+        "mean": 28.975566,
+        "std": 0.700211
+      },
+      "temperature_min_c": {
+        "mean": 21.644787,
+        "std": 0.252504
+      },
+      "rainfall_mm_year": {
+        "mean": 2899.028571,
+        "std": 688.434763
+      },
+      "precip_hours_day": {
+        "mean": 7.972296,
+        "std": 1.570981
+      },
+      "humidity_pct": {
+        "mean": 77.935128,
+        "std": 3.22497
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.562084,
+        "std": 0.44079
+      },
+      "shortwave_radiation": {
+        "mean": 18.55907,
+        "std": 0.76185
+      },
+      "et0_mm_day": {
+        "mean": 3.923579,
+        "std": 0.268241
+      },
+      "vapour_pressure_def": {
+        "mean": 1.629541,
+        "std": 0.293441
+      },
+      "wind_speed": {
+        "mean": 8.491105,
+        "std": 0.625043
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.415718,
+        "std": 0.030402
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.413409,
+        "std": 0.028135
+      },
+      "soil_temperature": {
+        "mean": 26.205064,
+        "std": 0.768668
+      }
+    },
+    "Karawang": {
+      "temperature_mean_c": {
+        "mean": 27.324149,
+        "std": 0.449835
+      },
+      "temperature_max_c": {
+        "mean": 32.150261,
+        "std": 0.712369
+      },
+      "temperature_min_c": {
+        "mean": 23.914367,
+        "std": 0.327226
+      },
+      "rainfall_mm_year": {
+        "mean": 2372.857143,
+        "std": 405.11033
+      },
+      "precip_hours_day": {
+        "mean": 7.391017,
+        "std": 1.329122
+      },
+      "humidity_pct": {
+        "mean": 78.775243,
+        "std": 2.79963
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.736503,
+        "std": 0.496943
+      },
+      "shortwave_radiation": {
+        "mean": 18.525597,
+        "std": 0.980408
+      },
+      "et0_mm_day": {
+        "mean": 4.090874,
+        "std": 0.278727
+      },
+      "vapour_pressure_def": {
+        "mean": 2.151447,
+        "std": 0.278061
+      },
+      "wind_speed": {
+        "mean": 6.782391,
+        "std": 0.258097
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.300567,
+        "std": 0.025011
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.277916,
+        "std": 0.028903
+      },
+      "soil_temperature": {
+        "mean": 29.071738,
+        "std": 0.741733
+      }
+    },
+    "Kebumen": {
+      "temperature_mean_c": {
+        "mean": 26.059332,
+        "std": 0.237415
+      },
+      "temperature_max_c": {
+        "mean": 29.517155,
+        "std": 0.370965
+      },
+      "temperature_min_c": {
+        "mean": 23.272013,
+        "std": 0.263012
+      },
+      "rainfall_mm_year": {
+        "mean": 2740.014286,
+        "std": 718.56842
+      },
+      "precip_hours_day": {
+        "mean": 9.573702,
+        "std": 1.807948
+      },
+      "humidity_pct": {
+        "mean": 83.742468,
+        "std": 1.408234
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.329002,
+        "std": 0.510594
+      },
+      "shortwave_radiation": {
+        "mean": 18.163508,
+        "std": 0.990231
+      },
+      "et0_mm_day": {
+        "mean": 3.754044,
+        "std": 0.213192
+      },
+      "vapour_pressure_def": {
+        "mean": 1.301287,
+        "std": 0.121419
+      },
+      "wind_speed": {
+        "mean": 7.901481,
+        "std": 0.494775
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.299281,
+        "std": 0.032044
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.281755,
+        "std": 0.029761
+      },
+      "soil_temperature": {
+        "mean": 27.544884,
+        "std": 0.368596
+      }
+    },
+    "Kediri": {
+      "temperature_mean_c": {
+        "mean": 26.455726,
+        "std": 0.350705
+      },
+      "temperature_max_c": {
+        "mean": 31.070264,
+        "std": 0.656805
+      },
+      "temperature_min_c": {
+        "mean": 23.497997,
+        "std": 0.283694
+      },
+      "rainfall_mm_year": {
+        "mean": 2115.285714,
+        "std": 558.755836
+      },
+      "precip_hours_day": {
+        "mean": 6.383473,
+        "std": 1.326503
+      },
+      "humidity_pct": {
+        "mean": 79.569372,
+        "std": 2.699534
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.689846,
+        "std": 0.425192
+      },
+      "shortwave_radiation": {
+        "mean": 19.151277,
+        "std": 0.806101
+      },
+      "et0_mm_day": {
+        "mean": 4.404095,
+        "std": 0.362264
+      },
+      "vapour_pressure_def": {
+        "mean": 1.871436,
+        "std": 0.28279
+      },
+      "wind_speed": {
+        "mean": 13.403668,
+        "std": 1.108353
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.276431,
+        "std": 0.03686
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.262967,
+        "std": 0.037573
+      },
+      "soil_temperature": {
+        "mean": 28.013823,
+        "std": 0.653062
+      }
+    },
+    "Kendal": {
+      "temperature_mean_c": {
+        "mean": 27.21393,
+        "std": 0.356077
+      },
+      "temperature_max_c": {
+        "mean": 30.859488,
+        "std": 0.587853
+      },
+      "temperature_min_c": {
+        "mean": 24.144879,
+        "std": 0.200152
+      },
+      "rainfall_mm_year": {
+        "mean": 2060.928571,
+        "std": 506.359614
+      },
+      "precip_hours_day": {
+        "mean": 6.573681,
+        "std": 1.204877
+      },
+      "humidity_pct": {
+        "mean": 77.800513,
+        "std": 3.073282
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.044551,
+        "std": 0.398963
+      },
+      "shortwave_radiation": {
+        "mean": 20.507728,
+        "std": 0.779664
+      },
+      "et0_mm_day": {
+        "mean": 4.488697,
+        "std": 0.281486
+      },
+      "vapour_pressure_def": {
+        "mean": 1.761519,
+        "std": 0.227245
+      },
+      "wind_speed": {
+        "mean": 8.657463,
+        "std": 0.461258
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.275239,
+        "std": 0.040526
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.26664,
+        "std": 0.0354
+      },
+      "soil_temperature": {
+        "mean": 28.744718,
+        "std": 0.743937
+      }
+    },
+    "Klaten": {
+      "temperature_mean_c": {
+        "mean": 26.242842,
+        "std": 0.303197
+      },
+      "temperature_max_c": {
+        "mean": 31.330107,
+        "std": 0.691211
+      },
+      "temperature_min_c": {
+        "mean": 22.884805,
+        "std": 0.228581
+      },
+      "rainfall_mm_year": {
+        "mean": 1883.9,
+        "std": 493.384745
+      },
+      "precip_hours_day": {
+        "mean": 6.561538,
+        "std": 1.295537
+      },
+      "humidity_pct": {
+        "mean": 78.693171,
+        "std": 2.821333
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.573319,
+        "std": 0.477889
+      },
+      "shortwave_radiation": {
+        "mean": 18.955677,
+        "std": 0.895094
+      },
+      "et0_mm_day": {
+        "mean": 4.192089,
+        "std": 0.303129
+      },
+      "vapour_pressure_def": {
+        "mean": 2.076775,
+        "std": 0.308258
+      },
+      "wind_speed": {
+        "mean": 9.197738,
+        "std": 0.769045
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.37872,
+        "std": 0.029957
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.357332,
+        "std": 0.032201
+      },
+      "soil_temperature": {
+        "mean": 28.235307,
+        "std": 0.682851
+      }
+    },
+    "Kota Bandung": {
+      "temperature_mean_c": {
+        "mean": 22.971071,
+        "std": 0.260535
+      },
+      "temperature_max_c": {
+        "mean": 28.017926,
+        "std": 0.580377
+      },
+      "temperature_min_c": {
+        "mean": 18.850547,
+        "std": 0.305301
+      },
+      "rainfall_mm_year": {
+        "mean": 2024.342857,
+        "std": 468.324534
+      },
+      "precip_hours_day": {
+        "mean": 6.719455,
+        "std": 1.335218
+      },
+      "humidity_pct": {
+        "mean": 78.905574,
+        "std": 2.862332
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.501084,
+        "std": 0.421385
+      },
+      "shortwave_radiation": {
+        "mean": 18.674539,
+        "std": 0.888723
+      },
+      "et0_mm_day": {
+        "mean": 3.790639,
+        "std": 0.241343
+      },
+      "vapour_pressure_def": {
+        "mean": 1.649691,
+        "std": 0.235171
+      },
+      "wind_speed": {
+        "mean": 6.587215,
+        "std": 0.313797
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.32451,
+        "std": 0.032791
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.322997,
+        "std": 0.030373
+      },
+      "soil_temperature": {
+        "mean": 23.73071,
+        "std": 0.538841
+      }
+    },
+    "Kota Banjar": {
+      "temperature_mean_c": {
+        "mean": 25.809142,
+        "std": 0.272756
+      },
+      "temperature_max_c": {
+        "mean": 29.677116,
+        "std": 0.588035
+      },
+      "temperature_min_c": {
+        "mean": 23.024458,
+        "std": 0.302931
+      },
+      "rainfall_mm_year": {
+        "mean": 2723.185714,
+        "std": 817.841363
+      },
+      "precip_hours_day": {
+        "mean": 10.329097,
+        "std": 2.12695
+      },
+      "humidity_pct": {
+        "mean": 84.735467,
+        "std": 2.065644
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.984073,
+        "std": 0.55996
+      },
+      "shortwave_radiation": {
+        "mean": 17.025231,
+        "std": 1.027492
+      },
+      "et0_mm_day": {
+        "mean": 3.503001,
+        "std": 0.255284
+      },
+      "vapour_pressure_def": {
+        "mean": 1.323687,
+        "std": 0.217337
+      },
+      "wind_speed": {
+        "mean": 5.333147,
+        "std": 0.3588
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.335586,
+        "std": 0.041117
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.320845,
+        "std": 0.04672
+      },
+      "soil_temperature": {
+        "mean": 26.929665,
+        "std": 0.377837
+      }
+    },
+    "Kota Batu": {
+      "temperature_mean_c": {
+        "mean": 21.604329,
+        "std": 0.16489
+      },
+      "temperature_max_c": {
+        "mean": 25.439371,
+        "std": 0.357276
+      },
+      "temperature_min_c": {
+        "mean": 18.837883,
+        "std": 0.212759
+      },
+      "rainfall_mm_year": {
+        "mean": 3432.5,
+        "std": 672.760225
+      },
+      "precip_hours_day": {
+        "mean": 8.12483,
+        "std": 0.84902
+      },
+      "humidity_pct": {
+        "mean": 85.669216,
+        "std": 1.818184
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.496917,
+        "std": 0.337845
+      },
+      "shortwave_radiation": {
+        "mean": 18.114971,
+        "std": 0.77957
+      },
+      "et0_mm_day": {
+        "mean": 3.450909,
+        "std": 0.176775
+      },
+      "vapour_pressure_def": {
+        "mean": 1.07202,
+        "std": 0.15608
+      },
+      "wind_speed": {
+        "mean": 5.094721,
+        "std": 0.209565
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.427033,
+        "std": 0.022532
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.419639,
+        "std": 0.023505
+      },
+      "soil_temperature": {
+        "mean": 23.388486,
+        "std": 0.427476
+      }
+    },
+    "Kota Bekasi": {
+      "temperature_mean_c": {
+        "mean": 27.019204,
+        "std": 0.426073
+      },
+      "temperature_max_c": {
+        "mean": 31.622217,
+        "std": 0.727962
+      },
+      "temperature_min_c": {
+        "mean": 23.61847,
+        "std": 0.26885
+      },
+      "rainfall_mm_year": {
+        "mean": 2473.157143,
+        "std": 455.566537
+      },
+      "precip_hours_day": {
+        "mean": 7.827332,
+        "std": 1.279652
+      },
+      "humidity_pct": {
+        "mean": 80.445997,
+        "std": 2.707932
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.674957,
+        "std": 0.514399
+      },
+      "shortwave_radiation": {
+        "mean": 18.421718,
+        "std": 0.936999
+      },
+      "et0_mm_day": {
+        "mean": 3.989646,
+        "std": 0.269901
+      },
+      "vapour_pressure_def": {
+        "mean": 1.94145,
+        "std": 0.276257
+      },
+      "wind_speed": {
+        "mean": 6.71019,
+        "std": 0.261465
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.317225,
+        "std": 0.031777
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.301007,
+        "std": 0.034852
+      },
+      "soil_temperature": {
+        "mean": 28.520512,
+        "std": 0.710222
+      }
+    },
+    "Kota Blitar": {
+      "temperature_mean_c": {
+        "mean": 25.209184,
+        "std": 0.247981
+      },
+      "temperature_max_c": {
+        "mean": 29.453231,
+        "std": 0.52289
+      },
+      "temperature_min_c": {
+        "mean": 22.050601,
+        "std": 0.256421
+      },
+      "rainfall_mm_year": {
+        "mean": 2316.485714,
+        "std": 633.928967
+      },
+      "precip_hours_day": {
+        "mean": 7.733356,
+        "std": 1.224737
+      },
+      "humidity_pct": {
+        "mean": 83.481613,
+        "std": 1.922473
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.487187,
+        "std": 0.451734
+      },
+      "shortwave_radiation": {
+        "mean": 18.46516,
+        "std": 0.919822
+      },
+      "et0_mm_day": {
+        "mean": 3.836149,
+        "std": 0.265098
+      },
+      "vapour_pressure_def": {
+        "mean": 1.469974,
+        "std": 0.211161
+      },
+      "wind_speed": {
+        "mean": 9.187666,
+        "std": 0.617672
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.198094,
+        "std": 0.033261
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.185601,
+        "std": 0.035382
+      },
+      "soil_temperature": {
+        "mean": 26.870838,
+        "std": 0.612562
+      }
+    },
+    "Kota Bogor": {
+      "temperature_mean_c": {
+        "mean": 25.857409,
+        "std": 0.440945
+      },
+      "temperature_max_c": {
+        "mean": 30.27732,
+        "std": 0.908973
+      },
+      "temperature_min_c": {
+        "mean": 22.500143,
+        "std": 0.204749
+      },
+      "rainfall_mm_year": {
+        "mean": 2479.871429,
+        "std": 574.840145
+      },
+      "precip_hours_day": {
+        "mean": 7.553738,
+        "std": 1.264115
+      },
+      "humidity_pct": {
+        "mean": 79.990583,
+        "std": 2.74322
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.293583,
+        "std": 0.536311
+      },
+      "shortwave_radiation": {
+        "mean": 18.005418,
+        "std": 0.974913
+      },
+      "et0_mm_day": {
+        "mean": 3.822752,
+        "std": 0.26955
+      },
+      "vapour_pressure_def": {
+        "mean": 1.735374,
+        "std": 0.337141
+      },
+      "wind_speed": {
+        "mean": 5.636194,
+        "std": 0.332751
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.420716,
+        "std": 0.027847
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.407792,
+        "std": 0.029858
+      },
+      "soil_temperature": {
+        "mean": 27.187174,
+        "std": 0.775195
+      }
+    },
+    "Kota Cilegon": {
+      "temperature_mean_c": {
+        "mean": 26.52859,
+        "std": 0.227466
+      },
+      "temperature_max_c": {
+        "mean": 29.691713,
+        "std": 0.49301
+      },
+      "temperature_min_c": {
+        "mean": 23.754142,
+        "std": 0.175434
+      },
+      "rainfall_mm_year": {
+        "mean": 2278.828571,
+        "std": 512.240564
+      },
+      "precip_hours_day": {
+        "mean": 9.253538,
+        "std": 1.224258
+      },
+      "humidity_pct": {
+        "mean": 84.29433,
+        "std": 2.101704
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.067039,
+        "std": 0.414369
+      },
+      "shortwave_radiation": {
+        "mean": 19.029051,
+        "std": 0.752571
+      },
+      "et0_mm_day": {
+        "mean": 3.895255,
+        "std": 0.214885
+      },
+      "vapour_pressure_def": {
+        "mean": 1.321458,
+        "std": 0.165843
+      },
+      "wind_speed": {
+        "mean": 8.207696,
+        "std": 0.382198
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.217333,
+        "std": 0.031214
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.199481,
+        "std": 0.039121
+      },
+      "soil_temperature": {
+        "mean": 27.852414,
+        "std": 0.550066
+      }
+    },
+    "Kota Cimahi": {
+      "temperature_mean_c": {
+        "mean": 21.886033,
+        "std": 0.235001
+      },
+      "temperature_max_c": {
+        "mean": 26.312469,
+        "std": 0.544882
+      },
+      "temperature_min_c": {
+        "mean": 18.543616,
+        "std": 0.27456
+      },
+      "rainfall_mm_year": {
+        "mean": 3290.057143,
+        "std": 608.128166
+      },
+      "precip_hours_day": {
+        "mean": 8.639305,
+        "std": 1.282424
+      },
+      "humidity_pct": {
+        "mean": 83.219257,
+        "std": 2.673226
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.345593,
+        "std": 0.440831
+      },
+      "shortwave_radiation": {
+        "mean": 18.57822,
+        "std": 0.838597
+      },
+      "et0_mm_day": {
+        "mean": 3.580535,
+        "std": 0.217981
+      },
+      "vapour_pressure_def": {
+        "mean": 1.256374,
+        "std": 0.202809
+      },
+      "wind_speed": {
+        "mean": 6.012474,
+        "std": 0.399861
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.360965,
+        "std": 0.031067
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.358237,
+        "std": 0.034539
+      },
+      "soil_temperature": {
+        "mean": 22.780885,
+        "std": 0.463032
+      }
+    },
+    "Kota Cirebon": {
+      "temperature_mean_c": {
+        "mean": 27.715433,
+        "std": 0.35793
+      },
+      "temperature_max_c": {
+        "mean": 31.83339,
+        "std": 0.701848
+      },
+      "temperature_min_c": {
+        "mean": 24.466425,
+        "std": 0.244244
+      },
+      "rainfall_mm_year": {
+        "mean": 2091.8,
+        "std": 475.916971
+      },
+      "precip_hours_day": {
+        "mean": 5.804703,
+        "std": 1.317739
+      },
+      "humidity_pct": {
+        "mean": 74.356353,
+        "std": 3.224626
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.116474,
+        "std": 0.384787
+      },
+      "shortwave_radiation": {
+        "mean": 19.608868,
+        "std": 0.848924
+      },
+      "et0_mm_day": {
+        "mean": 4.695837,
+        "std": 0.340104
+      },
+      "vapour_pressure_def": {
+        "mean": 2.116433,
+        "std": 0.267599
+      },
+      "wind_speed": {
+        "mean": 9.815804,
+        "std": 0.941419
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.16322,
+        "std": 0.025611
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.148079,
+        "std": 0.024802
+      },
+      "soil_temperature": {
+        "mean": 29.26024,
+        "std": 0.624188
+      }
+    },
+    "Kota Depok": {
+      "temperature_mean_c": {
+        "mean": 26.366407,
+        "std": 0.427884
+      },
+      "temperature_max_c": {
+        "mean": 31.229171,
+        "std": 0.827336
+      },
+      "temperature_min_c": {
+        "mean": 22.900398,
+        "std": 0.23853
+      },
+      "rainfall_mm_year": {
+        "mean": 2731.828571,
+        "std": 530.685914
+      },
+      "precip_hours_day": {
+        "mean": 7.817615,
+        "std": 1.230033
+      },
+      "humidity_pct": {
+        "mean": 81.113839,
+        "std": 2.922078
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.353325,
+        "std": 0.557762
+      },
+      "shortwave_radiation": {
+        "mean": 18.274125,
+        "std": 0.966302
+      },
+      "et0_mm_day": {
+        "mean": 3.884437,
+        "std": 0.266494
+      },
+      "vapour_pressure_def": {
+        "mean": 1.89913,
+        "std": 0.332752
+      },
+      "wind_speed": {
+        "mean": 5.813338,
+        "std": 0.27812
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.431935,
+        "std": 0.026359
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.421409,
+        "std": 0.031219
+      },
+      "soil_temperature": {
+        "mean": 27.723001,
+        "std": 0.736054
+      }
+    },
+    "Kota Kediri": {
+      "temperature_mean_c": {
+        "mean": 26.455726,
+        "std": 0.350705
+      },
+      "temperature_max_c": {
+        "mean": 31.070264,
+        "std": 0.656805
+      },
+      "temperature_min_c": {
+        "mean": 23.497997,
+        "std": 0.283694
+      },
+      "rainfall_mm_year": {
+        "mean": 2115.285714,
+        "std": 558.755836
+      },
+      "precip_hours_day": {
+        "mean": 6.383473,
+        "std": 1.326503
+      },
+      "humidity_pct": {
+        "mean": 79.569372,
+        "std": 2.699534
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.689846,
+        "std": 0.425192
+      },
+      "shortwave_radiation": {
+        "mean": 19.151277,
+        "std": 0.806101
+      },
+      "et0_mm_day": {
+        "mean": 4.403976,
+        "std": 0.362285
+      },
+      "vapour_pressure_def": {
+        "mean": 1.871436,
+        "std": 0.28279
+      },
+      "wind_speed": {
+        "mean": 13.403668,
+        "std": 1.108353
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.276431,
+        "std": 0.03686
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.262967,
+        "std": 0.037573
+      },
+      "soil_temperature": {
+        "mean": 28.013823,
+        "std": 0.653062
+      }
+    },
+    "Kota Madiun": {
+      "temperature_mean_c": {
+        "mean": 27.362903,
+        "std": 0.374932
+      },
+      "temperature_max_c": {
+        "mean": 32.507298,
+        "std": 0.663508
+      },
+      "temperature_min_c": {
+        "mean": 23.722335,
+        "std": 0.246859
+      },
+      "rainfall_mm_year": {
+        "mean": 1898.957143,
+        "std": 554.072381
+      },
+      "precip_hours_day": {
+        "mean": 5.668704,
+        "std": 1.211062
+      },
+      "humidity_pct": {
+        "mean": 74.314736,
+        "std": 3.232705
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.726613,
+        "std": 0.431329
+      },
+      "shortwave_radiation": {
+        "mean": 19.454683,
+        "std": 0.906816
+      },
+      "et0_mm_day": {
+        "mean": 4.677766,
+        "std": 0.364056
+      },
+      "vapour_pressure_def": {
+        "mean": 2.415529,
+        "std": 0.316566
+      },
+      "wind_speed": {
+        "mean": 9.871035,
+        "std": 0.904043
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.369579,
+        "std": 0.02801
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.347887,
+        "std": 0.032331
+      },
+      "soil_temperature": {
+        "mean": 29.803483,
+        "std": 0.7941
+      }
+    },
+    "Kota Magelang": {
+      "temperature_mean_c": {
+        "mean": 23.621775,
+        "std": 0.212424
+      },
+      "temperature_max_c": {
+        "mean": 27.842899,
+        "std": 0.506072
+      },
+      "temperature_min_c": {
+        "mean": 20.330599,
+        "std": 0.25011
+      },
+      "rainfall_mm_year": {
+        "mean": 2785.114286,
+        "std": 540.846199
+      },
+      "precip_hours_day": {
+        "mean": 9.971634,
+        "std": 1.57623
+      },
+      "humidity_pct": {
+        "mean": 85.962717,
+        "std": 2.015828
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.130542,
+        "std": 0.472512
+      },
+      "shortwave_radiation": {
+        "mean": 17.858136,
+        "std": 0.877748
+      },
+      "et0_mm_day": {
+        "mean": 3.510192,
+        "std": 0.228079
+      },
+      "vapour_pressure_def": {
+        "mean": 1.216829,
+        "std": 0.20867
+      },
+      "wind_speed": {
+        "mean": 6.757763,
+        "std": 0.391036
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.439782,
+        "std": 0.029857
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.432028,
+        "std": 0.031084
+      },
+      "soil_temperature": {
+        "mean": 24.275984,
+        "std": 0.388197
+      }
+    },
+    "Kota Malang": {
+      "temperature_mean_c": {
+        "mean": 24.01143,
+        "std": 0.165759
+      },
+      "temperature_max_c": {
+        "mean": 28.122488,
+        "std": 0.442177
+      },
+      "temperature_min_c": {
+        "mean": 21.171375,
+        "std": 0.221506
+      },
+      "rainfall_mm_year": {
+        "mean": 2880.528571,
+        "std": 451.18973
+      },
+      "precip_hours_day": {
+        "mean": 7.914599,
+        "std": 1.141741
+      },
+      "humidity_pct": {
+        "mean": 82.897557,
+        "std": 1.992723
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.402557,
+        "std": 0.376071
+      },
+      "shortwave_radiation": {
+        "mean": 18.226323,
+        "std": 0.888487
+      },
+      "et0_mm_day": {
+        "mean": 3.665726,
+        "std": 0.207483
+      },
+      "vapour_pressure_def": {
+        "mean": 1.398364,
+        "std": 0.195411
+      },
+      "wind_speed": {
+        "mean": 5.356446,
+        "std": 0.336298
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.305098,
+        "std": 0.02628
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.299302,
+        "std": 0.027489
+      },
+      "soil_temperature": {
+        "mean": 25.883966,
+        "std": 0.447788
+      }
+    },
+    "Kota Mojokerto": {
+      "temperature_mean_c": {
+        "mean": 27.826522,
+        "std": 0.377823
+      },
+      "temperature_max_c": {
+        "mean": 33.548114,
+        "std": 0.524757
+      },
+      "temperature_min_c": {
+        "mean": 23.874295,
+        "std": 0.227206
+      },
+      "rainfall_mm_year": {
+        "mean": 1953.914286,
+        "std": 426.595685
+      },
+      "precip_hours_day": {
+        "mean": 5.269478,
+        "std": 1.011076
+      },
+      "humidity_pct": {
+        "mean": 74.928126,
+        "std": 3.176178
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.853956,
+        "std": 0.370691
+      },
+      "shortwave_radiation": {
+        "mean": 19.75641,
+        "std": 0.790694
+      },
+      "et0_mm_day": {
+        "mean": 4.5033,
+        "std": 0.254076
+      },
+      "vapour_pressure_def": {
+        "mean": 2.738551,
+        "std": 0.25509
+      },
+      "wind_speed": {
+        "mean": 6.583532,
+        "std": 0.330795
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.256999,
+        "std": 0.02224
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.238476,
+        "std": 0.022403
+      },
+      "soil_temperature": {
+        "mean": 29.323208,
+        "std": 0.623483
+      }
+    },
+    "Kota Pasuruan": {
+      "temperature_mean_c": {
+        "mean": 27.739702,
+        "std": 0.365956
+      },
+      "temperature_max_c": {
+        "mean": 32.065837,
+        "std": 0.583486
+      },
+      "temperature_min_c": {
+        "mean": 24.049272,
+        "std": 0.246079
+      },
+      "rainfall_mm_year": {
+        "mean": 1648.914286,
+        "std": 381.036426
+      },
+      "precip_hours_day": {
+        "mean": 5.007436,
+        "std": 1.169827
+      },
+      "humidity_pct": {
+        "mean": 76.889936,
+        "std": 3.295762
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.365298,
+        "std": 0.269143
+      },
+      "shortwave_radiation": {
+        "mean": 21.167014,
+        "std": 0.718948
+      },
+      "et0_mm_day": {
+        "mean": 4.613446,
+        "std": 0.22869
+      },
+      "vapour_pressure_def": {
+        "mean": 2.099639,
+        "std": 0.234166
+      },
+      "wind_speed": {
+        "mean": 6.704197,
+        "std": 0.345871
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.263542,
+        "std": 0.045685
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.26959,
+        "std": 0.044769
+      },
+      "soil_temperature": {
+        "mean": 29.236502,
+        "std": 0.728389
+      }
+    },
+    "Kota Pekalongan": {
+      "temperature_mean_c": {
+        "mean": 27.320572,
+        "std": 0.341086
+      },
+      "temperature_max_c": {
+        "mean": 31.299331,
+        "std": 0.611326
+      },
+      "temperature_min_c": {
+        "mean": 23.759994,
+        "std": 0.204803
+      },
+      "rainfall_mm_year": {
+        "mean": 2161.4,
+        "std": 548.881602
+      },
+      "precip_hours_day": {
+        "mean": 6.858766,
+        "std": 1.435111
+      },
+      "humidity_pct": {
+        "mean": 78.073395,
+        "std": 2.630634
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.89419,
+        "std": 0.431938
+      },
+      "shortwave_radiation": {
+        "mean": 19.603438,
+        "std": 0.848064
+      },
+      "et0_mm_day": {
+        "mean": 4.166522,
+        "std": 0.233917
+      },
+      "vapour_pressure_def": {
+        "mean": 1.811643,
+        "std": 0.226275
+      },
+      "wind_speed": {
+        "mean": 5.496567,
+        "std": 0.220225
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.268907,
+        "std": 0.030955
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.253357,
+        "std": 0.030104
+      },
+      "soil_temperature": {
+        "mean": 29.077032,
+        "std": 0.646082
+      }
+    },
+    "Kota Probolinggo": {
+      "temperature_mean_c": {
+        "mean": 27.627973,
+        "std": 0.323819
+      },
+      "temperature_max_c": {
+        "mean": 31.339054,
+        "std": 0.68254
+      },
+      "temperature_min_c": {
+        "mean": 24.952526,
+        "std": 0.157586
+      },
+      "rainfall_mm_year": {
+        "mean": 1740.942857,
+        "std": 407.244107
+      },
+      "precip_hours_day": {
+        "mean": 5.652594,
+        "std": 1.131156
+      },
+      "humidity_pct": {
+        "mean": 74.045147,
+        "std": 2.498661
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.183563,
+        "std": 0.293932
+      },
+      "shortwave_radiation": {
+        "mean": 20.400068,
+        "std": 0.74268
+      },
+      "et0_mm_day": {
+        "mean": 5.053927,
+        "std": 0.329411
+      },
+      "vapour_pressure_def": {
+        "mean": 1.950014,
+        "std": 0.254812
+      },
+      "wind_speed": {
+        "mean": 13.763497,
+        "std": 1.595247
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.244095,
+        "std": 0.02788
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.234935,
+        "std": 0.028691
+      },
+      "soil_temperature": {
+        "mean": 30.135958,
+        "std": 0.733322
+      }
+    },
+    "Kota Salatiga": {
+      "temperature_mean_c": {
+        "mean": 24.121354,
+        "std": 0.401465
+      },
+      "temperature_max_c": {
+        "mean": 28.206246,
+        "std": 0.774809
+      },
+      "temperature_min_c": {
+        "mean": 21.15514,
+        "std": 0.251549
+      },
+      "rainfall_mm_year": {
+        "mean": 3793.785714,
+        "std": 841.286714
+      },
+      "precip_hours_day": {
+        "mean": 8.254258,
+        "std": 1.250045
+      },
+      "humidity_pct": {
+        "mean": 80.071838,
+        "std": 3.535665
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.552206,
+        "std": 0.4249
+      },
+      "shortwave_radiation": {
+        "mean": 19.202871,
+        "std": 0.858809
+      },
+      "et0_mm_day": {
+        "mean": 3.938031,
+        "std": 0.274253
+      },
+      "vapour_pressure_def": {
+        "mean": 1.54595,
+        "std": 0.290123
+      },
+      "wind_speed": {
+        "mean": 5.224093,
+        "std": 0.280251
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.308402,
+        "std": 0.033549
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.308789,
+        "std": 0.032289
+      },
+      "soil_temperature": {
+        "mean": 25.088888,
+        "std": 0.742343
+      }
+    },
+    "Kota Semarang": {
+      "temperature_mean_c": {
+        "mean": 27.412312,
+        "std": 0.395522
+      },
+      "temperature_max_c": {
+        "mean": 31.361463,
+        "std": 0.733773
+      },
+      "temperature_min_c": {
+        "mean": 24.31254,
+        "std": 0.223222
+      },
+      "rainfall_mm_year": {
+        "mean": 1705.085714,
+        "std": 396.02939
+      },
+      "precip_hours_day": {
+        "mean": 6.4298,
+        "std": 1.145918
+      },
+      "humidity_pct": {
+        "mean": 75.788072,
+        "std": 2.710476
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.883483,
+        "std": 0.410509
+      },
+      "shortwave_radiation": {
+        "mean": 19.982745,
+        "std": 0.787639
+      },
+      "et0_mm_day": {
+        "mean": 4.407261,
+        "std": 0.269184
+      },
+      "vapour_pressure_def": {
+        "mean": 2.043951,
+        "std": 0.287376
+      },
+      "wind_speed": {
+        "mean": 8.283261,
+        "std": 0.306858
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.26609,
+        "std": 0.030507
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.250158,
+        "std": 0.029345
+      },
+      "soil_temperature": {
+        "mean": 29.279519,
+        "std": 0.719274
+      }
+    },
+    "Kota Serang": {
+      "temperature_mean_c": {
+        "mean": 26.562574,
+        "std": 0.389344
+      },
+      "temperature_max_c": {
+        "mean": 30.57349,
+        "std": 0.738769
+      },
+      "temperature_min_c": {
+        "mean": 23.42235,
+        "std": 0.247965
+      },
+      "rainfall_mm_year": {
+        "mean": 2389.385714,
+        "std": 506.63264
+      },
+      "precip_hours_day": {
+        "mean": 8.553797,
+        "std": 1.337513
+      },
+      "humidity_pct": {
+        "mean": 81.786262,
+        "std": 2.356558
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.680964,
+        "std": 0.462005
+      },
+      "shortwave_radiation": {
+        "mean": 18.011259,
+        "std": 0.826304
+      },
+      "et0_mm_day": {
+        "mean": 3.778398,
+        "std": 0.237687
+      },
+      "vapour_pressure_def": {
+        "mean": 1.613945,
+        "std": 0.246755
+      },
+      "wind_speed": {
+        "mean": 5.635688,
+        "std": 0.129141
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.322681,
+        "std": 0.028277
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.30498,
+        "std": 0.029723
+      },
+      "soil_temperature": {
+        "mean": 27.735675,
+        "std": 0.585286
+      }
+    },
+    "Kota Sukabumi": {
+      "temperature_mean_c": {
+        "mean": 22.411592,
+        "std": 0.240648
+      },
+      "temperature_max_c": {
+        "mean": 26.544945,
+        "std": 0.514562
+      },
+      "temperature_min_c": {
+        "mean": 19.634783,
+        "std": 0.248052
+      },
+      "rainfall_mm_year": {
+        "mean": 3089.442857,
+        "std": 706.310887
+      },
+      "precip_hours_day": {
+        "mean": 9.366953,
+        "std": 1.097312
+      },
+      "humidity_pct": {
+        "mean": 86.855221,
+        "std": 1.487781
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.229125,
+        "std": 0.459652
+      },
+      "shortwave_radiation": {
+        "mean": 17.88867,
+        "std": 0.904738
+      },
+      "et0_mm_day": {
+        "mean": 3.422258,
+        "std": 0.199728
+      },
+      "vapour_pressure_def": {
+        "mean": 1.184322,
+        "std": 0.173084
+      },
+      "wind_speed": {
+        "mean": 4.856097,
+        "std": 0.144025
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.453887,
+        "std": 0.026022
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.44806,
+        "std": 0.03124
+      },
+      "soil_temperature": {
+        "mean": 23.630088,
+        "std": 0.450249
+      }
+    },
+    "Kota Surabaya": {
+      "temperature_mean_c": {
+        "mean": 27.731683,
+        "std": 0.266363
+      },
+      "temperature_max_c": {
+        "mean": 31.015523,
+        "std": 0.526849
+      },
+      "temperature_min_c": {
+        "mean": 24.625829,
+        "std": 0.228893
+      },
+      "rainfall_mm_year": {
+        "mean": 1808.185714,
+        "std": 421.252559
+      },
+      "precip_hours_day": {
+        "mean": 6.378933,
+        "std": 1.277619
+      },
+      "humidity_pct": {
+        "mean": 76.915016,
+        "std": 2.303244
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.052355,
+        "std": 0.339087
+      },
+      "shortwave_radiation": {
+        "mean": 20.347132,
+        "std": 0.809796
+      },
+      "et0_mm_day": {
+        "mean": 4.579021,
+        "std": 0.282019
+      },
+      "vapour_pressure_def": {
+        "mean": 1.839491,
+        "std": 0.220459
+      },
+      "wind_speed": {
+        "mean": 9.49757,
+        "std": 0.561118
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.172131,
+        "std": 0.027694
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.16235,
+        "std": 0.029353
+      },
+      "soil_temperature": {
+        "mean": 29.704289,
+        "std": 0.679486
+      }
+    },
+    "Kota Surakarta": {
+      "temperature_mean_c": {
+        "mean": 26.438557,
+        "std": 0.376121
+      },
+      "temperature_max_c": {
+        "mean": 31.724149,
+        "std": 0.790501
+      },
+      "temperature_min_c": {
+        "mean": 22.976375,
+        "std": 0.219321
+      },
+      "rainfall_mm_year": {
+        "mean": 2379.471429,
+        "std": 543.273374
+      },
+      "precip_hours_day": {
+        "mean": 6.63961,
+        "std": 1.352278
+      },
+      "humidity_pct": {
+        "mean": 78.378297,
+        "std": 3.551678
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.574722,
+        "std": 0.453567
+      },
+      "shortwave_radiation": {
+        "mean": 19.49171,
+        "std": 0.884813
+      },
+      "et0_mm_day": {
+        "mean": 4.404131,
+        "std": 0.354035
+      },
+      "vapour_pressure_def": {
+        "mean": 2.183153,
+        "std": 0.37292
+      },
+      "wind_speed": {
+        "mean": 9.561274,
+        "std": 0.904908
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.396023,
+        "std": 0.030786
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.385584,
+        "std": 0.037555
+      },
+      "soil_temperature": {
+        "mean": 28.317441,
+        "std": 0.789097
+      }
+    },
+    "Kota Tangerang": {
+      "temperature_mean_c": {
+        "mean": 26.715776,
+        "std": 0.353741
+      },
+      "temperature_max_c": {
+        "mean": 31.100073,
+        "std": 0.583837
+      },
+      "temperature_min_c": {
+        "mean": 23.328333,
+        "std": 0.23456
+      },
+      "rainfall_mm_year": {
+        "mean": 2500.814286,
+        "std": 499.531325
+      },
+      "precip_hours_day": {
+        "mean": 8.532082,
+        "std": 1.291484
+      },
+      "humidity_pct": {
+        "mean": 82.670798,
+        "std": 2.270215
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.790534,
+        "std": 0.450007
+      },
+      "shortwave_radiation": {
+        "mean": 18.59667,
+        "std": 0.877409
+      },
+      "et0_mm_day": {
+        "mean": 3.935401,
+        "std": 0.231527
+      },
+      "vapour_pressure_def": {
+        "mean": 1.712539,
+        "std": 0.214179
+      },
+      "wind_speed": {
+        "mean": 6.626773,
+        "std": 0.157988
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.333653,
+        "std": 0.031743
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.321375,
+        "std": 0.03475
+      },
+      "soil_temperature": {
+        "mean": 28.199056,
+        "std": 0.609339
+      }
+    },
+    "Kota Tasikmalaya": {
+      "temperature_mean_c": {
+        "mean": 23.859282,
+        "std": 0.216779
+      },
+      "temperature_max_c": {
+        "mean": 27.927557,
+        "std": 0.384977
+      },
+      "temperature_min_c": {
+        "mean": 20.956421,
+        "std": 0.398528
+      },
+      "rainfall_mm_year": {
+        "mean": 3171.714286,
+        "std": 839.379998
+      },
+      "precip_hours_day": {
+        "mean": 11.935303,
+        "std": 1.838913
+      },
+      "humidity_pct": {
+        "mean": 87.524445,
+        "std": 1.552108
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.670624,
+        "std": 0.519646
+      },
+      "shortwave_radiation": {
+        "mean": 16.645909,
+        "std": 0.929695
+      },
+      "et0_mm_day": {
+        "mean": 3.301892,
+        "std": 0.198145
+      },
+      "vapour_pressure_def": {
+        "mean": 1.139054,
+        "std": 0.12613
+      },
+      "wind_speed": {
+        "mean": 4.660877,
+        "std": 0.24594
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.261846,
+        "std": 0.028783
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.25404,
+        "std": 0.03484
+      },
+      "soil_temperature": {
+        "mean": 24.959791,
+        "std": 0.20026
+      }
+    },
+    "Kota Tegal": {
+      "temperature_mean_c": {
+        "mean": 26.624691,
+        "std": 0.283411
+      },
+      "temperature_max_c": {
+        "mean": 30.752713,
+        "std": 0.5431
+      },
+      "temperature_min_c": {
+        "mean": 23.272837,
+        "std": 0.269836
+      },
+      "rainfall_mm_year": {
+        "mean": 2186.414286,
+        "std": 410.197523
+      },
+      "precip_hours_day": {
+        "mean": 7.416367,
+        "std": 1.478999
+      },
+      "humidity_pct": {
+        "mean": 79.833189,
+        "std": 2.59659
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.974209,
+        "std": 0.414872
+      },
+      "shortwave_radiation": {
+        "mean": 19.75019,
+        "std": 0.820179
+      },
+      "et0_mm_day": {
+        "mean": 4.2018,
+        "std": 0.255811
+      },
+      "vapour_pressure_def": {
+        "mean": 1.78353,
+        "std": 0.219136
+      },
+      "wind_speed": {
+        "mean": 7.969828,
+        "std": 0.433861
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.291266,
+        "std": 0.024623
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.280274,
+        "std": 0.021833
+      },
+      "soil_temperature": {
+        "mean": 28.347626,
+        "std": 0.511194
+      }
+    },
+    "Kota Yogyakarta": {
+      "temperature_mean_c": {
+        "mean": 25.860655,
+        "std": 0.269294
+      },
+      "temperature_max_c": {
+        "mean": 30.541104,
+        "std": 0.618007
+      },
+      "temperature_min_c": {
+        "mean": 22.473385,
+        "std": 0.27692
+      },
+      "rainfall_mm_year": {
+        "mean": 2466.585714,
+        "std": 582.303184
+      },
+      "precip_hours_day": {
+        "mean": 8.356637,
+        "std": 1.304042
+      },
+      "humidity_pct": {
+        "mean": 81.665084,
+        "std": 2.712655
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.135008,
+        "std": 0.492582
+      },
+      "shortwave_radiation": {
+        "mean": 18.097621,
+        "std": 0.892366
+      },
+      "et0_mm_day": {
+        "mean": 3.820181,
+        "std": 0.245205
+      },
+      "vapour_pressure_def": {
+        "mean": 1.7299,
+        "std": 0.281391
+      },
+      "wind_speed": {
+        "mean": 6.18305,
+        "std": 0.384628
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.203214,
+        "std": 0.03292
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.187183,
+        "std": 0.037604
+      },
+      "soil_temperature": {
+        "mean": 27.229542,
+        "std": 0.632763
+      }
+    },
+    "Kudus": {
+      "temperature_mean_c": {
+        "mean": 26.907913,
+        "std": 0.363798
+      },
+      "temperature_max_c": {
+        "mean": 31.84467,
+        "std": 0.61682
+      },
+      "temperature_min_c": {
+        "mean": 23.446362,
+        "std": 0.215042
+      },
+      "rainfall_mm_year": {
+        "mean": 2084.514286,
+        "std": 442.57099
+      },
+      "precip_hours_day": {
+        "mean": 7.158344,
+        "std": 1.262368
+      },
+      "humidity_pct": {
+        "mean": 78.11396,
+        "std": 3.30274
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.576228,
+        "std": 0.428394
+      },
+      "shortwave_radiation": {
+        "mean": 18.905804,
+        "std": 0.847063
+      },
+      "et0_mm_day": {
+        "mean": 4.165858,
+        "std": 0.273921
+      },
+      "vapour_pressure_def": {
+        "mean": 2.190069,
+        "std": 0.298046
+      },
+      "wind_speed": {
+        "mean": 7.920516,
+        "std": 0.289451
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.394968,
+        "std": 0.024396
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.380077,
+        "std": 0.023809
+      },
+      "soil_temperature": {
+        "mean": 27.98121,
+        "std": 0.646092
+      }
+    },
+    "Kulon Progo": {
+      "temperature_mean_c": {
+        "mean": 25.90597,
+        "std": 0.190978
+      },
+      "temperature_max_c": {
+        "mean": 29.532468,
+        "std": 0.3454
+      },
+      "temperature_min_c": {
+        "mean": 23.150063,
+        "std": 0.221825
+      },
+      "rainfall_mm_year": {
+        "mean": 2867.885714,
+        "std": 688.514714
+      },
+      "precip_hours_day": {
+        "mean": 9.971599,
+        "std": 1.364313
+      },
+      "humidity_pct": {
+        "mean": 84.936751,
+        "std": 1.359682
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.46584,
+        "std": 0.497979
+      },
+      "shortwave_radiation": {
+        "mean": 18.433858,
+        "std": 0.958549
+      },
+      "et0_mm_day": {
+        "mean": 3.71432,
+        "std": 0.20249
+      },
+      "vapour_pressure_def": {
+        "mean": 1.275238,
+        "std": 0.133947
+      },
+      "wind_speed": {
+        "mean": 6.965148,
+        "std": 0.403338
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.328834,
+        "std": 0.035337
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.315349,
+        "std": 0.038132
+      },
+      "soil_temperature": {
+        "mean": 27.400356,
+        "std": 0.393803
+      }
+    },
+    "Kuningan": {
+      "temperature_mean_c": {
+        "mean": 23.511598,
+        "std": 0.223438
+      },
+      "temperature_max_c": {
+        "mean": 27.577638,
+        "std": 0.414977
+      },
+      "temperature_min_c": {
+        "mean": 21.031003,
+        "std": 0.29185
+      },
+      "rainfall_mm_year": {
+        "mean": 3356.028571,
+        "std": 871.79426
+      },
+      "precip_hours_day": {
+        "mean": 7.978095,
+        "std": 1.622389
+      },
+      "humidity_pct": {
+        "mean": 83.654968,
+        "std": 2.453508
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.595261,
+        "std": 0.466577
+      },
+      "shortwave_radiation": {
+        "mean": 18.427748,
+        "std": 0.852473
+      },
+      "et0_mm_day": {
+        "mean": 3.730095,
+        "std": 0.249931
+      },
+      "vapour_pressure_def": {
+        "mean": 1.282192,
+        "std": 0.17953
+      },
+      "wind_speed": {
+        "mean": 9.185904,
+        "std": 1.133654
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.311054,
+        "std": 0.030803
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.296783,
+        "std": 0.032408
+      },
+      "soil_temperature": {
+        "mean": 24.647561,
+        "std": 0.38759
+      }
+    },
+    "Lamongan": {
+      "temperature_mean_c": {
+        "mean": 27.722762,
+        "std": 0.312079
+      },
+      "temperature_max_c": {
+        "mean": 32.109731,
+        "std": 0.702729
+      },
+      "temperature_min_c": {
+        "mean": 24.273949,
+        "std": 0.261893
+      },
+      "rainfall_mm_year": {
+        "mean": 2014.342857,
+        "std": 493.055679
+      },
+      "precip_hours_day": {
+        "mean": 6.565387,
+        "std": 1.149802
+      },
+      "humidity_pct": {
+        "mean": 76.505733,
+        "std": 2.355668
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.83746,
+        "std": 0.398832
+      },
+      "shortwave_radiation": {
+        "mean": 19.724498,
+        "std": 0.787096
+      },
+      "et0_mm_day": {
+        "mean": 4.470652,
+        "std": 0.255692
+      },
+      "vapour_pressure_def": {
+        "mean": 2.212679,
+        "std": 0.261253
+      },
+      "wind_speed": {
+        "mean": 8.31264,
+        "std": 0.668167
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.375475,
+        "std": 0.022006
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.35498,
+        "std": 0.026381
+      },
+      "soil_temperature": {
+        "mean": 30.259542,
+        "std": 0.721619
+      }
+    },
+    "Lebak": {
+      "temperature_mean_c": {
+        "mean": 25.805311,
+        "std": 0.436193
+      },
+      "temperature_max_c": {
+        "mean": 30.031117,
+        "std": 0.922136
+      },
+      "temperature_min_c": {
+        "mean": 22.54031,
+        "std": 0.225123
+      },
+      "rainfall_mm_year": {
+        "mean": 2360.214286,
+        "std": 493.545521
+      },
+      "precip_hours_day": {
+        "mean": 7.968387,
+        "std": 1.344533
+      },
+      "humidity_pct": {
+        "mean": 82.556172,
+        "std": 2.666834
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.415432,
+        "std": 0.499402
+      },
+      "shortwave_radiation": {
+        "mean": 17.760229,
+        "std": 0.915624
+      },
+      "et0_mm_day": {
+        "mean": 3.674254,
+        "std": 0.266413
+      },
+      "vapour_pressure_def": {
+        "mean": 1.536039,
+        "std": 0.330497
+      },
+      "wind_speed": {
+        "mean": 6.581403,
+        "std": 0.329544
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.319489,
+        "std": 0.033362
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.30411,
+        "std": 0.036693
+      },
+      "soil_temperature": {
+        "mean": 26.844615,
+        "std": 0.672227
+      }
+    },
+    "Lumajang": {
+      "temperature_mean_c": {
+        "mean": 25.498786,
+        "std": 0.157749
+      },
+      "temperature_max_c": {
+        "mean": 29.412632,
+        "std": 0.30463
+      },
+      "temperature_min_c": {
+        "mean": 22.688161,
+        "std": 0.227451
+      },
+      "rainfall_mm_year": {
+        "mean": 2843.571429,
+        "std": 525.175164
+      },
+      "precip_hours_day": {
+        "mean": 10.59822,
+        "std": 1.069663
+      },
+      "humidity_pct": {
+        "mean": 85.556818,
+        "std": 1.0198
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.435314,
+        "std": 0.38883
+      },
+      "shortwave_radiation": {
+        "mean": 18.024929,
+        "std": 0.77779
+      },
+      "et0_mm_day": {
+        "mean": 3.617587,
+        "std": 0.165191
+      },
+      "vapour_pressure_def": {
+        "mean": 1.243208,
+        "std": 0.08638
+      },
+      "wind_speed": {
+        "mean": 6.239582,
+        "std": 0.265954
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.248025,
+        "std": 0.019018
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.23614,
+        "std": 0.024227
+      },
+      "soil_temperature": {
+        "mean": 26.332218,
+        "std": 0.254164
+      }
+    },
+    "Madiun": {
+      "temperature_mean_c": {
+        "mean": 27.362903,
+        "std": 0.374932
+      },
+      "temperature_max_c": {
+        "mean": 32.507298,
+        "std": 0.663508
+      },
+      "temperature_min_c": {
+        "mean": 23.722335,
+        "std": 0.246859
+      },
+      "rainfall_mm_year": {
+        "mean": 1898.957143,
+        "std": 554.072381
+      },
+      "precip_hours_day": {
+        "mean": 5.668704,
+        "std": 1.211062
+      },
+      "humidity_pct": {
+        "mean": 74.314736,
+        "std": 3.232705
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.726613,
+        "std": 0.431329
+      },
+      "shortwave_radiation": {
+        "mean": 19.454683,
+        "std": 0.906816
+      },
+      "et0_mm_day": {
+        "mean": 4.677447,
+        "std": 0.364187
+      },
+      "vapour_pressure_def": {
+        "mean": 2.415529,
+        "std": 0.316566
+      },
+      "wind_speed": {
+        "mean": 9.871035,
+        "std": 0.904043
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.369579,
+        "std": 0.02801
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.347887,
+        "std": 0.032331
+      },
+      "soil_temperature": {
+        "mean": 29.803483,
+        "std": 0.7941
+      }
+    },
+    "Magelang": {
+      "temperature_mean_c": {
+        "mean": 23.621775,
+        "std": 0.212424
+      },
+      "temperature_max_c": {
+        "mean": 27.842899,
+        "std": 0.506072
+      },
+      "temperature_min_c": {
+        "mean": 20.330599,
+        "std": 0.25011
+      },
+      "rainfall_mm_year": {
+        "mean": 2785.114286,
+        "std": 540.846199
+      },
+      "precip_hours_day": {
+        "mean": 9.971634,
+        "std": 1.57623
+      },
+      "humidity_pct": {
+        "mean": 85.962717,
+        "std": 2.015828
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.130542,
+        "std": 0.472512
+      },
+      "shortwave_radiation": {
+        "mean": 17.858136,
+        "std": 0.877748
+      },
+      "et0_mm_day": {
+        "mean": 3.50888,
+        "std": 0.228027
+      },
+      "vapour_pressure_def": {
+        "mean": 1.216829,
+        "std": 0.20867
+      },
+      "wind_speed": {
+        "mean": 6.757763,
+        "std": 0.391036
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.439782,
+        "std": 0.029857
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.432028,
+        "std": 0.031084
+      },
+      "soil_temperature": {
+        "mean": 24.275984,
+        "std": 0.388197
+      }
+    },
+    "Magetan": {
+      "temperature_mean_c": {
+        "mean": 25.267059,
+        "std": 0.351183
+      },
+      "temperature_max_c": {
+        "mean": 29.505448,
+        "std": 0.625284
+      },
+      "temperature_min_c": {
+        "mean": 22.601884,
+        "std": 0.308271
+      },
+      "rainfall_mm_year": {
+        "mean": 4345.085714,
+        "std": 715.942953
+      },
+      "precip_hours_day": {
+        "mean": 7.690122,
+        "std": 1.389484
+      },
+      "humidity_pct": {
+        "mean": 76.364504,
+        "std": 3.549962
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.67746,
+        "std": 0.436077
+      },
+      "shortwave_radiation": {
+        "mean": 19.617879,
+        "std": 0.923197
+      },
+      "et0_mm_day": {
+        "mean": 4.484259,
+        "std": 0.388448
+      },
+      "vapour_pressure_def": {
+        "mean": 1.764596,
+        "std": 0.272582
+      },
+      "wind_speed": {
+        "mean": 11.026814,
+        "std": 1.179876
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.384764,
+        "std": 0.031287
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.378341,
+        "std": 0.029299
+      },
+      "soil_temperature": {
+        "mean": 27.615663,
+        "std": 0.697573
+      }
+    },
+    "Majalengka": {
+      "temperature_mean_c": {
+        "mean": 26.161581,
+        "std": 0.469304
+      },
+      "temperature_max_c": {
+        "mean": 30.731422,
+        "std": 0.79858
+      },
+      "temperature_min_c": {
+        "mean": 22.911806,
+        "std": 0.310201
+      },
+      "rainfall_mm_year": {
+        "mean": 2260.314286,
+        "std": 576.838092
+      },
+      "precip_hours_day": {
+        "mean": 6.661365,
+        "std": 1.60214
+      },
+      "humidity_pct": {
+        "mean": 76.317569,
+        "std": 3.530103
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.501354,
+        "std": 0.505348
+      },
+      "shortwave_radiation": {
+        "mean": 18.248554,
+        "std": 0.95809
+      },
+      "et0_mm_day": {
+        "mean": 4.245495,
+        "std": 0.386103
+      },
+      "vapour_pressure_def": {
+        "mean": 1.954921,
+        "std": 0.313868
+      },
+      "wind_speed": {
+        "mean": 8.939652,
+        "std": 1.088711
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.389055,
+        "std": 0.031358
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.375125,
+        "std": 0.035599
+      },
+      "soil_temperature": {
+        "mean": 27.517642,
+        "std": 0.781826
+      }
+    },
+    "Malang": {
+      "temperature_mean_c": {
+        "mean": 24.665607,
+        "std": 0.225627
+      },
+      "temperature_max_c": {
+        "mean": 29.023652,
+        "std": 0.435001
+      },
+      "temperature_min_c": {
+        "mean": 21.513632,
+        "std": 0.257575
+      },
+      "rainfall_mm_year": {
+        "mean": 1899.785714,
+        "std": 409.95308
+      },
+      "precip_hours_day": {
+        "mean": 6.72053,
+        "std": 1.088527
+      },
+      "humidity_pct": {
+        "mean": 81.303336,
+        "std": 1.688559
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.510566,
+        "std": 0.396481
+      },
+      "shortwave_radiation": {
+        "mean": 18.730834,
+        "std": 0.937684
+      },
+      "et0_mm_day": {
+        "mean": 3.8693,
+        "std": 0.228052
+      },
+      "vapour_pressure_def": {
+        "mean": 1.564347,
+        "std": 0.171667
+      },
+      "wind_speed": {
+        "mean": 7.09712,
+        "std": 0.567332
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.278696,
+        "std": 0.026027
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.269246,
+        "std": 0.023057
+      },
+      "soil_temperature": {
+        "mean": 26.579973,
+        "std": 0.486071
+      }
+    },
+    "Mojokerto": {
+      "temperature_mean_c": {
+        "mean": 27.826522,
+        "std": 0.377823
+      },
+      "temperature_max_c": {
+        "mean": 33.548114,
+        "std": 0.524757
+      },
+      "temperature_min_c": {
+        "mean": 23.874295,
+        "std": 0.227206
+      },
+      "rainfall_mm_year": {
+        "mean": 1953.914286,
+        "std": 426.595685
+      },
+      "precip_hours_day": {
+        "mean": 5.269478,
+        "std": 1.011076
+      },
+      "humidity_pct": {
+        "mean": 74.928126,
+        "std": 3.176178
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.853956,
+        "std": 0.370691
+      },
+      "shortwave_radiation": {
+        "mean": 19.75641,
+        "std": 0.790694
+      },
+      "et0_mm_day": {
+        "mean": 4.503346,
+        "std": 0.254088
+      },
+      "vapour_pressure_def": {
+        "mean": 2.738551,
+        "std": 0.25509
+      },
+      "wind_speed": {
+        "mean": 6.583532,
+        "std": 0.330795
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.256999,
+        "std": 0.02224
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.238476,
+        "std": 0.022403
+      },
+      "soil_temperature": {
+        "mean": 29.323208,
+        "std": 0.623483
+      }
+    },
+    "Nganjuk": {
+      "temperature_mean_c": {
+        "mean": 27.315812,
+        "std": 0.446681
+      },
+      "temperature_max_c": {
+        "mean": 32.310254,
+        "std": 0.766165
+      },
+      "temperature_min_c": {
+        "mean": 23.491416,
+        "std": 0.281473
+      },
+      "rainfall_mm_year": {
+        "mean": 1719.228571,
+        "std": 440.957011
+      },
+      "precip_hours_day": {
+        "mean": 5.599185,
+        "std": 1.274795
+      },
+      "humidity_pct": {
+        "mean": 73.791354,
+        "std": 3.62226
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.702287,
+        "std": 0.416895
+      },
+      "shortwave_radiation": {
+        "mean": 19.733581,
+        "std": 0.858834
+      },
+      "et0_mm_day": {
+        "mean": 4.750125,
+        "std": 0.360415
+      },
+      "vapour_pressure_def": {
+        "mean": 2.368683,
+        "std": 0.331864
+      },
+      "wind_speed": {
+        "mean": 9.065412,
+        "std": 0.78055
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.352094,
+        "std": 0.032425
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.333359,
+        "std": 0.034924
+      },
+      "soil_temperature": {
+        "mean": 29.640054,
+        "std": 0.894951
+      }
+    },
+    "Ngawi": {
+      "temperature_mean_c": {
+        "mean": 27.163684,
+        "std": 0.444984
+      },
+      "temperature_max_c": {
+        "mean": 32.267046,
+        "std": 0.724304
+      },
+      "temperature_min_c": {
+        "mean": 23.685799,
+        "std": 0.272525
+      },
+      "rainfall_mm_year": {
+        "mean": 2430.271429,
+        "std": 638.803221
+      },
+      "precip_hours_day": {
+        "mean": 6.266477,
+        "std": 1.45094
+      },
+      "humidity_pct": {
+        "mean": 75.16842,
+        "std": 4.132733
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.691435,
+        "std": 0.423482
+      },
+      "shortwave_radiation": {
+        "mean": 19.740788,
+        "std": 0.898738
+      },
+      "et0_mm_day": {
+        "mean": 4.686009,
+        "std": 0.396993
+      },
+      "vapour_pressure_def": {
+        "mean": 2.317291,
+        "std": 0.36448
+      },
+      "wind_speed": {
+        "mean": 9.37853,
+        "std": 0.940806
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.389991,
+        "std": 0.030906
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.383866,
+        "std": 0.03219
+      },
+      "soil_temperature": {
+        "mean": 29.476446,
+        "std": 0.942218
+      }
+    },
+    "Pacitan": {
+      "temperature_mean_c": {
+        "mean": 26.252087,
+        "std": 0.200194
+      },
+      "temperature_max_c": {
+        "mean": 29.168094,
+        "std": 0.311658
+      },
+      "temperature_min_c": {
+        "mean": 24.027648,
+        "std": 0.250334
+      },
+      "rainfall_mm_year": {
+        "mean": 2055.185714,
+        "std": 585.49451
+      },
+      "precip_hours_day": {
+        "mean": 8.61647,
+        "std": 1.589246
+      },
+      "humidity_pct": {
+        "mean": 84.371432,
+        "std": 1.455668
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.661083,
+        "std": 0.460141
+      },
+      "shortwave_radiation": {
+        "mean": 18.844246,
+        "std": 1.116458
+      },
+      "et0_mm_day": {
+        "mean": 3.82034,
+        "std": 0.245377
+      },
+      "vapour_pressure_def": {
+        "mean": 1.143676,
+        "std": 0.120676
+      },
+      "wind_speed": {
+        "mean": 10.160044,
+        "std": 0.773
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.295635,
+        "std": 0.038482
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.286956,
+        "std": 0.037006
+      },
+      "soil_temperature": {
+        "mean": 28.123549,
+        "std": 0.449327
+      }
+    },
+    "Pamekasan": {
+      "temperature_mean_c": {
+        "mean": 27.110993,
+        "std": 0.257173
+      },
+      "temperature_max_c": {
+        "mean": 30.831021,
+        "std": 0.505057
+      },
+      "temperature_min_c": {
+        "mean": 24.300086,
+        "std": 0.17484
+      },
+      "rainfall_mm_year": {
+        "mean": 1806.342857,
+        "std": 378.688209
+      },
+      "precip_hours_day": {
+        "mean": 5.91274,
+        "std": 1.170909
+      },
+      "humidity_pct": {
+        "mean": 78.779582,
+        "std": 1.937433
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.112564,
+        "std": 0.346285
+      },
+      "shortwave_radiation": {
+        "mean": 19.94037,
+        "std": 0.861179
+      },
+      "et0_mm_day": {
+        "mean": 4.324542,
+        "std": 0.24397
+      },
+      "vapour_pressure_def": {
+        "mean": 1.858576,
+        "std": 0.195469
+      },
+      "wind_speed": {
+        "mean": 8.591442,
+        "std": 0.314414
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.265614,
+        "std": 0.023701
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.255681,
+        "std": 0.021089
+      },
+      "soil_temperature": {
+        "mean": 28.478663,
+        "std": 0.437904
+      }
+    },
+    "Pandeglang": {
+      "temperature_mean_c": {
+        "mean": 25.364317,
+        "std": 0.334975
+      },
+      "temperature_max_c": {
+        "mean": 29.116031,
+        "std": 0.701449
+      },
+      "temperature_min_c": {
+        "mean": 22.788131,
+        "std": 0.216039
+      },
+      "rainfall_mm_year": {
+        "mean": 2322.414286,
+        "std": 484.229534
+      },
+      "precip_hours_day": {
+        "mean": 9.161575,
+        "std": 1.231733
+      },
+      "humidity_pct": {
+        "mean": 82.571075,
+        "std": 2.424242
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.472386,
+        "std": 0.492374
+      },
+      "shortwave_radiation": {
+        "mean": 17.409854,
+        "std": 0.893959
+      },
+      "et0_mm_day": {
+        "mean": 3.551851,
+        "std": 0.235771
+      },
+      "vapour_pressure_def": {
+        "mean": 1.452621,
+        "std": 0.250396
+      },
+      "wind_speed": {
+        "mean": 5.441722,
+        "std": 0.26723
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.41667,
+        "std": 0.02539
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.391041,
+        "std": 0.03095
+      },
+      "soil_temperature": {
+        "mean": 26.759072,
+        "std": 0.566106
+      }
+    },
+    "Pangandaran": {
+      "temperature_mean_c": {
+        "mean": 25.882057,
+        "std": 0.274499
+      },
+      "temperature_max_c": {
+        "mean": 28.328742,
+        "std": 0.393403
+      },
+      "temperature_min_c": {
+        "mean": 23.887679,
+        "std": 0.262859
+      },
+      "rainfall_mm_year": {
+        "mean": 2878.428571,
+        "std": 937.097552
+      },
+      "precip_hours_day": {
+        "mean": 12.345814,
+        "std": 1.967951
+      },
+      "humidity_pct": {
+        "mean": 87.624578,
+        "std": 1.208049
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.527667,
+        "std": 0.522073
+      },
+      "shortwave_radiation": {
+        "mean": 18.483745,
+        "std": 1.096871
+      },
+      "et0_mm_day": {
+        "mean": 3.588031,
+        "std": 0.209961
+      },
+      "vapour_pressure_def": {
+        "mean": 0.909359,
+        "std": 0.085984
+      },
+      "wind_speed": {
+        "mean": 8.42265,
+        "std": 0.450857
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.342336,
+        "std": 0.038833
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.323932,
+        "std": 0.046651
+      },
+      "soil_temperature": {
+        "mean": 27.142606,
+        "std": 0.267924
+      }
+    },
+    "Pasuruan": {
+      "temperature_mean_c": {
+        "mean": 27.739702,
+        "std": 0.365956
+      },
+      "temperature_max_c": {
+        "mean": 32.065837,
+        "std": 0.583486
+      },
+      "temperature_min_c": {
+        "mean": 24.049272,
+        "std": 0.246079
+      },
+      "rainfall_mm_year": {
+        "mean": 1648.914286,
+        "std": 381.036426
+      },
+      "precip_hours_day": {
+        "mean": 5.007436,
+        "std": 1.169827
+      },
+      "humidity_pct": {
+        "mean": 76.889936,
+        "std": 3.295762
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.365298,
+        "std": 0.269143
+      },
+      "shortwave_radiation": {
+        "mean": 21.167014,
+        "std": 0.718948
+      },
+      "et0_mm_day": {
+        "mean": 4.613446,
+        "std": 0.22869
+      },
+      "vapour_pressure_def": {
+        "mean": 2.099639,
+        "std": 0.234166
+      },
+      "wind_speed": {
+        "mean": 6.704197,
+        "std": 0.345871
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.263542,
+        "std": 0.045685
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.26959,
+        "std": 0.044769
+      },
+      "soil_temperature": {
+        "mean": 29.236502,
+        "std": 0.728389
+      }
+    },
+    "Pati": {
+      "temperature_mean_c": {
+        "mean": 26.893027,
+        "std": 0.263137
+      },
+      "temperature_max_c": {
+        "mean": 31.420317,
+        "std": 0.567552
+      },
+      "temperature_min_c": {
+        "mean": 23.537876,
+        "std": 0.181723
+      },
+      "rainfall_mm_year": {
+        "mean": 1839.942857,
+        "std": 312.874942
+      },
+      "precip_hours_day": {
+        "mean": 6.953179,
+        "std": 1.267324
+      },
+      "humidity_pct": {
+        "mean": 79.659313,
+        "std": 2.289843
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.85503,
+        "std": 0.381027
+      },
+      "shortwave_radiation": {
+        "mean": 19.537698,
+        "std": 0.738352
+      },
+      "et0_mm_day": {
+        "mean": 4.155441,
+        "std": 0.211509
+      },
+      "vapour_pressure_def": {
+        "mean": 1.941412,
+        "std": 0.223443
+      },
+      "wind_speed": {
+        "mean": 6.044865,
+        "std": 0.337649
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.411534,
+        "std": 0.021991
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.400695,
+        "std": 0.018188
+      },
+      "soil_temperature": {
+        "mean": 28.345509,
+        "std": 0.428176
+      }
+    },
+    "Pekalongan": {
+      "temperature_mean_c": {
+        "mean": 27.320572,
+        "std": 0.341086
+      },
+      "temperature_max_c": {
+        "mean": 31.299331,
+        "std": 0.611326
+      },
+      "temperature_min_c": {
+        "mean": 23.759994,
+        "std": 0.204803
+      },
+      "rainfall_mm_year": {
+        "mean": 2161.4,
+        "std": 548.881602
+      },
+      "precip_hours_day": {
+        "mean": 6.858766,
+        "std": 1.435111
+      },
+      "humidity_pct": {
+        "mean": 78.073395,
+        "std": 2.630634
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.89419,
+        "std": 0.431938
+      },
+      "shortwave_radiation": {
+        "mean": 19.603438,
+        "std": 0.848064
+      },
+      "et0_mm_day": {
+        "mean": 4.166522,
+        "std": 0.233917
+      },
+      "vapour_pressure_def": {
+        "mean": 1.811643,
+        "std": 0.226275
+      },
+      "wind_speed": {
+        "mean": 5.496567,
+        "std": 0.220225
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.268907,
+        "std": 0.030955
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.253357,
+        "std": 0.030104
+      },
+      "soil_temperature": {
+        "mean": 29.077032,
+        "std": 0.646082
+      }
+    },
+    "Pemalang": {
+      "temperature_mean_c": {
+        "mean": 26.958995,
+        "std": 0.322707
+      },
+      "temperature_max_c": {
+        "mean": 31.535332,
+        "std": 0.512012
+      },
+      "temperature_min_c": {
+        "mean": 23.423962,
+        "std": 0.21492
+      },
+      "rainfall_mm_year": {
+        "mean": 2449.7,
+        "std": 479.361071
+      },
+      "precip_hours_day": {
+        "mean": 7.219903,
+        "std": 1.519672
+      },
+      "humidity_pct": {
+        "mean": 78.444636,
+        "std": 3.182771
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.904617,
+        "std": 0.441133
+      },
+      "shortwave_radiation": {
+        "mean": 19.660203,
+        "std": 0.88476
+      },
+      "et0_mm_day": {
+        "mean": 4.369982,
+        "std": 0.280953
+      },
+      "vapour_pressure_def": {
+        "mean": 1.984266,
+        "std": 0.217285
+      },
+      "wind_speed": {
+        "mean": 7.066642,
+        "std": 0.51663
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.395664,
+        "std": 0.03561
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.390975,
+        "std": 0.024379
+      },
+      "soil_temperature": {
+        "mean": 28.048365,
+        "std": 0.643602
+      }
+    },
+    "Ponorogo": {
+      "temperature_mean_c": {
+        "mean": 27.066994,
+        "std": 0.277646
+      },
+      "temperature_max_c": {
+        "mean": 31.814288,
+        "std": 0.55076
+      },
+      "temperature_min_c": {
+        "mean": 23.612822,
+        "std": 0.264964
+      },
+      "rainfall_mm_year": {
+        "mean": 1788.514286,
+        "std": 545.263763
+      },
+      "precip_hours_day": {
+        "mean": 5.459366,
+        "std": 1.313473
+      },
+      "humidity_pct": {
+        "mean": 75.622035,
+        "std": 2.449048
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.767996,
+        "std": 0.439396
+      },
+      "shortwave_radiation": {
+        "mean": 19.361648,
+        "std": 0.908981
+      },
+      "et0_mm_day": {
+        "mean": 4.572204,
+        "std": 0.347119
+      },
+      "vapour_pressure_def": {
+        "mean": 2.123626,
+        "std": 0.246802
+      },
+      "wind_speed": {
+        "mean": 10.766586,
+        "std": 1.182071
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.262506,
+        "std": 0.028937
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.248602,
+        "std": 0.028004
+      },
+      "soil_temperature": {
+        "mean": 28.870978,
+        "std": 0.616432
+      }
+    },
+    "Probolinggo": {
+      "temperature_mean_c": {
+        "mean": 27.627973,
+        "std": 0.323819
+      },
+      "temperature_max_c": {
+        "mean": 31.339054,
+        "std": 0.68254
+      },
+      "temperature_min_c": {
+        "mean": 24.952526,
+        "std": 0.157586
+      },
+      "rainfall_mm_year": {
+        "mean": 1740.942857,
+        "std": 407.244107
+      },
+      "precip_hours_day": {
+        "mean": 5.652594,
+        "std": 1.131156
+      },
+      "humidity_pct": {
+        "mean": 74.045147,
+        "std": 2.498661
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.183563,
+        "std": 0.293932
+      },
+      "shortwave_radiation": {
+        "mean": 20.400068,
+        "std": 0.74268
+      },
+      "et0_mm_day": {
+        "mean": 5.054007,
+        "std": 0.32938
+      },
+      "vapour_pressure_def": {
+        "mean": 1.950014,
+        "std": 0.254812
+      },
+      "wind_speed": {
+        "mean": 13.763497,
+        "std": 1.595247
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.244095,
+        "std": 0.02788
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.234935,
+        "std": 0.028691
+      },
+      "soil_temperature": {
+        "mean": 30.135958,
+        "std": 0.733322
+      }
+    },
+    "Purbalingga": {
+      "temperature_mean_c": {
+        "mean": 26.352202,
+        "std": 0.225653
+      },
+      "temperature_max_c": {
+        "mean": 30.14862,
+        "std": 0.560959
+      },
+      "temperature_min_c": {
+        "mean": 23.429808,
+        "std": 0.318823
+      },
+      "rainfall_mm_year": {
+        "mean": 2875.014286,
+        "std": 775.09884
+      },
+      "precip_hours_day": {
+        "mean": 9.833133,
+        "std": 1.773693
+      },
+      "humidity_pct": {
+        "mean": 81.758651,
+        "std": 2.002095
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.867528,
+        "std": 0.560205
+      },
+      "shortwave_radiation": {
+        "mean": 16.995722,
+        "std": 0.959381
+      },
+      "et0_mm_day": {
+        "mean": 3.534558,
+        "std": 0.22834
+      },
+      "vapour_pressure_def": {
+        "mean": 1.443571,
+        "std": 0.221041
+      },
+      "wind_speed": {
+        "mean": 4.463541,
+        "std": 0.165671
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.332188,
+        "std": 0.039477
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.32061,
+        "std": 0.042595
+      },
+      "soil_temperature": {
+        "mean": 27.149863,
+        "std": 0.440157
+      }
+    },
+    "Purwakarta": {
+      "temperature_mean_c": {
+        "mean": 26.433433,
+        "std": 0.513255
+      },
+      "temperature_max_c": {
+        "mean": 31.008654,
+        "std": 0.933832
+      },
+      "temperature_min_c": {
+        "mean": 23.114405,
+        "std": 0.280072
+      },
+      "rainfall_mm_year": {
+        "mean": 2484.357143,
+        "std": 451.31305
+      },
+      "precip_hours_day": {
+        "mean": 7.180987,
+        "std": 1.320073
+      },
+      "humidity_pct": {
+        "mean": 77.877819,
+        "std": 3.575221
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.460511,
+        "std": 0.496508
+      },
+      "shortwave_radiation": {
+        "mean": 18.530614,
+        "std": 0.958814
+      },
+      "et0_mm_day": {
+        "mean": 3.976115,
+        "std": 0.298126
+      },
+      "vapour_pressure_def": {
+        "mean": 1.982833,
+        "std": 0.374317
+      },
+      "wind_speed": {
+        "mean": 5.41931,
+        "std": 0.255986
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.403144,
+        "std": 0.026394
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.385971,
+        "std": 0.037665
+      },
+      "soil_temperature": {
+        "mean": 27.784476,
+        "std": 0.91341
+      }
+    },
+    "Purworejo": {
+      "temperature_mean_c": {
+        "mean": 25.381166,
+        "std": 0.220837
+      },
+      "temperature_max_c": {
+        "mean": 29.353516,
+        "std": 0.394527
+      },
+      "temperature_min_c": {
+        "mean": 22.395207,
+        "std": 0.303304
+      },
+      "rainfall_mm_year": {
+        "mean": 3051.857143,
+        "std": 640.393137
+      },
+      "precip_hours_day": {
+        "mean": 9.87258,
+        "std": 1.449044
+      },
+      "humidity_pct": {
+        "mean": 85.298322,
+        "std": 1.639476
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.204882,
+        "std": 0.525158
+      },
+      "shortwave_radiation": {
+        "mean": 17.753491,
+        "std": 0.906215
+      },
+      "et0_mm_day": {
+        "mean": 3.592076,
+        "std": 0.200938
+      },
+      "vapour_pressure_def": {
+        "mean": 1.308232,
+        "std": 0.143634
+      },
+      "wind_speed": {
+        "mean": 5.403678,
+        "std": 0.277144
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.326458,
+        "std": 0.034498
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.314957,
+        "std": 0.035818
+      },
+      "soil_temperature": {
+        "mean": 26.775497,
+        "std": 0.343697
+      }
+    },
+    "Rembang": {
+      "temperature_mean_c": {
+        "mean": 27.128477,
+        "std": 0.269342
+      },
+      "temperature_max_c": {
+        "mean": 30.923819,
+        "std": 0.480336
+      },
+      "temperature_min_c": {
+        "mean": 24.122979,
+        "std": 0.21528
+      },
+      "rainfall_mm_year": {
+        "mean": 2046.971429,
+        "std": 371.371816
+      },
+      "precip_hours_day": {
+        "mean": 7.059676,
+        "std": 1.203143
+      },
+      "humidity_pct": {
+        "mean": 79.775955,
+        "std": 2.514419
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.050269,
+        "std": 0.366461
+      },
+      "shortwave_radiation": {
+        "mean": 20.196853,
+        "std": 0.757392
+      },
+      "et0_mm_day": {
+        "mean": 4.35508,
+        "std": 0.257688
+      },
+      "vapour_pressure_def": {
+        "mean": 1.77511,
+        "std": 0.198389
+      },
+      "wind_speed": {
+        "mean": 8.883821,
+        "std": 0.480779
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.301074,
+        "std": 0.032478
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.298018,
+        "std": 0.03034
+      },
+      "soil_temperature": {
+        "mean": 28.877818,
+        "std": 0.604482
+      }
+    },
+    "Sampang": {
+      "temperature_mean_c": {
+        "mean": 27.891963,
+        "std": 0.303526
+      },
+      "temperature_max_c": {
+        "mean": 31.03262,
+        "std": 0.505111
+      },
+      "temperature_min_c": {
+        "mean": 25.542673,
+        "std": 0.245607
+      },
+      "rainfall_mm_year": {
+        "mean": 1614.8,
+        "std": 450.590635
+      },
+      "precip_hours_day": {
+        "mean": 6.252963,
+        "std": 1.266915
+      },
+      "humidity_pct": {
+        "mean": 76.235714,
+        "std": 2.52899
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.183157,
+        "std": 0.328987
+      },
+      "shortwave_radiation": {
+        "mean": 20.178946,
+        "std": 0.831431
+      },
+      "et0_mm_day": {
+        "mean": 4.717526,
+        "std": 0.306696
+      },
+      "vapour_pressure_def": {
+        "mean": 1.820245,
+        "std": 0.229839
+      },
+      "wind_speed": {
+        "mean": 11.363745,
+        "std": 0.867138
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.316026,
+        "std": 0.052999
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.337155,
+        "std": 0.060627
+      },
+      "soil_temperature": {
+        "mean": 30.312043,
+        "std": 0.735338
+      }
+    },
+    "Semarang": {
+      "temperature_mean_c": {
+        "mean": 24.925516,
+        "std": 0.332836
+      },
+      "temperature_max_c": {
+        "mean": 29.160321,
+        "std": 0.691823
+      },
+      "temperature_min_c": {
+        "mean": 21.897413,
+        "std": 0.194827
+      },
+      "rainfall_mm_year": {
+        "mean": 2647.6,
+        "std": 515.858333
+      },
+      "precip_hours_day": {
+        "mean": 7.871236,
+        "std": 1.148599
+      },
+      "humidity_pct": {
+        "mean": 79.715043,
+        "std": 3.152375
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.652353,
+        "std": 0.442407
+      },
+      "shortwave_radiation": {
+        "mean": 19.092806,
+        "std": 0.843696
+      },
+      "et0_mm_day": {
+        "mean": 3.960641,
+        "std": 0.257242
+      },
+      "vapour_pressure_def": {
+        "mean": 1.672961,
+        "std": 0.281145
+      },
+      "wind_speed": {
+        "mean": 6.122264,
+        "std": 0.27742
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.406278,
+        "std": 0.026696
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.394564,
+        "std": 0.027232
+      },
+      "soil_temperature": {
+        "mean": 26.637688,
+        "std": 0.727056
+      }
+    },
+    "Serang": {
+      "temperature_mean_c": {
+        "mean": 26.562574,
+        "std": 0.389344
+      },
+      "temperature_max_c": {
+        "mean": 30.57349,
+        "std": 0.738769
+      },
+      "temperature_min_c": {
+        "mean": 23.42235,
+        "std": 0.247965
+      },
+      "rainfall_mm_year": {
+        "mean": 2389.385714,
+        "std": 506.63264
+      },
+      "precip_hours_day": {
+        "mean": 8.553797,
+        "std": 1.337513
+      },
+      "humidity_pct": {
+        "mean": 81.786262,
+        "std": 2.356558
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.680964,
+        "std": 0.462005
+      },
+      "shortwave_radiation": {
+        "mean": 18.011259,
+        "std": 0.826304
+      },
+      "et0_mm_day": {
+        "mean": 3.778398,
+        "std": 0.237687
+      },
+      "vapour_pressure_def": {
+        "mean": 1.613945,
+        "std": 0.246755
+      },
+      "wind_speed": {
+        "mean": 5.635688,
+        "std": 0.129141
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.322681,
+        "std": 0.028277
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.30498,
+        "std": 0.029723
+      },
+      "soil_temperature": {
+        "mean": 27.735675,
+        "std": 0.585286
+      }
+    },
+    "Sidoarjo": {
+      "temperature_mean_c": {
+        "mean": 27.273194,
+        "std": 0.300479
+      },
+      "temperature_max_c": {
+        "mean": 31.152813,
+        "std": 0.583644
+      },
+      "temperature_min_c": {
+        "mean": 24.004128,
+        "std": 0.217743
+      },
+      "rainfall_mm_year": {
+        "mean": 2209.8,
+        "std": 505.00503
+      },
+      "precip_hours_day": {
+        "mean": 5.904211,
+        "std": 1.287345
+      },
+      "humidity_pct": {
+        "mean": 79.246099,
+        "std": 2.660829
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.210049,
+        "std": 0.298601
+      },
+      "shortwave_radiation": {
+        "mean": 20.743729,
+        "std": 0.742398
+      },
+      "et0_mm_day": {
+        "mean": 4.507406,
+        "std": 0.246787
+      },
+      "vapour_pressure_def": {
+        "mean": 1.901425,
+        "std": 0.23169
+      },
+      "wind_speed": {
+        "mean": 8.338813,
+        "std": 0.467964
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.269489,
+        "std": 0.037184
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.279607,
+        "std": 0.031374
+      },
+      "soil_temperature": {
+        "mean": 29.091834,
+        "std": 0.664502
+      }
+    },
+    "Situbondo": {
+      "temperature_mean_c": {
+        "mean": 26.53013,
+        "std": 0.292382
+      },
+      "temperature_max_c": {
+        "mean": 30.684985,
+        "std": 0.483557
+      },
+      "temperature_min_c": {
+        "mean": 23.228113,
+        "std": 0.228708
+      },
+      "rainfall_mm_year": {
+        "mean": 2539.7,
+        "std": 402.287617
+      },
+      "precip_hours_day": {
+        "mean": 6.353578,
+        "std": 1.040199
+      },
+      "humidity_pct": {
+        "mean": 76.933226,
+        "std": 2.631068
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.480476,
+        "std": 0.276301
+      },
+      "shortwave_radiation": {
+        "mean": 20.735398,
+        "std": 0.720027
+      },
+      "et0_mm_day": {
+        "mean": 4.494501,
+        "std": 0.216408
+      },
+      "vapour_pressure_def": {
+        "mean": 1.901946,
+        "std": 0.209177
+      },
+      "wind_speed": {
+        "mean": 8.169037,
+        "std": 0.57713
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.390721,
+        "std": 0.027852
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.385738,
+        "std": 0.028073
+      },
+      "soil_temperature": {
+        "mean": 27.83284,
+        "std": 0.586295
+      }
+    },
+    "Sleman": {
+      "temperature_mean_c": {
+        "mean": 24.905023,
+        "std": 0.200122
+      },
+      "temperature_max_c": {
+        "mean": 29.245311,
+        "std": 0.568909
+      },
+      "temperature_min_c": {
+        "mean": 21.800438,
+        "std": 0.284479
+      },
+      "rainfall_mm_year": {
+        "mean": 3048.057143,
+        "std": 693.88684
+      },
+      "precip_hours_day": {
+        "mean": 9.248277,
+        "std": 1.426885
+      },
+      "humidity_pct": {
+        "mean": 82.825075,
+        "std": 2.343388
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.096257,
+        "std": 0.493701
+      },
+      "shortwave_radiation": {
+        "mean": 17.743017,
+        "std": 0.861765
+      },
+      "et0_mm_day": {
+        "mean": 3.622378,
+        "std": 0.226862
+      },
+      "vapour_pressure_def": {
+        "mean": 1.446516,
+        "std": 0.258593
+      },
+      "wind_speed": {
+        "mean": 6.167859,
+        "std": 0.331325
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.228426,
+        "std": 0.035214
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.218284,
+        "std": 0.039162
+      },
+      "soil_temperature": {
+        "mean": 25.850854,
+        "std": 0.526272
+      }
+    },
+    "Sragen": {
+      "temperature_mean_c": {
+        "mean": 27.183327,
+        "std": 0.418745
+      },
+      "temperature_max_c": {
+        "mean": 32.533083,
+        "std": 0.740874
+      },
+      "temperature_min_c": {
+        "mean": 23.36237,
+        "std": 0.232209
+      },
+      "rainfall_mm_year": {
+        "mean": 2293.357143,
+        "std": 464.749197
+      },
+      "precip_hours_day": {
+        "mean": 5.817754,
+        "std": 1.182117
+      },
+      "humidity_pct": {
+        "mean": 75.888121,
+        "std": 3.691435
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.69818,
+        "std": 0.413434
+      },
+      "shortwave_radiation": {
+        "mean": 19.335968,
+        "std": 0.777474
+      },
+      "et0_mm_day": {
+        "mean": 4.49912,
+        "std": 0.349618
+      },
+      "vapour_pressure_def": {
+        "mean": 2.426876,
+        "std": 0.365193
+      },
+      "wind_speed": {
+        "mean": 9.310725,
+        "std": 0.910868
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.365211,
+        "std": 0.030581
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.361305,
+        "std": 0.025667
+      },
+      "soil_temperature": {
+        "mean": 29.165148,
+        "std": 0.939759
+      }
+    },
+    "Subang": {
+      "temperature_mean_c": {
+        "mean": 26.796811,
+        "std": 0.49537
+      },
+      "temperature_max_c": {
+        "mean": 31.973812,
+        "std": 0.845566
+      },
+      "temperature_min_c": {
+        "mean": 23.082404,
+        "std": 0.276222
+      },
+      "rainfall_mm_year": {
+        "mean": 2345.828571,
+        "std": 483.957514
+      },
+      "precip_hours_day": {
+        "mean": 6.578016,
+        "std": 1.378371
+      },
+      "humidity_pct": {
+        "mean": 77.089031,
+        "std": 3.656953
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.510258,
+        "std": 0.458286
+      },
+      "shortwave_radiation": {
+        "mean": 18.698838,
+        "std": 0.980106
+      },
+      "et0_mm_day": {
+        "mean": 4.116383,
+        "std": 0.305212
+      },
+      "vapour_pressure_def": {
+        "mean": 2.26825,
+        "std": 0.349715
+      },
+      "wind_speed": {
+        "mean": 6.0206,
+        "std": 0.271557
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.399513,
+        "std": 0.025637
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.376333,
+        "std": 0.03583
+      },
+      "soil_temperature": {
+        "mean": 27.825372,
+        "std": 0.770084
+      }
+    },
+    "Sukabumi": {
+      "temperature_mean_c": {
+        "mean": 22.411592,
+        "std": 0.240648
+      },
+      "temperature_max_c": {
+        "mean": 26.544945,
+        "std": 0.514562
+      },
+      "temperature_min_c": {
+        "mean": 19.634783,
+        "std": 0.248052
+      },
+      "rainfall_mm_year": {
+        "mean": 3089.442857,
+        "std": 706.310887
+      },
+      "precip_hours_day": {
+        "mean": 9.366953,
+        "std": 1.097312
+      },
+      "humidity_pct": {
+        "mean": 86.855221,
+        "std": 1.487781
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.229125,
+        "std": 0.459652
+      },
+      "shortwave_radiation": {
+        "mean": 17.88867,
+        "std": 0.904738
+      },
+      "et0_mm_day": {
+        "mean": 3.422258,
+        "std": 0.199728
+      },
+      "vapour_pressure_def": {
+        "mean": 1.184322,
+        "std": 0.173084
+      },
+      "wind_speed": {
+        "mean": 4.856097,
+        "std": 0.144025
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.453887,
+        "std": 0.026022
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.44806,
+        "std": 0.03124
+      },
+      "soil_temperature": {
+        "mean": 23.630088,
+        "std": 0.450249
+      }
+    },
+    "Sukoharjo": {
+      "temperature_mean_c": {
+        "mean": 26.160116,
+        "std": 0.341212
+      },
+      "temperature_max_c": {
+        "mean": 31.407097,
+        "std": 0.726122
+      },
+      "temperature_min_c": {
+        "mean": 22.771336,
+        "std": 0.225466
+      },
+      "rainfall_mm_year": {
+        "mean": 2612.657143,
+        "std": 642.420817
+      },
+      "precip_hours_day": {
+        "mean": 6.877929,
+        "std": 1.415963
+      },
+      "humidity_pct": {
+        "mean": 79.157142,
+        "std": 3.331932
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.602981,
+        "std": 0.459152
+      },
+      "shortwave_radiation": {
+        "mean": 19.164047,
+        "std": 0.923093
+      },
+      "et0_mm_day": {
+        "mean": 4.274364,
+        "std": 0.325697
+      },
+      "vapour_pressure_def": {
+        "mean": 2.103208,
+        "std": 0.338661
+      },
+      "wind_speed": {
+        "mean": 9.07975,
+        "std": 0.717012
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.392637,
+        "std": 0.032443
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.383083,
+        "std": 0.038362
+      },
+      "soil_temperature": {
+        "mean": 28.25043,
+        "std": 0.776816
+      }
+    },
+    "Sumedang": {
+      "temperature_mean_c": {
+        "mean": 24.473007,
+        "std": 0.409865
+      },
+      "temperature_max_c": {
+        "mean": 29.143314,
+        "std": 0.786588
+      },
+      "temperature_min_c": {
+        "mean": 20.938112,
+        "std": 0.268669
+      },
+      "rainfall_mm_year": {
+        "mean": 2911.457143,
+        "std": 627.764791
+      },
+      "precip_hours_day": {
+        "mean": 7.867713,
+        "std": 1.467673
+      },
+      "humidity_pct": {
+        "mean": 81.423881,
+        "std": 3.665656
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.540199,
+        "std": 0.468372
+      },
+      "shortwave_radiation": {
+        "mean": 18.621952,
+        "std": 1.028014
+      },
+      "et0_mm_day": {
+        "mean": 3.857903,
+        "std": 0.300294
+      },
+      "vapour_pressure_def": {
+        "mean": 1.670013,
+        "std": 0.306963
+      },
+      "wind_speed": {
+        "mean": 4.964477,
+        "std": 0.438074
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.313901,
+        "std": 0.037278
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.296428,
+        "std": 0.044113
+      },
+      "soil_temperature": {
+        "mean": 25.447918,
+        "std": 0.851082
+      }
+    },
+    "Sumenep": {
+      "temperature_mean_c": {
+        "mean": 27.040503,
+        "std": 0.286991
+      },
+      "temperature_max_c": {
+        "mean": 30.587623,
+        "std": 0.552639
+      },
+      "temperature_min_c": {
+        "mean": 24.294326,
+        "std": 0.22449
+      },
+      "rainfall_mm_year": {
+        "mean": 2003.985714,
+        "std": 395.258672
+      },
+      "precip_hours_day": {
+        "mean": 6.915127,
+        "std": 1.170029
+      },
+      "humidity_pct": {
+        "mean": 79.906904,
+        "std": 2.121869
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.297914,
+        "std": 0.308878
+      },
+      "shortwave_radiation": {
+        "mean": 20.696821,
+        "std": 0.735504
+      },
+      "et0_mm_day": {
+        "mean": 4.459397,
+        "std": 0.230334
+      },
+      "vapour_pressure_def": {
+        "mean": 1.701419,
+        "std": 0.196899
+      },
+      "wind_speed": {
+        "mean": 9.13898,
+        "std": 0.463373
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.2879,
+        "std": 0.02837
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.277824,
+        "std": 0.028491
+      },
+      "soil_temperature": {
+        "mean": 28.403584,
+        "std": 0.449394
+      }
+    },
+    "Tangerang": {
+      "temperature_mean_c": {
+        "mean": 26.715776,
+        "std": 0.353741
+      },
+      "temperature_max_c": {
+        "mean": 31.100073,
+        "std": 0.583837
+      },
+      "temperature_min_c": {
+        "mean": 23.328333,
+        "std": 0.23456
+      },
+      "rainfall_mm_year": {
+        "mean": 2500.814286,
+        "std": 499.531325
+      },
+      "precip_hours_day": {
+        "mean": 8.532082,
+        "std": 1.291484
+      },
+      "humidity_pct": {
+        "mean": 82.670798,
+        "std": 2.270215
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.790534,
+        "std": 0.450007
+      },
+      "shortwave_radiation": {
+        "mean": 18.59667,
+        "std": 0.877409
+      },
+      "et0_mm_day": {
+        "mean": 3.935401,
+        "std": 0.231527
+      },
+      "vapour_pressure_def": {
+        "mean": 1.712539,
+        "std": 0.214179
+      },
+      "wind_speed": {
+        "mean": 6.626773,
+        "std": 0.157988
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.333653,
+        "std": 0.031743
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.321375,
+        "std": 0.03475
+      },
+      "soil_temperature": {
+        "mean": 28.199056,
+        "std": 0.609339
+      }
+    },
+    "Tasikmalaya": {
+      "temperature_mean_c": {
+        "mean": 23.859282,
+        "std": 0.216779
+      },
+      "temperature_max_c": {
+        "mean": 27.927557,
+        "std": 0.384977
+      },
+      "temperature_min_c": {
+        "mean": 20.956421,
+        "std": 0.398528
+      },
+      "rainfall_mm_year": {
+        "mean": 3171.714286,
+        "std": 839.379998
+      },
+      "precip_hours_day": {
+        "mean": 11.935303,
+        "std": 1.838913
+      },
+      "humidity_pct": {
+        "mean": 87.524445,
+        "std": 1.552108
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.670624,
+        "std": 0.519646
+      },
+      "shortwave_radiation": {
+        "mean": 16.645909,
+        "std": 0.929695
+      },
+      "et0_mm_day": {
+        "mean": 3.302768,
+        "std": 0.198095
+      },
+      "vapour_pressure_def": {
+        "mean": 1.139054,
+        "std": 0.12613
+      },
+      "wind_speed": {
+        "mean": 4.660877,
+        "std": 0.24594
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.261846,
+        "std": 0.028783
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.25404,
+        "std": 0.03484
+      },
+      "soil_temperature": {
+        "mean": 24.959791,
+        "std": 0.20026
+      }
+    },
+    "Tegal": {
+      "temperature_mean_c": {
+        "mean": 26.624691,
+        "std": 0.283411
+      },
+      "temperature_max_c": {
+        "mean": 30.752713,
+        "std": 0.5431
+      },
+      "temperature_min_c": {
+        "mean": 23.272837,
+        "std": 0.269836
+      },
+      "rainfall_mm_year": {
+        "mean": 2186.414286,
+        "std": 410.197523
+      },
+      "precip_hours_day": {
+        "mean": 7.416367,
+        "std": 1.478999
+      },
+      "humidity_pct": {
+        "mean": 79.833189,
+        "std": 2.59659
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.974209,
+        "std": 0.414872
+      },
+      "shortwave_radiation": {
+        "mean": 19.75019,
+        "std": 0.820179
+      },
+      "et0_mm_day": {
+        "mean": 4.201886,
+        "std": 0.255802
+      },
+      "vapour_pressure_def": {
+        "mean": 1.78353,
+        "std": 0.219136
+      },
+      "wind_speed": {
+        "mean": 7.969828,
+        "std": 0.433861
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.291266,
+        "std": 0.024623
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.280274,
+        "std": 0.021833
+      },
+      "soil_temperature": {
+        "mean": 28.347626,
+        "std": 0.511194
+      }
+    },
+    "Temanggung": {
+      "temperature_mean_c": {
+        "mean": 22.508726,
+        "std": 0.222428
+      },
+      "temperature_max_c": {
+        "mean": 27.110122,
+        "std": 0.51096
+      },
+      "temperature_min_c": {
+        "mean": 19.061867,
+        "std": 0.343769
+      },
+      "rainfall_mm_year": {
+        "mean": 2721.128571,
+        "std": 583.023038
+      },
+      "precip_hours_day": {
+        "mean": 8.062944,
+        "std": 1.452801
+      },
+      "humidity_pct": {
+        "mean": 87.230928,
+        "std": 2.119027
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.348635,
+        "std": 0.448833
+      },
+      "shortwave_radiation": {
+        "mean": 18.593564,
+        "std": 0.855212
+      },
+      "et0_mm_day": {
+        "mean": 3.59684,
+        "std": 0.236688
+      },
+      "vapour_pressure_def": {
+        "mean": 1.238472,
+        "std": 0.208026
+      },
+      "wind_speed": {
+        "mean": 7.903088,
+        "std": 0.636403
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.202975,
+        "std": 0.029728
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.188816,
+        "std": 0.030814
+      },
+      "soil_temperature": {
+        "mean": 23.685134,
+        "std": 0.478324
+      }
+    },
+    "Trenggalek": {
+      "temperature_mean_c": {
+        "mean": 25.563886,
+        "std": 0.208905
+      },
+      "temperature_max_c": {
+        "mean": 29.138271,
+        "std": 0.347868
+      },
+      "temperature_min_c": {
+        "mean": 23.022312,
+        "std": 0.247818
+      },
+      "rainfall_mm_year": {
+        "mean": 2092.0,
+        "std": 504.965309
+      },
+      "precip_hours_day": {
+        "mean": 9.513842,
+        "std": 1.44366
+      },
+      "humidity_pct": {
+        "mean": 85.307871,
+        "std": 1.405082
+      },
+      "sunshine_hrs_day": {
+        "mean": 8.881419,
+        "std": 0.437377
+      },
+      "shortwave_radiation": {
+        "mean": 17.686815,
+        "std": 1.01829
+      },
+      "et0_mm_day": {
+        "mean": 3.570782,
+        "std": 0.224497
+      },
+      "vapour_pressure_def": {
+        "mean": 1.246901,
+        "std": 0.141124
+      },
+      "wind_speed": {
+        "mean": 7.549723,
+        "std": 0.606113
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.326074,
+        "std": 0.033639
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.311981,
+        "std": 0.035143
+      },
+      "soil_temperature": {
+        "mean": 27.008538,
+        "std": 0.335333
+      }
+    },
+    "Tuban": {
+      "temperature_mean_c": {
+        "mean": 27.153906,
+        "std": 0.269516
+      },
+      "temperature_max_c": {
+        "mean": 31.19068,
+        "std": 0.378346
+      },
+      "temperature_min_c": {
+        "mean": 24.13993,
+        "std": 0.194667
+      },
+      "rainfall_mm_year": {
+        "mean": 2261.971429,
+        "std": 395.176407
+      },
+      "precip_hours_day": {
+        "mean": 7.422156,
+        "std": 1.198394
+      },
+      "humidity_pct": {
+        "mean": 79.537926,
+        "std": 2.134502
+      },
+      "sunshine_hrs_day": {
+        "mean": 10.048792,
+        "std": 0.339012
+      },
+      "shortwave_radiation": {
+        "mean": 20.133681,
+        "std": 0.738869
+      },
+      "et0_mm_day": {
+        "mean": 4.362741,
+        "std": 0.221776
+      },
+      "vapour_pressure_def": {
+        "mean": 1.828815,
+        "std": 0.168889
+      },
+      "wind_speed": {
+        "mean": 8.748262,
+        "std": 0.3408
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.287585,
+        "std": 0.028819
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.276468,
+        "std": 0.025016
+      },
+      "soil_temperature": {
+        "mean": 28.871715,
+        "std": 0.560398
+      }
+    },
+    "Tulungagung": {
+      "temperature_mean_c": {
+        "mean": 26.038626,
+        "std": 0.273895
+      },
+      "temperature_max_c": {
+        "mean": 30.259836,
+        "std": 0.482553
+      },
+      "temperature_min_c": {
+        "mean": 23.037654,
+        "std": 0.241276
+      },
+      "rainfall_mm_year": {
+        "mean": 2128.614286,
+        "std": 484.534572
+      },
+      "precip_hours_day": {
+        "mean": 8.770404,
+        "std": 1.279115
+      },
+      "humidity_pct": {
+        "mean": 83.0493,
+        "std": 1.972533
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.402156,
+        "std": 0.44063
+      },
+      "shortwave_radiation": {
+        "mean": 18.158632,
+        "std": 0.962946
+      },
+      "et0_mm_day": {
+        "mean": 3.817886,
+        "std": 0.239448
+      },
+      "vapour_pressure_def": {
+        "mean": 1.580132,
+        "std": 0.176538
+      },
+      "wind_speed": {
+        "mean": 6.935277,
+        "std": 0.557696
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.299903,
+        "std": 0.030877
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.279697,
+        "std": 0.030795
+      },
+      "soil_temperature": {
+        "mean": 27.57262,
+        "std": 0.480775
+      }
+    },
+    "Wonogiri": {
+      "temperature_mean_c": {
+        "mean": 26.401373,
+        "std": 0.310391
+      },
+      "temperature_max_c": {
+        "mean": 31.234617,
+        "std": 0.739574
+      },
+      "temperature_min_c": {
+        "mean": 23.004689,
+        "std": 0.254508
+      },
+      "rainfall_mm_year": {
+        "mean": 2127.9,
+        "std": 554.262793
+      },
+      "precip_hours_day": {
+        "mean": 6.805927,
+        "std": 1.34008
+      },
+      "humidity_pct": {
+        "mean": 78.771728,
+        "std": 3.02039
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.498916,
+        "std": 0.489775
+      },
+      "shortwave_radiation": {
+        "mean": 18.755278,
+        "std": 0.974347
+      },
+      "et0_mm_day": {
+        "mean": 4.146901,
+        "std": 0.33022
+      },
+      "vapour_pressure_def": {
+        "mean": 2.030526,
+        "std": 0.325334
+      },
+      "wind_speed": {
+        "mean": 7.38393,
+        "std": 0.779953
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.378305,
+        "std": 0.036418
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.377119,
+        "std": 0.036774
+      },
+      "soil_temperature": {
+        "mean": 28.198215,
+        "std": 0.777254
+      }
+    },
+    "Wonosobo": {
+      "temperature_mean_c": {
+        "mean": 21.319093,
+        "std": 0.236109
+      },
+      "temperature_max_c": {
+        "mean": 24.830067,
+        "std": 0.247487
+      },
+      "temperature_min_c": {
+        "mean": 18.636894,
+        "std": 0.324337
+      },
+      "rainfall_mm_year": {
+        "mean": 4528.714286,
+        "std": 831.69061
+      },
+      "precip_hours_day": {
+        "mean": 11.351255,
+        "std": 1.073671
+      },
+      "humidity_pct": {
+        "mean": 89.280355,
+        "std": 0.782937
+      },
+      "sunshine_hrs_day": {
+        "mean": 9.026196,
+        "std": 0.441867
+      },
+      "shortwave_radiation": {
+        "mean": 17.558993,
+        "std": 0.858712
+      },
+      "et0_mm_day": {
+        "mean": 3.215133,
+        "std": 0.156645
+      },
+      "vapour_pressure_def": {
+        "mean": 0.784116,
+        "std": 0.054139
+      },
+      "wind_speed": {
+        "mean": 5.519703,
+        "std": 0.261053
+      },
+      "soil_moisture_0_7cm": {
+        "mean": 0.270573,
+        "std": 0.02285
+      },
+      "soil_moisture_7_28cm": {
+        "mean": 0.26728,
+        "std": 0.026145
+      },
+      "soil_temperature": {
+        "mean": 22.492905,
+        "std": 0.121353
+      }
+    }
+  }
+}

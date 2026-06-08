@@ -1,0 +1,10 @@
+pandas==2.2.3
+numpy==1.26.4
+scikit-learn==1.5.2
+streamlit==1.40.2
+folium==0.18.0
+streamlit-folium==0.23.1
+scipy==1.13.1
+joblib==1.4.2
+matplotlib==3.9.2
+seaborn==0.13.2
