@@ -338,10 +338,12 @@ def main():
             ).add_to(m)
 
         st.markdown(
-            '<style>.stFoliumMap { margin-bottom: -1rem !important; }</style>',
+            """<style>
+            div[data-testid="stCustomComponentV1"] { margin-bottom: -2.5rem !important; }
+            </style>""",
             unsafe_allow_html=True,
         )
-        map_data = st_folium(m, width=900, height=460, key="map_pin")
+        map_data = st_folium(m, use_container_width=True, height=460, key="map_pin")
 
         clicked = map_data.get("last_clicked")
         if clicked:
